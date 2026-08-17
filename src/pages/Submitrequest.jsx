@@ -7,12 +7,14 @@ function Submitrequest() {
     return (
         <div>
             <Nav />
-            <InputGroupInlineStart />
-            <hr className='mt-5' />
-            <p className='ml-90 mt-5 text-sm'>Help center</p>
-            <p className='ml-90 mt-5 text-xl font-bold'>Submit a request</p>
-            <FieldDemo />
-            <Footer2/>
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <InputGroupInlineStart />
+                <hr className='mt-5' />
+                <p className='ml-90 mt-5 text-sm'>Help center</p>
+                <p className='ml-90 mt-5 text-xl font-bold'>Submit a request</p>
+                <FieldDemo />
+            </div>
+            <Footer2 />
         </div>
     )
 }

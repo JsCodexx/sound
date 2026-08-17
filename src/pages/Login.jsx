@@ -47,9 +47,9 @@ export default function Login() {
                             <label className='text-gray-700' htmlFor="">Password</label>
                             <input type="password" className='border-[0.72px] border-[#D6EAFF] mt-2 ' />
                         </div>
-                        <div className='flex justify-evenly mt-5'>
-                            <img src="/src/assets/Checkbox.png" alt="" />
-                            <p> <Link to="/forget"> Forget Password </Link></p>
+                        <div className='flex justify-evenly mt-5  '>
+                            <p> Remember Me</p>
+                            <p className='ml-4'> <Link to="/forget"> Forget Password? </Link></p>
                         </div>
                         <Link to="/home"><img src="/src/assets/Frame7.png" alt="" className='ml-10 mt-10 cursor-pointer' /></Link>
                         <p className='ml-22 mt-5 text-gray-500'>Not Registered? <Link to="/register"><span className='text-black  font-bold cursor-pointer' >Create an account</span></Link> </p>

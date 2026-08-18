@@ -69,7 +69,7 @@ const Footer2 = (props) => {
 
   return (
     <section className={cn(className)}>
-      <div className="container mx-auto">
+      <div className="container mx-auto w-full">
         <footer >
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 py-10 text-white bg-[#232323] ">
             <div className="col-span-2 mb-8 lg:mb-0">
@@ -78,7 +78,7 @@ const Footer2 = (props) => {
                 <h1 className="h-7 dark:invert text-2xl font-bold  " > LOGO </h1 >
                 <p>Subscribe to our newsletter</p>
                 <p>Get product updates, company news, and more.</p>
-                <button className="bg-[#D74664] w-40 h-10 rounded-e-sm cursor-pointer">Subscribe</button>
+                <button className="bg-[#D74664] w-40 h-10 rounded-sm cursor-pointer">SUBSCRIBE</button>
               </div>
 
             </div>

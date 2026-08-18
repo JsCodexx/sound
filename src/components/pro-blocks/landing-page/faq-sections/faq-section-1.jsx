@@ -21,7 +21,7 @@ export function FaqSection1() {
           <AccordionItem value="item-1" >
             <div >
               <div>
-                <AccordionTrigger className="text-left  font-bold text-2xl">
+                <AccordionTrigger className="text-left  font-bold text-xl">
                   What is shadcn/ui?
                 </AccordionTrigger>
               </div>
@@ -37,7 +37,7 @@ export function FaqSection1() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-left text-2xl font-bold">
+            <AccordionTrigger className="text-left text-xl font-bold">
               What is shadcn/ui kit for Figma?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-sm">
@@ -67,7 +67,7 @@ export function FaqSection1() {
           </AccordionItem>
 
           <AccordionItem value="item-5" >
-            <AccordionTrigger className="text-left text-2xl font-bold">
+            <AccordionTrigger className="text-left text-xl font-bold">
               How will this kit save me time?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-sm">

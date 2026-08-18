@@ -26,17 +26,23 @@ function Home() {
                     <img src="/src/assets/two.png" alt="" />
                 </div>
                 <div className='flex'>
-                    <div className='relative mt-20 ml-30'>
+                    <div className=' mt-20 ml-30'>
                         <h1 className='text-2xl font-bold mb-3'>How company name works</h1>
                         <p className='mb-4'>See what Splice is all about in this short video.</p>
-                        <img className='absolute top-21' src="/src/assets/black.png" alt="" width={500} />
-                        <img src="/src/assets/pic.png" alt="" width={500} />
+                        <div className='relative'>
+                            <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
+                            <img src="/src/assets/pic.png" alt="" width={500} />
+                            <img className='absolute top-25 left-50' src="/src/assets/play.png" alt="" width={80} />
+                        </div>
                     </div>
-                    <div className='relative mt-20 ml-20'>
+                    <div className=' mt-20 ml-20'>
                         <h1 className='text-2xl font-bold mb-3'>Find Your Plan</h1>
                         <p className='mb-4'>See what Splice is all about in this short video.</p>
-                        <img className='absolute top-21' src="/src/assets/black.png" alt="" width={500} />
-                        <img src="/src/assets/square.png" alt="" width={500} />
+                        <div className='relative '>
+                            <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
+                            <img src="/src/assets/square.png" alt="" width={500} />
+                            <img className='absolute top-25 left-50' src="/src/assets/play.png" alt="" width={80} />
+                        </div>
                     </div>
                 </div>
 

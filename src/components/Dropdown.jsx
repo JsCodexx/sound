@@ -28,25 +28,25 @@ export function DropdownMenuShortcuts() {
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuItem>
             Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+            
           </DropdownMenuItem>
           <DropdownMenuItem>
             Billing
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+          
           </DropdownMenuItem>
           <Link to="/settings">
             <DropdownMenuItem>
               Settings
-              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+           
             </DropdownMenuItem>
           </Link>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
 
         <button onClick={goToLogin}>
-          <DropdownMenuItem >
+          <DropdownMenuItem className="hover:bg-red-400" >
             Log out
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+           
           </DropdownMenuItem>
         </button>
       </DropdownMenuContent>

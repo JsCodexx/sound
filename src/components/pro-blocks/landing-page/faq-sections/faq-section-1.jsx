@@ -7,10 +7,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 // import { Button } from "@/components/ui/button";
-
+import { useNavigate } from "react-router-dom";
 // import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 
 export function FaqSection1() {
+  const navigate = useNavigate()
+
+  function help() {
+    navigate("/help")
+  }
+
   return (
     <section className="bg-background section-padding-y" aria-labelledby="faq-heading">
       <div
@@ -21,69 +27,47 @@ export function FaqSection1() {
           <AccordionItem value="item-1" >
             <div >
               <div>
-                <AccordionTrigger className="text-left  font-bold text-xl">
-                  What is shadcn/ui?
+                <AccordionTrigger className="text-left decoration-accent  font-bold text-xl" onClick={help}>
+                  How do Sounds credits work?
                 </AccordionTrigger>
               </div>
-              <div>
-                <AccordionContent className="text-muted-foreground text-sm">
-                  Shadcn/ui is a popular, open-source UI component library for React
-                  that focuses on flexibility and customization. It provides a set
-                  of accessible, customizable components that you can use to build
-                  modern web applications.
-                </AccordionContent>
-              </div>
+
             </div>
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-left text-xl font-bold">
+            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
               What is shadcn/ui kit for Figma?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              The shadcn/ui kit for Figma is a comprehensive design resource
-              that mirrors the components and styling of the shadcn/ui library.
-            </AccordionContent>
+
           </AccordionItem>
 
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-left text-xl font-bold">
+            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
               I'm not familiar with shadcn/ui. Can I still use this kit?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              Yes, you can still use this kit even if you're new to shadcn/ui.
-              The components are designed to be intuitive and easy to use.
-            </AccordionContent>
+
           </AccordionItem>
 
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-left text-xl font-bold">
+            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
               Can I create multi-brand design systems with this UI kit?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              Yes, the UI kit is designed to be flexible and can be customized
-              for multiple brands and design systems.
-            </AccordionContent>
+
           </AccordionItem>
 
           <AccordionItem value="item-5" >
-            <AccordionTrigger className="text-left text-xl font-bold">
+            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
               How will this kit save me time?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              This kit provides pre-built components and consistent styling,
-              reducing development and design time significantly.
-            </AccordionContent>
+
           </AccordionItem>
 
           <AccordionItem value="item-6" className="">
-            <AccordionTrigger className="text-left text-xl font-bold ">
+            <AccordionTrigger className="text-left text-xl decoration-accent font-bold " onClick={help}>
               How does this improve my collaboration with developers?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              The kit provides a shared language and consistent components that
-              both designers and developers can reference.
-            </AccordionContent>
+
           </AccordionItem>
         </Accordion>
 

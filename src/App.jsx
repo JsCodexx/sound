@@ -16,7 +16,10 @@ import Billing from './pages/Billing'
 import Plan from './pages/Plan'
 import Noification from './pages/Noification'
 import LandingPage from './pages/LandingPage'
-
+import Instrument from './pages/Instrument'
+import Cinematics from './pages/Cinematics'
+import Genres from './pages/Genres'
+import Label from './pages/Label'
 
 function App() {
 
@@ -40,7 +43,10 @@ function App() {
           <Route path='/plans' element={< Plan />} />
           <Route path='/notifications' element={< Noification />} />
           <Route path='/landingPage' element={< LandingPage />} />
-
+          <Route path='/instrument' element={< Instrument />} />
+          <Route path='/cinematics' element={< Cinematics />} />
+          <Route path='/genres' element={< Genres />} />
+          <Route path='/label' element={< Label />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,23 +1,24 @@
 import React from 'react'
 import NavBar from '@/components/NavHome'
 import { TabsLine } from '@/components/Menu'
+import { Link } from 'react-router-dom'
 function Sound() {
     return (
         <div >
             <NavBar />
             <div className='flex ml-35 mt-5 gap-5 relative w-auto'>
                 <div className='flex flex-col gap-10'>
-                    <h1 className='text-black font-extrabold '>Sounds</h1>
+                    <h1 className='text-black font-extrabold cursor-pointer '>Sounds</h1>
                     <div>
-                        <h1 className='text-black font-bold '>Browse</h1>
-                        <h1 className='text-black '>Charts</h1>
+                        <Link><h1 className='text-black font-bold cursor-pointer'>Browse</h1></Link>
+                        <Link to="/Charts"><h1 className='text-black cursor-pointer'>Charts</h1></Link>
                     </div>
                     <div>
                         <h1 className='text-black '>Your Library</h1>
-                        <h1 className='text-black '>Sounds</h1>
+                        <h1 className='text-black cursor-pointer'>Sounds</h1>
                     </div>
                 </div>
-                <img src="src/assets/line.png" alt="" className='h-950'/>
+                <img src="src/assets/line.png" alt="" className='h-950' />
                 <h1 className=' text-red-400  font-bold ml-60'>You are currently viewing company sounds</h1>
 
             </div>
@@ -27,7 +28,7 @@ function Sound() {
             </div>
             <div className='flex flex-col text-[#5C5C5C] gap-5 absolute top-120 left-70'>
                 <div className='flex gap-6 cursor-pointer '>
-                    <TabsLine/>
+                    <TabsLine />
                 </div>
                 <div className='w-auto'>
                     <hr />
@@ -471,7 +472,7 @@ function Sound() {
                 </div>
 
             </div>
-         
+
         </div>
 
     )

@@ -1,6 +1,7 @@
 
-
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+
 
 const defaultProps = {
   logo: {
@@ -78,7 +79,7 @@ const Footer2 = (props) => {
                 <h1 className="h-7 dark:invert text-2xl font-bold  " > LOGO </h1 >
                 <p>Subscribe to our newsletter</p>
                 <p>Get product updates, company news, and more.</p>
-                <button className="bg-[#D74664] w-40 h-10 rounded-sm cursor-pointer">SUBSCRIBE</button>
+                <Link to="/subscribe"><button className="bg-[#D74664] w-40 h-10 rounded-sm cursor-pointer">SUBSCRIBE</button></Link>
               </div>
 
             </div>

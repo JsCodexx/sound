@@ -3,6 +3,7 @@ import NavBar from '@/components/NavHome'
 import { Link } from 'react-router-dom'
 import { CheckboxInvalid } from '@/components/Checkbox'
 import { Footer2 } from '@/components/footer2'
+import { TabsLine } from '@/components/Menu'
 export default function Noification() {
     return (
         <div>
@@ -14,10 +15,11 @@ export default function Noification() {
                 <h1 className='text-center text-4xl font-bold mt-5'>Settings</h1>
                 <p className='text-center text-gray-500 mt-3'>Account setting and payment seetting</p>
                 <div className=' mt-5 flex gap-8 ml-120 mb-5'>
-                    <Link to="/settings"><p className='cursor-pointer'>Account</p></Link>
+                    {/* <Link to="/settings"><p className='cursor-pointer'>Account</p></Link>
                     <Link to="/billings"><p className='cursor-pointer'>Billing</p></Link>
                     <Link to="/plans">  <p className='cursor-pointer'>Plans</p></Link>
-                    <Link to="/notifications"><p className='cursor-pointer'>Notifications</p></Link>
+                    <Link to="/notifications"><p className='cursor-pointer'>Notifications</p></Link> */}
+                    <TabsLine variant="setting" />
 
                 </div>
                 <hr />

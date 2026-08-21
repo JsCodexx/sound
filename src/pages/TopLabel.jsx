@@ -3,6 +3,7 @@ import NavBar from '@/components/NavHome'
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import PackCard from '@/components/PackCard'
+import SideBar from '@/components/SideBar'
 export default function TopLabel() {
     const cardData = [
         {
@@ -181,30 +182,7 @@ export default function TopLabel() {
         <div>
             <NavBar />
             <div className='flex ml-35 mt-5 gap-5 relative w-auto'>
-                <div className='flex flex-col gap-10'>
-                    <h1 className='text-black font-extrabold cursor-pointer '>Sounds</h1>
-                    <div>
-                        <NavLink to="/sound">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Browse
-                                </h1>
-                            )}
-                        </NavLink>
-
-                        <NavLink to="/top labels">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Charts
-                                </h1>
-                            )}
-                        </NavLink>
-                    </div>
-                    <div>
-                        <h1 className='text-black '>Your Library</h1>
-                        <h1 className='text-black cursor-pointer'>Sounds</h1>
-                    </div>
-                </div>
+                <SideBar />
                 <img src="src/assets/line.png" alt="" className='h-420' />
                 <div className='flex flex-col gap-4'>
                     <h1 className=' text-red-400  font-bold ml-60'>You are currently viewing company sounds</h1>

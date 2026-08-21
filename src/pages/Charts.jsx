@@ -3,6 +3,7 @@ import NavBar from '@/components/NavHome'
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import PackCard from '@/components/PackCard'
+import SideBar from '@/components/SideBar'
 export default function Charts() {
     const cardData = [
         {
@@ -300,36 +301,7 @@ export default function Charts() {
         <div>
             <NavBar />
             <div className='flex ml-35 mt-5 gap-5 relative w-auto'>
-                <div className='flex flex-col gap-10'>
-                    <h1 className='text-black font-extrabold cursor-pointer '>Sounds</h1>
-                    <div>
-                        <NavLink to="/sound">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Browse
-                                </h1>
-                            )}
-                        </NavLink>
-
-                        <NavLink to="/Charts">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Charts
-                                </h1>
-                            )}
-                        </NavLink>
-                    </div>
-                    <div>
-                        <h1 className='text-black '>Your Library</h1>
-                        <NavLink to="/Sound2">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                   Sound
-                                </h1>
-                            )}
-                        </NavLink>
-                    </div>
-                </div>
+                <SideBar />
                 <img src="src/assets/line.png" alt="" className='h-700' />
                 <div className='flex flex-col gap-4'>
                     <h1 className=' text-red-400  font-bold ml-60'>You are currently viewing company sounds</h1>
@@ -363,6 +335,7 @@ export default function Charts() {
                                 num={data.num}
                                 ChangeRow={index % 2 === 1}
                                 showArrow={data.showArrow}
+                                variant="chart"
 
                             />
                         ))}

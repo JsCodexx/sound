@@ -20,7 +20,13 @@ import Instrument from './pages/Instrument'
 import Cinematics from './pages/Cinematics'
 import Genres from './pages/Genres'
 import Label from './pages/Label'
-
+import Present from './pages/Present'
+import Midi from './pages/Midi'
+import Subscrbe from './pages/Subscrbe'
+import Charts from './pages/Charts'
+import TopLabel from './pages/TopLabel'
+import Sound2 from './pages/Sound-2'
+import Subsound from './pages/Subsound'
 function App() {
 
 
@@ -47,6 +53,13 @@ function App() {
           <Route path='/cinematics' element={< Cinematics />} />
           <Route path='/genres' element={< Genres />} />
           <Route path='/label' element={< Label />} />
+          <Route path='/present' element={< Present />} />
+          <Route path='/Midi' element={< Midi />} />
+          <Route path='/subscribe' element={< Subscrbe />} />
+          <Route path='/Charts' element={< Charts />} />
+          <Route path='/top labels' element={< TopLabel />} />
+          <Route path='/Sound2' element={< Sound2 />} />
+          <Route path='/subsound' element={< Subsound />} />
         </Routes>
       </BrowserRouter>
     </>

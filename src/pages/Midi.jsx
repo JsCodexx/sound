@@ -2,82 +2,81 @@ import React from 'react'
 import NavBar from '@/components/NavHome'
 import { TabsLine } from '@/components/Menu'
 import { CardDemo } from '@/components/Card-2'
-export default function Label() {
+export default function Midi() {
     const cardData = [
         {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c1.png",
-            title: "Audio Lab",
-            packs: "56 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c2.png",
-            title: "Power Tone",
-            packs: "256 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l2.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c3.png",
-            title: "Art house",
-            packs: "56 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l3.png",
+            title: "Astral lounge  ",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c1.png",
-            title: "Power Tone",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c2.png",
-            title: "Art House",
-            packs: "96 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l2.png",
+            title: "Bradd web",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c1.png",
-            title: "Art Waleed",
-            packs: "9 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l3.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c3.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l3.png",
+            title: "Bradd web",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c3.png",
-            title: "Art House",
-            packs: "96 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l3.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
         {
-            src: "/src/assets/c2.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future House"]
+            src: "/src/assets/l2.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
         },
     ]
-
     return (
         <div>
             <NavBar />
@@ -106,7 +105,8 @@ export default function Label() {
                     <TabsLine />
                 </div>
                 <hr className='w-230' />
-                <div className='flex flex-wrap gap-2'>
+                <h1 className='text-xl font-bold text-black'>Packs with MIDI Basslines</h1>
+                <div className='flex flex-wrap gap-2 '>
                     {cardData.map((data, index) => (
                         <CardDemo
                             key={index}
@@ -114,10 +114,10 @@ export default function Label() {
                             title={data.title}
                             packs={data.packs}
                             tags={data.tags}
+                            variant="Midi"
                         />
                     ))}
                 </div>
-
             </div>
         </div>
     )

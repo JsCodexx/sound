@@ -23,7 +23,7 @@ const tabsListVariants = cva(
     variants: {
       variant: {
         default: "bg-muted",
-        line: "gap-1 bg-transparent",
+        line: "gap-2 bg-transparent",
       },
     },
     defaultVariants: {
@@ -40,7 +40,7 @@ function TabsList({
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
-      data-variant={variant}
+      line-variant={variant}
       className={cn(tabsListVariants({ variant }), className)}
       {...props} />
   );

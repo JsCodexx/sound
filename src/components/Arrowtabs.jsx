@@ -23,7 +23,7 @@ import {
 export function NavigationMenuDemo({ variant }) {
     return (
         <NavigationMenu >
-            <NavigationMenuList className="  mt-3 ml-5">
+            <NavigationMenuList className="  mt-3 ml-2 md:ml-5">
                 <div className="flex gap-55">
 
                     <div className="flex gap-3">
@@ -31,7 +31,7 @@ export function NavigationMenuDemo({ variant }) {
                             <div className="flex gap-117">
                                 <div className="flex gap-4">
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="border-1 border-[#868e9648] rounded-2xl text-[#868E96]">Instruments</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger className="border-1 border-[#868e9648]  rounded-2xl text-[#868E96]">Instruments</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul className="grid w-[200px]">
                                                 <li>
@@ -88,7 +88,7 @@ export function NavigationMenuDemo({ variant }) {
                                 </div>
                             </div>
                             :
-                            <div className="flex gap-55">
+                            <div className="flex md:gap-55  flex-col gap-3 md:flex-row">
                                 <div className="flex gap-4">
                                     <NavigationMenuItem>
                                         <NavigationMenuTrigger className="border-1 border-[#868e9648] rounded-2xl text-[#868E96]">Instruments</NavigationMenuTrigger>

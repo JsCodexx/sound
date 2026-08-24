@@ -18,8 +18,8 @@ export function CardSmall({ variant, description }) {
         <div >
 
             {variant === "genres" ?
-                <div className="flex flex-col">
-                    <div div className="flex">
+                <div className="flex flex-col md:flex-row">
+                    <div div className="flex flex-col">
                         <Card size="sm" className=" p-0 rounded-none ml-10 h-65  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
@@ -70,7 +70,7 @@ export function CardSmall({ variant, description }) {
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
                             </CardHeader>
-                            <CardContent className="h-60 flex gap-30 mt-0">
+                            <CardContent className="h-60 flex  gap-30 mt-0">
                                 <div className="flex flex-col">
                                     <ul className="flex flex-col gap-5 text-center text-[#5C5C5C]">
                                         <li className="ml-2">Kicks</li>
@@ -114,7 +114,7 @@ export function CardSmall({ variant, description }) {
                         </Card>
 
                     </div>
-                    <div className=" ml-6 flex ">
+                    <div className=" ml-6 flex flex-col md:flex-row ">
                         <Card size="sm" className=" p-0 rounded-none ml-4 h-65 mt-[-15px]  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>

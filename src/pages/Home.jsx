@@ -15,7 +15,7 @@ function Home() {
 
             <NavBar />
             <div className='bg-[#CD4848] w-full h-15'>
-                <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
+                <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className='text-center mt-5'>

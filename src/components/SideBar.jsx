@@ -8,17 +8,17 @@ export default function SideBar() {
 
     return (
         <div className=''>
-            <div className='flex flex-col gap-10'>
+            <div className='flex flex-col gap-10 '>
                 <h1 className='text-black font-extrabold cursor-pointer '>{current}</h1>
                 <div>
 
                     <NavLink to="/sound" onClick={() => setCurrent("Browse")}>
                         {({ isActive }) => (
-                           
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`} >
-                                    Browse
-                                </h1>
-                           
+
+                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`} >
+                                Browse
+                            </h1>
+
 
                         )}
                     </NavLink>

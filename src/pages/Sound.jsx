@@ -75,7 +75,7 @@ function Sound() {
                     </div>
                     <div className='' >
                         <img src="/src/assets/image86.png" alt="" className='absolute top-25 left-60 w-220' />
-                        <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-180 w-110' />
+                        <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-178 w-103' />
                     </div>
                     <div className='flex flex-col text-[#5C5C5C] gap-5 absolute top-120 left-60'>
                         <div className='flex gap-6 cursor-pointer '>
@@ -113,7 +113,7 @@ function Sound() {
 
                                     </div>
                                     <div className='relative '>
-                                        <div className='absolute flex gap-3 left-90 top-10 w-40'>
+                                        <div className='absolute flex gap-3 left-75 top-10 w-40'>
                                             <img src="src/assets/left.png" alt="" />
                                             <img src="src/assets/right.png" alt="" />
                                         </div>
@@ -311,7 +311,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>
@@ -352,7 +352,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>
@@ -363,7 +363,7 @@ function Sound() {
                                 </div>
                                 {/* section4 */}
 
-                                <h1 className='ml-50 py-4 text-black text-2xl font-bold mt-10'>Celebrate AAPI Creators on Company</h1>
+                                <h1 className='ml-32 py-4 text-black text-2xl font-bold mt-10'>Celebrate AAPI Creators on Company</h1>
                                 <p className='w-100 text-center text-sm ml-35 py-0'>
                                     Celebrate AAPI month with us as we dive into this
                                     curation of our favorite sample packs by Asian,
@@ -393,7 +393,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>
@@ -434,7 +434,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>
@@ -473,7 +473,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>
@@ -512,7 +512,7 @@ function Sound() {
 
                                         </div>
                                         <div className='relative '>
-                                            <div className='absolute flex gap-3 left-90 top-0 w-40'>
+                                            <div className='absolute flex gap-3 left-75 top-0 w-40'>
                                                 <img src="src/assets/left.png" alt="" />
                                                 <img src="src/assets/right.png" alt="" />
                                             </div>

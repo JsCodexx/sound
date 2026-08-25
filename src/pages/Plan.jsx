@@ -14,11 +14,8 @@ function Plan() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h1 className='text-center text-4xl font-bold mt-5'>Settings</h1>
                 <p className='text-center text-gray-500 mt-3'>Account setting and payment seetting</p>
-                <div className=' mt-5 flex gap-8 ml-120 mb-5'>
-                    {/* <Link to="/settings"><p className='cursor-pointer'>Account</p></Link>
-                    <Link to="/billings"><p className='cursor-pointer'>Billing</p></Link>
-                    <Link to="/plans">  <p className='cursor-pointer'>Plans</p></Link>
-                    <Link to="/notifications"><p className='cursor-pointer'>Notifications</p></Link> */}
+                <div className=' mt-5 flex gap-8 ml-13 md:ml-115 mb-5'>
+
                     <TabsLine variant="setting" />
 
                 </div>

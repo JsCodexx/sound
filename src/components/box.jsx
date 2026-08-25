@@ -6,7 +6,7 @@ import {
 
 export function Cards() {
     return (
-        <Card size="sm" className="p-0 rounded-none h-60 w-[440px] max-w-lg">
+        <Card size="sm" className="p-0 rounded-none h-60 w-[440px] border-[#EBEBEB] border-1 max-w-lg">
             <div className=" bg-[#F5F5F5] h-13 p-3 border-[#EBEBEB] rounded-none flex gap-60">
                 <h1 className="font-bold text-2xl">Astra</h1>
                 <p className="text-[12px] mt-2 text-red-700">View All</p>

@@ -29,10 +29,10 @@ function NavBar({ variant }) {
     return (
         <nav className="w-full bg-black text-white relative z-50">
 
-    
+
             <div className="hidden md:flex min-h-[68px] w-full items-center justify-between px-4 lg:px-8 xl:px-14">
 
-           
+
                 <div className="flex items-center gap-4 lg:gap-6">
 
                     <button onClick={handleLogin}>
@@ -63,13 +63,22 @@ function NavBar({ variant }) {
                     </Link>
                 </div>
 
-           
+
                 {variant === 'landing' ? (
-                    <div className="hidden lg:block">
-                        <InputButtonGroup />
+                    <div className="relative">
+                        <input
+                            className="w-full h-10 rounded-full bg-white text-black px-5 pr-12 text-sm outline-none"
+                            placeholder="Search Sound"
+                        />
+
+                        <img
+                            src="/src/assets/search.png"
+                            alt="Search"
+                            className="absolute right-4 top-2.5 w-5 h-5"
+                        />
                     </div>
                 ) : (
-                  
+
                     <div className="relative hidden lg:block">
                         <input
                             className="w-64 xl:w-80 h-10 rounded-full bg-white text-black mt-1 px-5 pr-12 text-sm outline-none"
@@ -84,7 +93,7 @@ function NavBar({ variant }) {
                     </div>
                 )}
 
-            
+
                 <div className="flex items-center gap-3 lg:gap-5">
 
                     {variant === 'landing' ? (
@@ -95,7 +104,7 @@ function NavBar({ variant }) {
                                 </p>
                             </button>
 
-                            <button className="bg-white text-red-700 text-xs lg:text-sm font-medium rounded-full px-4 py-2 hover:bg-gray-200 transition">
+                            <button className="bg-red-700 text-white-700 text-xs lg:text-sm font-medium rounded-full px-4 py-2 hover:bg-gray-200 transition">
                                 Try Free
                             </button>
                         </>
@@ -112,7 +121,7 @@ function NavBar({ variant }) {
                                 Try Free
                             </button>
 
-                         
+
                             <div className="relative">
                                 <img
                                     src="/src/assets/voice.png"
@@ -128,29 +137,29 @@ function NavBar({ variant }) {
                                 )}
                             </div>
 
-                    
+
                             <DropdownMenuShortcuts />
                         </>
                     )}
                 </div>
             </div>
 
-          
+
             <div className="md:hidden min-h-[64px] flex items-center justify-between px-4">
 
-           
+
                 <button onClick={handleLogin}>
                     <h1 className="text-xl font-bold cursor-pointer">
                         LOGO
                     </h1>
                 </button>
 
-           
+
                 <div className="flex items-center gap-3">
 
                     {variant !== 'landing' && (
                         <>
-                          
+
                             <div className="relative">
                                 <img
                                     src="/src/assets/voice.png"
@@ -187,7 +196,7 @@ function NavBar({ variant }) {
             {mobileMenu && (
                 <div className="md:hidden border-t border-gray-800 px-4 py-5 space-y-4">
 
-              
+
                     {variant !== 'landing' && (
                         <div className="relative">
                             <input
@@ -241,7 +250,7 @@ function NavBar({ variant }) {
                         )}
                     </div>
 
-       
+
                     {variant === 'landing' && (
                         <div className="flex items-center gap-3 pt-2">
 
@@ -258,7 +267,7 @@ function NavBar({ variant }) {
                         </div>
                     )}
 
-              
+
                     {variant !== 'landing' && (
                         <button className="bg-white text-red-700 text-sm rounded-full px-5 py-2">
                             Try Free

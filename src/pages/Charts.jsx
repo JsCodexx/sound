@@ -14,6 +14,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -23,7 +26,8 @@ export default function Charts() {
             img: "/src/assets/z2.png",
             num: "585"
             ,
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -32,6 +36,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -40,7 +47,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p1.png",
@@ -49,6 +57,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -57,7 +68,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p1.png",
@@ -66,6 +78,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -74,7 +89,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -83,6 +99,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p1.png",
@@ -91,7 +110,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -100,6 +120,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -108,7 +131,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -117,6 +141,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -125,7 +152,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -134,6 +162,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -142,7 +173,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -151,6 +183,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -159,7 +194,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -168,6 +204,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -176,7 +215,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -185,6 +225,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -193,7 +236,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -202,6 +246,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -210,7 +257,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -219,6 +267,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -227,7 +278,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -236,6 +288,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -244,7 +299,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -253,6 +309,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -261,7 +320,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -270,6 +330,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -278,7 +341,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
         {
             src: "/src/assets/p3.png",
@@ -287,6 +351,9 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585"
+            ,
+            showArrow: "/src/assets/arror.",
+            num1: "25"
         },
         {
             src: "/src/assets/p2.png",
@@ -295,7 +362,8 @@ export default function Charts() {
             description: "by sample Magic",
             img: "/src/assets/z2.png",
             num: "585",
-            showArrow: "/src/assets/arror.png"
+            showArrow: "/src/assets/arror.png",
+            num1: "25"
         },
     ]
     return (
@@ -326,6 +394,10 @@ export default function Charts() {
                             </NavLink>
                         </div>
                         <ComboboxBasic />
+                        <div className='text-sm flex ml-60 justify-between pr-25'>
+                            <p className='text-[#838383]'>PACKS</p>
+                            <p className='text-[#838383]'>CONTENTS</p>
+                        </div>
                         <div className='w-75 md:w-full'>
                             {cardData.map((data, index) => (
                                 <PackCard
@@ -336,6 +408,7 @@ export default function Charts() {
                                     description={data.description}
                                     img={data.img}
                                     num={data.num}
+                                    num1={data.num1}
                                     ChangeRow={index % 2 === 1}
                                     showArrow={data.showArrow}
                                     variant="chart"

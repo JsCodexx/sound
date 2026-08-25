@@ -17,7 +17,7 @@ function Home() {
             <div className='bg-[#CD4848] w-full h-15'>
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
                 <div className='text-center mt-5'>
                     <h1 className='font-bold text-3xl'>Explore</h1>
                     <p>Dive into the Splice subscription.</p>
@@ -25,8 +25,8 @@ function Home() {
                 <div className='mt-10 ml-80'>
                     <img src="/src/assets/two.png" alt="" />
                 </div>
-                <div className='flex'>
-                    <div className=' mt-20 ml-30'>
+                <div className='flex '>
+                    <div className=' mt-20 ml-25'>
                         <h1 className='text-2xl font-bold mb-3'>How company name works</h1>
                         <p className='mb-4'>See what Splice is all about in this short video.</p>
                         <div className='relative'>
@@ -62,24 +62,56 @@ function Home() {
                     <img src="/src/assets/eight.png" alt="" />
                 </div>
 
-                <div className='text-center mt-15'>
+                <div className='flex gap-2 absolute top-310 left-150 '>
+                    <img src="/src/assets/left.png" alt="" />
+                    <img src="/src/assets/right.png" alt="" />
+                </div>
+
+                <div className='text-center mt-25'>
                     <h1 className='font-bold text-2xl'>What's Free</h1>
                     <p className='w-300 text-gray-600'>What's new
                         Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                 </div>
 
                 <div className='flex justify-evenly mt-10'>
-                    <img src="/src/assets/one.png" alt="" />
-                    <img src="/src/assets/three.png" alt="" />
-                    <img src="/src/assets/four.png" alt="" />
-                    <img src="/src/assets/five.png" alt="" />
-                    <img src="/src/assets/six.png" alt="" />
-                    <img src="/src/assets/seven.png" alt="" />
-                    <img src="/src/assets/eight.png" alt="" />
+                    <div>
+                        <img src="/src/assets/one.png" alt="" />
+                        <img src="/src/assets/free.png" alt="" className='absolute top-351 left-30' />
+
+                    </div>
+                    <div>
+                        <img src="/src/assets/three.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-73' />
+                    </div>
+                    <div>
+                        <img src="/src/assets/four.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-117' />
+                    </div>
+                    <div>
+                        <img src="/src/assets/five.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-163' />
+                    </div>
+                    <div>
+                        <img src="/src/assets/six.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-207' />
+                    </div>
+                    <div>
+                        <img src="/src/assets/seven.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-251' />
+                    </div>
+                    <div>
+                        <img src="/src/assets/eight.png" alt="" />
+                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-295' />
+                    </div>
+
                 </div>
-                <div className='relative mt-15'>
+                <div className='flex gap-2 absolute top-420 left-155 '>
+                    <img src="/src/assets/left.png" alt="" />
+                    <img src="/src/assets/right.png" alt="" />
+                </div>
+                <div className='relative  mt-25 w-full'>
                     <img src="/src/assets/song.png" alt="" />
-                    <div className='absolute top-15  left-130'>
+                    <div className='absolute top-15  left-110'>
                         <h1 className='text-white text-3xl font-bold pb-3'>Start Your Free Trial Today</h1>
 
                         <p className='text-white text-sm ml-4 pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>

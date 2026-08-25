@@ -207,6 +207,11 @@ export default function TopLabel() {
                             </NavLink>
                         </div>
                         <ComboboxBasic />
+                        <div className='text-sm flex  ml-40 justify-between '>
+                            <p className='text-[#838383] '>LABEL</p>
+                            <p className='text-[#838383] pr-50'>GENERES</p>
+                            <p className='text-[#838383] pr-10'>TOTAL PACK</p>
+                        </div>
                         <div className='w-73 md:w-full'>
                             {cardData.map((data, index) => (
                                 <PackCard

@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '@/components/Nav'
-import { AlertDemo } from '@/components/Alertpop'
+
 import { useState } from 'react'
 function Register() {
     const [open, setOpen] = useState(false)

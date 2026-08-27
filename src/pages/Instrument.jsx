@@ -28,7 +28,7 @@ export default function Instrument() {
 
                     <hr className="w-230" />
 
-                    <div className="flex gap-5 flex-wrap ">
+                    <div className="flex gap-5 flex-wrap  ">
                         <CardSmall />
                         <CardSmall />
                         <CardSmall />

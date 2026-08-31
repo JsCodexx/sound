@@ -5,7 +5,7 @@ import { Footer2 } from '@/components/footer2'
 export default function LandingPage() {
     return (
         <>
-            <div >
+            <div className=''>
                 <NavBar variant="landing" />
 
                 <div className='bg-[#CD4848] w-full h-15'>
@@ -14,7 +14,7 @@ export default function LandingPage() {
 
                 <div className='relative '>
                     <img src="/src/assets/emoji.png" alt="" />
-                    <h1 className='font-poppins font-black absolute top-[50px] left-[121px] leading-none  text-white text-[55px] w-[370px] h-[183px]'>Step into the
+                    <h1 className='font-poppins font-black absolute animate-typing  whitespace-pre-wrap overflow-hidden  top-[50px] left-[121px] leading-none  text-white text-[55px] w-[370px] h-[183px]'>Step into the
                         producer's
                         playground</h1>
                     <p className='font-poppins  absolute leading-none top-[250px] left-[121px] text-white text-[20px] w-[512px] h-[65px]'>Explore the

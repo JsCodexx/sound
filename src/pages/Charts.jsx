@@ -370,55 +370,66 @@ export default function Charts() {
         <div>
             <NavBar />
             <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
-                <div className='flex md:ml-25 mt-5 md:gap-5 gap-3 relative w-auto'>
-                    <SideBar />
-                    <img src="src/assets/line.png" alt="" className='h-700' />
-                    <div className='flex flex-col gap-4'>
-                        <h1 className=' text-red-400  font-bold text-sm md:ml-60'>You are currently viewing company sounds</h1>
-                        <hr className='md:w-240 mr-0' />
+                <div className='w-full'>
+
+                    <div className='flex md:ml-8 mt-5 md:gap-5 gap-3 relative w-auto'>
                         <div className='flex gap-10'>
-                            <NavLink to="/Charts">
-                                {({ isActive }) => (
-                                    <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                        Weekly top packs
-                                    </h1>
-                                )}
-                            </NavLink>
-
-                            <NavLink to="/top labels">
-                                {({ isActive }) => (
-                                    <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                        Weekly top labels
-                                    </h1>
-                                )}
-                            </NavLink>
-                        </div>
-                        <ComboboxBasic />
-                        <div className='text-sm flex ml-60 justify-between pr-25'>
-                            <p className='text-[#838383]'>PACKS</p>
-                            <p className='text-[#838383]'>CONTENTS</p>
-                        </div>
-                        <div className='w-75 md:w-full'>
-                            {cardData.map((data, index) => (
-                                <PackCard
-                                    key={index}
-                                    id={data.id}
-                                    src={data.src}
-                                    title={data.title}
-                                    description={data.description}
-                                    img={data.img}
-                                    num={data.num}
-                                    num1={data.num1}
-                                    ChangeRow={index % 2 === 1}
-                                    showArrow={data.showArrow}
-                                    variant="chart"
-
-                                />
-                            ))}
+                            <SideBar />
+                            <div>
+                                <img src="src/assets/line.png" alt="" className='h-700' />
+                                {/* <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
+                                <hr className='w-1050 absolute  right-0 ' /> */}
+                            </div>
 
                         </div>
+
+                        <div className='flex flex-col gap-4'>
+                            <h1 className=' text-red-400  font-bold text-sm md:ml-60'>You are currently viewing company sounds</h1>
+                            <hr className='md:w-250 mr-0' />
+                            <div className='flex gap-10 ml-3'>
+                                <NavLink to="/Charts">
+                                    {({ isActive }) => (
+                                        <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                            Weekly top packs
+                                        </h1>
+                                    )}
+                                </NavLink>
+
+                                <NavLink to="/top labels">
+                                    {({ isActive }) => (
+                                        <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                            Weekly top labels
+                                        </h1>
+                                    )}
+                                </NavLink>
+                            </div>
+                            <ComboboxBasic />
+                            <div className='text-sm flex mx-60 justify-between pr-25'>
+                                <p className='text-[#838383]'>PACKS</p>
+                                <p className='text-[#838383]'>CONTENTS</p>
+                            </div>
+                            <div className='w-75 md:w-250 ml-3'>
+                                {cardData.map((data, index) => (
+                                    <PackCard
+                                        key={index}
+                                        id={data.id}
+                                        src={data.src}
+                                        title={data.title}
+                                        description={data.description}
+                                        img={data.img}
+                                        num={data.num}
+                                        num1={data.num1}
+                                        ChangeRow={index % 2 === 1}
+                                        showArrow={data.showArrow}
+                                        variant="chart"
+
+                                    />
+                                ))}
+
+                            </div>
+                        </div>
+
                     </div>
-
                 </div>
             </main>
         </div>

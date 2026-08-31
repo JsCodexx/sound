@@ -236,7 +236,7 @@ export default function Sound2() {
             <NavBar />
             {/* <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> */}
             <main className="mx-auto w-full max-w-[1440px] px-8 relative">
-                <div className='flex ml-25 mt-5 gap-5 w-auto  '>
+                <div className='flex ml-8 mt-5 gap-10 w-auto  '>
                     <SideBar />
                     <img src="src/assets/line.png" alt="" className='h-450' />
                     <div className='flex flex-col '>

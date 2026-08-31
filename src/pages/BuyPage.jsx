@@ -131,7 +131,7 @@ export default function BuyPage() {
             <NavBar />
             <main className="mx-auto w-full max-w-[1440px] px-8 relative">
                 <div className=''>
-                    <div className='flex md:ml-25 mt-5 gap-1.5 md:gap-5   '>
+                    <div className='flex md:ml-8 mt-5 gap-1.5 md:gap-10   '>
                         <SideBar />
                         <img src="src/assets/line.png" alt="" className='h-320' />
                         <div>

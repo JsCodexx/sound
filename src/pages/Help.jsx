@@ -14,9 +14,9 @@ function Help() {
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8" >
-                <div className='flex gap-10'>
+                <div className='flex gap-0'>
                     <InputGroupInlineStart />
-                    <Link to="/Submit"><button className='md:ml-130 md:w-50 text-sm bg-black text-white px-2 mt-5 rounded-xl cursor-pointer py-2'>Click for Request</button></Link>
+                    <Link to="/Submit"><button className='md:ml-130 md:w-40 text-sm bg-black text-white px-2 mt-5 rounded-xl cursor-pointer py-2'>Click for Request</button></Link>
 
                 </div>
 

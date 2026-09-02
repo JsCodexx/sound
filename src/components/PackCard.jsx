@@ -13,7 +13,7 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
                         <img
                             src={src}
                             alt=""
-                            className="h-10 w-10 object-contain shrink-0"
+                            className="w-10 h-10 sm:w-12 sm:h-12  shrink-0"
                         />
 
 

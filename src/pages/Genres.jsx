@@ -35,7 +35,7 @@ export default function Genres() {
                         </div>
                         <hr className='md:w-230 w-75 mt-5' />
 
-                        <div className='mr-10 '>
+                        <div className=' '>
 
 
                             <CardSmall variant="genres" description={genres} />

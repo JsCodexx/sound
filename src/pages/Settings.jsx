@@ -2,15 +2,41 @@ import React from 'react'
 import NavBar from '@/components/NavHome'
 import { Footer2 } from '@/components/footer2'
 import { Link } from 'react-router-dom'
-import { AlertDemo } from '@/components/Alertpop'
+
 import { useState } from 'react'
 import { TabsLine } from '@/components/Menu'
+import { MyAlertDialog } from '@/components/Alert'
 
 function Settings() {
     const [open, setOpen] = useState(false)
     const [edit, setEdit] = useState(false)
     const [deleteAcount, setDelete] = useState(false)
+    const [formData, setFormData] = useState({
+        username: "waleed siddiqui",
+        email: "waleed siddiqui.py",
+        fullName: "waleed siddiqui",
 
+    })
+    const [tempData, setTempData] = useState(formData)
+
+    function handleClick() {
+        setTempData(formData)
+        setEdit(true)
+    }
+    function changeInput(e) {
+        const { name, value } = e.target.value;
+        setTempData((prev) => ({
+            ...prev,
+            [name]: value
+        }))
+    }
+    function handleSave() {
+        setFormData(tempData)
+        setEdit(false)
+    }
+    function handleCancel() {
+        setEdit(false)
+    }
     function handleOpen() {
         setOpen(true)
     }
@@ -18,9 +44,7 @@ function Settings() {
         setOpen(false)
     }
 
-    function handleEdit() {
-        setEdit(true)
-    }
+
     function closeEdit() {
         setEdit(false)
     }
@@ -31,7 +55,7 @@ function Settings() {
         setDelete(false)
     }
     return (
-        <div className={` ${edit ? 'bg-[#000000C9] ' : 'bg-transparent'}`}>
+        <div className={'bg-transparent'}>
             <NavBar />
             <div className='bg-[#CD4848] w-full h-15'>
                 <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
@@ -44,37 +68,73 @@ function Settings() {
                     <TabsLine variant="setting" />
 
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent'}`} />
+                <hr className='bg-transparent' />
                 <div className='flex ml-100 gap-100'>
                     <h1 className=' text-2xl font-bold mt-5'>Profile</h1>
-                    <button onClick={handleEdit}><img src="/src/assets/pencil.png" alt="" className='w-5 h-5 mt-7 cursor-pointer' /></button>
+                    {!edit ?
+                        <button onClick={handleClick}><img src="/src/assets/pencil.png" alt="" className='w-5 h-5 mt-7 cursor-pointer' /></button> :
+                        <div className='flex gap-4'>
+                            <button className='bg-[#f1f1f1] text-[#A0A0A0] w-[78px] h-24px h-10 mt-5 rounded-4xl ' onClick={handleCancel}>Cancel</button>
+                            <button className='text-[12px] text-white bg-black font-bold w-[98px] h-24px h-10 mt-5 rounded-4xl ' onClick={handleSave}>Save Changes</button>
+
+                        </div>
+                    }
+
                 </div>
                 <div className='flex ml-100 gap-110 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6'>Photo</h1>
                     <img src="/src/assets/Ellipse 10.png" alt="" className='w-10 h-10 mt-4 cursor-pointer' />
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent mx-85'}`} />
+                <hr className='bg-transparent mx-65 ml-95' />
                 <div className='flex ml-100 gap-90 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Username</h1>
-                    <p className='mt-5 '>Waleed Siddiqui</p>
+                    {edit ?
+                        <div className='flex gap-90 '>
+                            <h1 className=' text-sm mt-6'>Username</h1>
+                            <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.username} name='username' onClick={changeInput} />
+                        </div> :
+                        <>
+                            <h1 className=' text-sm mt-6'>Username</h1>
+                            <p className='mt-5 '>Waleed Siddiqui</p>
+                        </>
+
+                    }
+
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent mx-85'}`} />
+                <hr className='bg-transparent mx-65 ml-95' />
                 <div className='flex ml-100 gap-85 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Email Adress</h1>
-                    <p className='mt-5 '>WaleedSiddiqui.py</p>
+                    {edit ?
+                        <div className='flex gap-80 '>
+                            <h1 className=' text-sm mt-6'>Email Adress</h1>
+                            <input className='mt-5 border-[#cd4848a2] border-2 w-45 px-2 py-2 rounded-4xl' type="text" value={tempData.email} name='email' onClick={changeInput} />
+                        </div> :
+                        <>
+                            <h1 className=' text-sm mt-6'>Email Adress</h1>
+                            <p className='mt-5 '>WaleedSiddiqui.py</p>
+                        </>
+
+                    }
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent mx-85'}`} />
+                <hr className='bg-transparent mx-65 ml-95' />
                 <div className='flex ml-100 gap-90 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Full Name</h1>
-                    <p className='mt-5 '>Waleed Siddiqui</p>
+                    {edit ?
+                        <div className='flex gap-90 '>
+                            <h1 className=' text-sm mt-6'>Full Name</h1>
+                            <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.fullName} name='fullName' onClick={changeInput} />
+                        </div> :
+                        <>
+                            <h1 className=' text-sm mt-6'>Full Name</h1>
+                            <p className='mt-5 '>Waleed Siddiqui</p>
+                        </>
+
+                    }
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent mx-85'}`} />
+                <hr className='bg-transparent mx-65 ml-95' />
                 <div className='flex ml-100 gap-110 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6'>User Id</h1>
                     <p className='mt-5 '>123456</p>
                 </div>
-                <hr className={` ${edit ? 'border-[#000000C9] ' : 'bg-transparent mx-85'}`} />
-                <h1 className=' ml-98 text-2xl font-bold mt-5'>Settings</h1>
+                <hr className='bg-transparent mx-65 ml-95' />
+                <h1 className=' ml-98 text-2xl font-bold mt-5'>Details</h1>
                 <div className='flex ml-100 gap-90 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6 font-semibold'>Password</h1>
 
@@ -85,9 +145,9 @@ function Settings() {
                     <button onClick={opendeletea}> <p className='mt-5 text-[#C5C5C5] font-semibold cursor-pointer hover:text-red-800'>Delete account</p></button>
 
                 </div>
-                {open && <AlertDemo close={close} />}
-                {edit && <AlertDemo edit={closeEdit} />}
-                {deleteAcount && <AlertDemo del={closedeletea} />}
+                {open && <MyAlertDialog open={close} />}
+                {edit && <MyAlertDialog edit={closeEdit} />}
+                {deleteAcount && <MyAlertDialog deleteAcount={closedeletea} />}
             </div>
             <Footer2 />
         </div>

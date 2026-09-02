@@ -39,7 +39,7 @@ function Price() {
                     <img src="/src/assets/Group.png" alt="" className='ml-50 mt-10 cursor-pointer' width={900} />
 
                     <div className='bg-[#D971F1] w-100 h-13 ml-110 mt-5 rounded-xl text-center pt-3 cursor-pointer text-white font-bold text-2xl'>Start a free trial</div>
-                    <h1 className='text-center mt-3'>Cancel at any time</h1>
+                    <h1 className='text-center mt-3 ml-20'>Cancel at any time</h1>
                     <div className='flex mt-20'>
                         <div className='mt-15 ml-10'>
                             <h1 className='text-2xl font-bold pb-4 ml-30'>How does company work?</h1>

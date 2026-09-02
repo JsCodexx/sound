@@ -18,7 +18,7 @@ export function FaqSection1() {
   }
 
   return (
-    <section className="bg-background section-padding-y" aria-labelledby="faq-heading">
+    <section className="bg-background py-10" aria-labelledby="faq-heading">
       <div
         className="container-padding-x flex max-w-8xl mx-10 flex-col gap-10 md:gap-12">
 

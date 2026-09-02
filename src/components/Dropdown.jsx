@@ -18,7 +18,7 @@ export function DropdownMenuShortcuts() {
   const navigate = useNavigate()
 
   function goToLogin() {
-    navigate("/login")
+    navigate("/landingPage")
   }
   return (
     <DropdownMenu classname="bg-black mt-10">

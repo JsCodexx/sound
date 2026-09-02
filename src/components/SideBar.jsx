@@ -8,7 +8,7 @@ export default function SideBar() {
 
     return (
         <div className=''>
-            <div className='flex flex-col gap-10 '>
+            <div className='flex flex-col gap-10 mt-5 '>
                 <h1 className='text-black font-extrabold cursor-pointer '>{current}</h1>
                 <div>
 

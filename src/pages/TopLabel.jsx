@@ -183,13 +183,20 @@ export default function TopLabel() {
         <div>
             <NavBar />
             <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
-                <div className='flex md:ml-25 mt-5 gap-5 relative w-auto'>
-                    <SideBar />
-                    <img src="src/assets/line.png" alt="" className='h-420' />
+                <div className='flex md:ml-8 mt-5 gap-5 relative w-auto'>
+                    <div className='flex gap-10'>
+                        <SideBar />
+                        <div>
+                            <img src="src/assets/line.png" alt="" className='h-700' />
+                            {/* <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
+                                           <hr className='w-1050 absolute  right-0 ' /> */}
+                        </div>
+
+                    </div>
                     <div className='flex flex-col gap-4'>
                         <h1 className=' text-red-400  font-bold md:ml-60 text-sm'>You are currently viewing company sounds</h1>
                         <hr className='md:w-240 mr-0' />
-                        <div className='flex gap-10'>
+                        <div className='flex gap-10 ml-3'>
                             <NavLink to="/Charts">
                                 {({ isActive }) => (
                                     <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>

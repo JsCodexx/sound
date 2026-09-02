@@ -30,7 +30,7 @@ const frameworks = [
 
 export function ComboboxBasic() {
     return (
-        <div className="w-75 md:w-full">
+        <div className="w-75 ml-3 md:w-250">
             <Combobox items={frameworks} >
                 <div className="rounded-none">
                     <ComboboxInput placeholder="All Levels" />

@@ -7,7 +7,7 @@ export default function Subsound() {
     return (
         <div>
             <NavBar />
-            <div className='flex ml-35 mt-5 gap-5  w-100% overflow-x-hidden'>
+            <div className='flex ml-16 mt-5 gap-10  w-100% overflow-x-hidden'>
                 <SideBar />
                 <img src="src/assets/line.png" alt="" className='h-950' />
                 <div className='flex flex-col gap-5 '>

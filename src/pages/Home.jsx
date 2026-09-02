@@ -3,17 +3,116 @@ import NavBar from '@/components/NavHome'
 import { Footer2 } from '@/components/footer2'
 import Content from '@/components/Content'
 import { useNavigate } from 'react-router-dom'
+import { CardDemo } from '@/components/Card-2'
+import { motion } from "motion/react";
 function Home() {
     const navigate = useNavigate()
 
     function handlePricePage() {
         navigate("/price")
     }
-
+    const cardData = [
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l2.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l3.png",
+            title: "Astral lounge  ",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l2.png",
+            title: "Bradd web",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+        {
+            src: "/src/assets/l3.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus"
+        },
+    ]
+    const cardData_2 = [
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free.png"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+        {
+            src: "/src/assets/l2.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+        {
+            src: "/src/assets/l3.png",
+            title: "Astral lounge  ",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+        {
+            src: "/src/assets/l2.png",
+            title: "Bradd web",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+        {
+            src: "/src/assets/l3.png",
+            title: "The Front Porch",
+            packs: "RnB",
+            tags: "Soul surplus",
+            free: "/src/assets/free2.png"
+        },
+    ]
     return (
-        <div >
+        <div
+
+        >
 
             <NavBar />
+
             <div className='bg-[#CD4848] w-full h-15'>
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
@@ -52,14 +151,17 @@ function Home() {
                         Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                 </div>
 
-                <div className='flex justify-evenly mt-10'>
-                    <img src="/src/assets/one.png" alt="" />
-                    <img src="/src/assets/three.png" alt="" />
-                    <img src="/src/assets/four.png" alt="" />
-                    <img src="/src/assets/five.png" alt="" />
-                    <img src="/src/assets/six.png" alt="" />
-                    <img src="/src/assets/seven.png" alt="" />
-                    <img src="/src/assets/eight.png" alt="" />
+                <div className='flex flex-wrap gap-6 ml-17  '>
+                    {cardData.map((data, index) => (
+                        <CardDemo
+                            key={index}
+                            src={data.src}
+                            title={data.title}
+                            packs={data.packs}
+                            tags={data.tags}
+                            variant="Midi"
+                        />
+                    ))}
                 </div>
 
                 <div className='flex gap-2 absolute top-310 left-150 '>
@@ -73,39 +175,20 @@ function Home() {
                         Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                 </div>
 
-                <div className='flex justify-evenly mt-10'>
-                    <div>
-                        <img src="/src/assets/one.png" alt="" />
-                        <img src="/src/assets/free.png" alt="" className='absolute top-351 left-30' />
-
-                    </div>
-                    <div>
-                        <img src="/src/assets/three.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-73' />
-                    </div>
-                    <div>
-                        <img src="/src/assets/four.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-117' />
-                    </div>
-                    <div>
-                        <img src="/src/assets/five.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-163' />
-                    </div>
-                    <div>
-                        <img src="/src/assets/six.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-207' />
-                    </div>
-                    <div>
-                        <img src="/src/assets/seven.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-251' />
-                    </div>
-                    <div>
-                        <img src="/src/assets/eight.png" alt="" />
-                        <img src="/src/assets/free2.png" alt="" className='absolute top-351 left-295' />
-                    </div>
-
+                <div className='flex flex-wrap gap-6 ml-17  '>
+                    {cardData_2.map((data, index) => (
+                        <CardDemo
+                            key={index}
+                            src={data.src}
+                            title={data.title}
+                            packs={data.packs}
+                            tags={data.tags}
+                            free={data.free}
+                            variant="Midi"
+                        />
+                    ))}
                 </div>
-                <div className='flex gap-2 absolute top-420 left-155 '>
+                <div className='flex gap-2 absolute top-420 left-153 '>
                     <img src="/src/assets/left.png" alt="" />
                     <img src="/src/assets/right.png" alt="" />
                 </div>

@@ -3,6 +3,7 @@ import { Footer2 } from '@/components/footer2'
 import Content from '@/components/content';
 import Nav from '@/components/Nav'
 import { useState } from 'react';
+import HoverCards from '@/components/HoverCards';
 
 
 function Price() {
@@ -36,18 +37,19 @@ function Price() {
                         </div>
 
                     </div>
-                    <img src="/src/assets/Group.png" alt="" className='ml-50 mt-10 cursor-pointer' width={900} />
+                    {/* <img src="/src/assets/Group.png" alt="" className='ml-50 mt-10 cursor-pointer' width={900} /> */}
+                    <HoverCards />
 
                     <div className='bg-[#D971F1] w-100 h-13 ml-110 mt-5 rounded-xl text-center pt-3 cursor-pointer text-white font-bold text-2xl'>Start a free trial</div>
                     <h1 className='text-center mt-3 ml-20'>Cancel at any time</h1>
                     <div className='flex mt-20'>
                         <div className='mt-15 ml-10'>
-                            <h1 className='text-2xl font-bold pb-4 ml-30'>How does company work?</h1>
-                            <p className='w-80 ml-30'>Get new credits every month to purchase samples, presets, and MIDI.
+                            <h1 className='text-2xl font-black pb-4 ml-30'>How does company work?</h1>
+                            <p className='w-130 ml-30'>Get new credits every month to purchase samples, presets, and MIDI.
                                 1 sample = 1 credit. Presets and MIDI cost between 1-3 credits.
                                 Unused credits roll over to the next month.</p>
                         </div>
-                        <div className='ml-65 relative'>
+                        <div className='ml-25 relative'>
                             <img className='h-70' src="/src/assets/pic.png" alt="" width={350} />
                             <img className='absolute h-50 top-10 right-70 rounded-2xl' src="/src/assets/small.png" alt="" width={120} />
                         </div>
@@ -62,7 +64,7 @@ function Price() {
                             <img className=' absolute left-125 top-20 ml-0 ' src="/src/assets/drum.png" alt="" />
                         </div>
                         <div className='absolute left-170 top-400'>
-                            <h1 className='text-2xl font-bold'>The highest-quality samples on the market</h1>
+                            <h1 className='text-2xl font-black'>The highest-quality samples on the market</h1>
                             <p className='w-100'>Make better music with masterfully-recorded samples—carefully crafted by leading sound designers, breakthrough producers, and established icons like Oliver, KSHMR, and Murda Beatz
 
                             </p>
@@ -70,16 +72,16 @@ function Price() {
                     </div>
                     <div className='flex h-145 mt-10'>
                         <div>
-                            <h1 className='text-2xl font-bold mt-20 ml-20 w-100'>Limitless inspiration from hundreds of genres</h1>
-                            <h3 className='ml-20 w-100 mt-5'>Combine samples from house to cinematic, techno to trap, and EDM to ambient to creat
+                            <h1 className='text-2xl font-black mt-20 ml-20 w-100'>Limitless inspiration from hundreds of genres</h1>
+                            <h3 className='ml-20 w-140 mt-5'>Combine samples from house to cinematic, techno to trap, and EDM to ambient to creat
                                 e something unique. We’ve traveled around the world to record inspiring samples—from glaciers in Iceland to
                                 abandoned mines in Utah.
                             </h3>
                         </div>
                         <div >
-                            <img className='ml-60 relative' src="/src/assets/concert.png" alt="" />
-                            <img className='ml-60 absolute top-450 right-15' src="/src/assets/string.png" alt="" />
-                            <img className='ml-60 absolute top-550 right-70' src="/src/assets/light.png" alt="" />
+                            <img className='ml-20 relative' src="/src/assets/concert.png" alt="" />
+                            <img className='ml-20 absolute top-450 right-15' src="/src/assets/string.png" alt="" />
+                            <img className='ml-20 absolute top-550 right-70' src="/src/assets/light.png" alt="" />
                         </div>
                     </div>
                     <Content />

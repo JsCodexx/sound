@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import PackCard from '@/components/PackCard'
 import SideBar from '@/components/SideBar'
+import { ComboboxBasic } from '@/components/Combobox'
 export default function TopLabel() {
     const cardData = [
         {
@@ -181,47 +182,50 @@ export default function TopLabel() {
     return (
         <div>
             <NavBar />
-            <div className='flex ml-35 mt-5 gap-5 relative w-auto'>
-                <SideBar />
-                <img src="src/assets/line.png" alt="" className='h-420' />
-                <div className='flex flex-col gap-4'>
-                    <h1 className=' text-red-400  font-bold ml-60'>You are currently viewing company sounds</h1>
-                    <hr className='w-240 mr-0' />
-                    <div className='flex gap-10'>
-                        <NavLink to="/Charts">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Weekly top packs
-                                </h1>
-                            )}
-                        </NavLink>
+            <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
+                <div className='flex md:ml-25 mt-5 gap-5 relative w-auto'>
+                    <SideBar />
+                    <img src="src/assets/line.png" alt="" className='h-420' />
+                    <div className='flex flex-col gap-4'>
+                        <h1 className=' text-red-400  font-bold md:ml-60 text-sm'>You are currently viewing company sounds</h1>
+                        <hr className='md:w-240 mr-0' />
+                        <div className='flex gap-10'>
+                            <NavLink to="/Charts">
+                                {({ isActive }) => (
+                                    <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                        Weekly top packs
+                                    </h1>
+                                )}
+                            </NavLink>
 
-                        <NavLink to="/top labels">
-                            {({ isActive }) => (
-                                <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                    Weekly top labels
-                                </h1>
-                            )}
-                        </NavLink>
-                    </div>
-                    <div>
-                        {cardData.map((data, index) => (
-                            <PackCard
-                                key={index}
-                                id={data.id}
-                                src={data.src}
-                                title={data.title}
-                                description={data.description}
-                                img={data.img}
-                                num={data.num}
-                                ChangeRow={index % 2 === 1}
-                                variant="label"
+                            <NavLink to="/top labels">
+                                {({ isActive }) => (
+                                    <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                        Weekly top labels
+                                    </h1>
+                                )}
+                            </NavLink>
+                        </div>
+                        <ComboboxBasic />
+                        <div className='w-73 md:w-full'>
+                            {cardData.map((data, index) => (
+                                <PackCard
+                                    key={index}
+                                    id={data.id}
+                                    src={data.src}
+                                    title={data.title}
+                                    description={data.description}
+                                    img={data.img}
+                                    num={data.num}
+                                    ChangeRow={index % 2 === 1}
+                                    variant="label"
 
-                            />
-                        ))}
+                                />
+                            ))}
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>)
 }

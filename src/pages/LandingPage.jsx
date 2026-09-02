@@ -7,6 +7,7 @@ export default function LandingPage() {
         <>
             <div >
                 <NavBar variant="landing" />
+
                 <div className='bg-[#CD4848] w-full h-15'>
                     <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
                 </div>
@@ -91,9 +92,12 @@ export default function LandingPage() {
 
 
             </div>
+
             <div className='className= top-870 absolute left-0 w-316 '>
                 <Footer2 />
-            </div>
+
+            </div >
+
         </>
     )
 }

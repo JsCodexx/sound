@@ -1,90 +1,273 @@
-
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { InputButtonGroup } from './InputLabel'
-import { Link } from 'react-router-dom'
 import { DropdownMenuShortcuts } from './Dropdown'
 import { useState } from 'react'
 import { SliderVertical } from './Slider'
 
 function NavBar({ variant }) {
     const [volume, setVolume] = useState(false)
+    const [mobileMenu, setMobileMenu] = useState(false)
+
     const navigate = useNavigate()
+
     function handleLogin() {
-        navigate("/home")
+        navigate('/home')
     }
+
     function openVolume() {
         setVolume(!volume)
     }
 
     function landing() {
-        navigate("/login")
+        navigate('/login')
     }
+
+    function toggleMobileMenu() {
+        setMobileMenu(!mobileMenu)
+    }
+
     return (
-        <>
-            {variant === "landing" ? <div>
-                <div className='bg-black w-full h-17 flex justify-evenly'>
-                    <div className='flex'>
-                        <button onClick={handleLogin}><h1 className='text-white pt-0 pl-15 text-2xl font-bold cursor-pointer'>LOGO</h1></button>
+        <nav className="w-full bg-black text-white relative z-50">
 
-                        <Link to="/sound"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>Sounds</p></Link>
-                        <Link to="/price"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>Pricing</p></Link>
-                        <Link to="/faqs"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>FAQs</p></Link>
-                    </div>
-                    <div><InputButtonGroup /></div>
+    
+            <div className="hidden md:flex min-h-[68px] w-full items-center justify-between px-4 lg:px-8 xl:px-14">
 
-                    <div className='flex '>
-                        <button onClick={landing}><p className='text-white pt-0 pr-15 cursor-pointer font-semibold'>Login</p></button>
-                        <button className=' cursor-pointer pt-2 bg-white px-0 py-6.5 text-sm h-7 w-19 mt-4 rounded-2xl text-red-700 ml-1 '>Try Free</button>
+           
+                <div className="flex items-center gap-4 lg:gap-6">
 
+                    <button onClick={handleLogin}>
+                        <h1 className="text-xl lg:text-2xl font-bold cursor-pointer">
+                            LOGO
+                        </h1>
+                    </button>
 
-                    </div>
+                    <Link
+                        to="/sound"
+                        className="text-sm hover:text-gray-300 transition"
+                    >
+                        Sounds
+                    </Link>
 
+                    <Link
+                        to="/price"
+                        className="text-sm hover:text-gray-300 transition"
+                    >
+                        Pricing
+                    </Link>
+
+                    <Link
+                        to="/faqs"
+                        className="text-sm hover:text-gray-300 transition"
+                    >
+                        FAQs
+                    </Link>
                 </div>
 
-            </div> : <div>
-                <div className='bg-black w-full h-17 flex justify-evenly pr-15'>
-                    <div className='flex'>
-                        <button onClick={handleLogin}><h1 className='text-white pt-0 pl-15 text-2xl font-bold cursor-pointer'>LOGO</h1></button>
-
-                        <Link to="/sound"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>Sounds</p></Link>
-                        <Link to="/price"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>Pricing</p></Link>
-                        <Link to="/faqs"><p className='text-white text-sm pl-5 pt-6 cursor-pointer'>FAQs</p></Link>
+           
+                {variant === 'landing' ? (
+                    <div className="hidden lg:block">
+                        <InputButtonGroup />
                     </div>
-                    <div className='relative'>
-                        <input className='w-85.75 h-10 rounded-4xl bg-white mt-4 px-8 text-sm ' placeholder='Search Sound' />
-                        <img src="/src/assets/search.png" alt="" className='absolute top-7 left-75 cursor-pointer' />
+                ) : (
+                  
+                    <div className="relative hidden lg:block">
+                        <input
+                            className="w-64 xl:w-80 h-10 rounded-full bg-white text-black mt-1 px-5 pr-12 text-sm outline-none"
+                            placeholder="Search Sound"
+                        />
+
+                        <img
+                            src="/src/assets/search.png"
+                            alt="Search"
+                            className="absolute right-4 top-3 w-5 h-5 cursor-pointer"
+                        />
                     </div>
+                )}
+
+            
+                <div className="flex items-center gap-3 lg:gap-5">
+
+                    {variant === 'landing' ? (
+                        <>
+                            <button onClick={landing}>
+                                <p className="cursor-pointer font-semibold text-sm lg:text-base">
+                                    Login
+                                </p>
+                            </button>
+
+                            <button className="bg-white text-red-700 text-xs lg:text-sm font-medium rounded-full px-4 py-2 hover:bg-gray-200 transition">
+                                Try Free
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <Link
+                                to="/help"
+                                className="text-sm hover:text-gray-300 transition"
+                            >
+                                Help
+                            </Link>
+
+                            <button className="bg-white text-red-700 text-xs lg:text-sm font-medium rounded-full px-4 py-2 hover:bg-gray-200 transition">
+                                Try Free
+                            </button>
+
+                         
+                            <div className="relative">
+                                <img
+                                    src="/src/assets/voice.png"
+                                    alt="Volume"
+                                    className="w-9 h-9 cursor-pointer"
+                                    onClick={openVolume}
+                                />
+
+                                {volume && (
+                                    <div className="absolute right-0 top-11">
+                                        <SliderVertical />
+                                    </div>
+                                )}
+                            </div>
+
+                    
+                            <DropdownMenuShortcuts />
+                        </>
+                    )}
+                </div>
+            </div>
+
+          
+            <div className="md:hidden min-h-[64px] flex items-center justify-between px-4">
+
+           
+                <button onClick={handleLogin}>
+                    <h1 className="text-xl font-bold cursor-pointer">
+                        LOGO
+                    </h1>
+                </button>
+
+           
+                <div className="flex items-center gap-3">
+
+                    {variant !== 'landing' && (
+                        <>
+                          
+                            <div className="relative">
+                                <img
+                                    src="/src/assets/voice.png"
+                                    alt="Volume"
+                                    className="w-9 h-9 cursor-pointer"
+                                    onClick={openVolume}
+                                />
+
+                                {volume && (
+                                    <div className="absolute right-0 top-11">
+                                        <SliderVertical />
+                                    </div>
+                                )}
+                            </div>
+
+                            <DropdownMenuShortcuts />
+                        </>
+                    )}
 
 
+                    <button
+                        onClick={toggleMobileMenu}
+                        className="w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+                        aria-label="Toggle menu"
+                    >
+                        <span className="w-6 h-0.5 bg-white"></span>
+                        <span className="w-6 h-0.5 bg-white"></span>
+                        <span className="w-6 h-0.5 bg-white"></span>
+                    </button>
+                </div>
+            </div>
 
 
-                    <div className='flex '>
-                        <Link to="/help"><p className='text-white pt-6 pr-15 cursor-pointer'>Help</p></Link>
-                        <button className=' cursor-pointer pt-2 bg-white px-0 py-6.5 text-sm h-7 w-19 mt-4 rounded-2xl text-red-700 ml-1 '>Try Free</button>
-                        <div>
-                            <img src="/src/assets/voice.png" alt="" className='w-10 ml-6 h-10 mt-4 cursor-pointer' onClick={openVolume} />
-                            {volume &&
-                                <SliderVertical />
-                            }
+            {mobileMenu && (
+                <div className="md:hidden border-t border-gray-800 px-4 py-5 space-y-4">
 
+              
+                    {variant !== 'landing' && (
+                        <div className="relative">
+                            <input
+                                className="w-full h-10 rounded-full bg-white text-black px-5 pr-12 text-sm outline-none"
+                                placeholder="Search Sound"
+                            />
 
+                            <img
+                                src="/src/assets/search.png"
+                                alt="Search"
+                                className="absolute right-4 top-2.5 w-5 h-5"
+                            />
                         </div>
+                    )}
 
 
-                        {/* <img src="/src/assets/Ellipse 10.png" alt="" className='ml-6 h-10 mt-3' /> */}
-                        <div className='mt-3 ml-5'>  <DropdownMenuShortcuts /></div>
+                    <div className="flex flex-col gap-4">
 
+                        <Link
+                            to="/sound"
+                            onClick={() => setMobileMenu(false)}
+                            className="text-sm py-1"
+                        >
+                            Sounds
+                        </Link>
+
+                        <Link
+                            to="/price"
+                            onClick={() => setMobileMenu(false)}
+                            className="text-sm py-1"
+                        >
+                            Pricing
+                        </Link>
+
+                        <Link
+                            to="/faqs"
+                            onClick={() => setMobileMenu(false)}
+                            className="text-sm py-1"
+                        >
+                            FAQs
+                        </Link>
+
+                        {variant !== 'landing' && (
+                            <Link
+                                to="/help"
+                                onClick={() => setMobileMenu(false)}
+                                className="text-sm py-1"
+                            >
+                                Help
+                            </Link>
+                        )}
                     </div>
 
+       
+                    {variant === 'landing' && (
+                        <div className="flex items-center gap-3 pt-2">
+
+                            <button
+                                onClick={landing}
+                                className="text-sm font-semibold"
+                            >
+                                Login
+                            </button>
+
+                            <button className="bg-white text-red-700 text-sm rounded-full px-5 py-2">
+                                Try Free
+                            </button>
+                        </div>
+                    )}
+
+              
+                    {variant !== 'landing' && (
+                        <button className="bg-white text-red-700 text-sm rounded-full px-5 py-2">
+                            Try Free
+                        </button>
+                    )}
                 </div>
-
-            </div>}
-
-
-        </>
+            )}
+        </nav>
     )
 }
 
 export default NavBar
-
-

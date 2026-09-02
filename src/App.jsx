@@ -27,6 +27,7 @@ import Charts from './pages/Charts'
 import TopLabel from './pages/TopLabel'
 import Sound2 from './pages/Sound-2'
 import Subsound from './pages/Subsound'
+import BuyPage from './pages/BuyPage'
 function App() {
 
 
@@ -60,6 +61,7 @@ function App() {
           <Route path='/top labels' element={< TopLabel />} />
           <Route path='/Sound2' element={< Sound2 />} />
           <Route path='/subsound' element={< Subsound />} />
+          <Route path='/buy' element={< BuyPage />} />
         </Routes>
       </BrowserRouter>
     </>

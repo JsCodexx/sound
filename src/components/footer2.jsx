@@ -1,7 +1,5 @@
-
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-
 
 const defaultProps = {
   logo: {
@@ -61,7 +59,14 @@ const defaultProps = {
 const MAX_SECTIONS = 4;
 
 const Footer2 = (props) => {
-  const { logo, description, sections, copyright, legalLinks, className } = {
+  const {
+    logo,
+    description,
+    sections,
+    copyright,
+    legalLinks,
+    className,
+  } = {
     ...defaultProps,
     ...props,
   };
@@ -69,42 +74,124 @@ const Footer2 = (props) => {
   const visibleSections = (sections ?? []).slice(0, MAX_SECTIONS);
 
   return (
-    <section className={cn(className)}>
-      <div className="container mx-auto w-full">
-        <footer >
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 py-10 text-white bg-[#232323] ">
-            <div className="col-span-2 mb-8 lg:mb-0">
-              <div className="flex flex-col gap-4 items-start ml-10 lg:justify-start">
+    <section className={cn("w-full", className)}>
+      <div className="container mx-auto w-full  md:px-4 sm:px-6 lg:px-0">
+        <footer>
 
-                <h1 className="h-7 dark:invert text-2xl font-bold  " > LOGO </h1 >
-                <p>Subscribe to our newsletter</p>
-                <p>Get product updates, company news, and more.</p>
-                <Link to="/subscribe"><button className="bg-[#D74664] w-40 h-10 rounded-sm cursor-pointer">SUBSCRIBE</button></Link>
+          <div
+            className="
+              grid
+              grid-cols-1
+              gap-10
+              bg-[#232323]
+              px-6
+              py-10
+              text-white
+              sm:grid-cols-2
+              sm:px-8
+              lg:grid-cols-6
+              lg:gap-8
+              lg:px-10
+              lg:py-12
+            "
+          >
+
+            <div className="sm:col-span-2 lg:col-span-2">
+              <div className="flex flex-col items-start gap-4">
+                <h1 className="text-2xl font-bold">
+                  LOGO
+                </h1>
+
+                <p className="text-base font-medium">
+                  Subscribe to our newsletter
+                </p>
+
+                <p className="max-w-sm text-sm leading-6 text-gray-300">
+                  Get product updates, company news, and more.
+                </p>
+
+                <Link to="/subscribe">
+                  <button
+                    type="button"
+                    className="
+                      h-10
+                      w-40
+                      rounded-sm
+                      bg-[#D74664]
+                      px-4
+                      text-sm
+                      font-semibold
+                      transition-colors
+                      hover:bg-[#c63d59]
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-[#D74664]
+                      focus:ring-offset-2
+                      focus:ring-offset-[#232323]
+                    "
+                  >
+                    SUBSCRIBE
+                  </button>
+                </Link>
               </div>
-
             </div>
+
+
             {visibleSections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h3 className="mb-4 text-sm font-semibold tracking-tight">
                   {section.title}
                 </h3>
-                <ul className="space-y-4 text-sm text-white">
+
+                <ul className="space-y-3 text-sm text-white">
                   {section.links.map((link, linkIdx) => (
-                    <li key={linkIdx} className="font-medium hover:text-primary">
-                      <a href={link.href}>{link.name}</a>
+                    <li
+                      key={linkIdx}
+                      className="font-medium text-gray-300 transition-colors hover:text-white"
+                    >
+                      <a href={link.href}>
+                        {link.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
+
+
           <div
-            className="mt-0 flex pl-100 text-center gap-4 bg-black text-white   border-border  text-xs font-medium text-muted-foreground md:flex-row md:items-center">
-            <p>{copyright}</p>
-            <ul className="flex gap-4 py-3 text-white">
+            className="
+              flex
+              flex-col
+              items-center
+              justify-between
+              gap-3
+              bg-black
+              px-6
+              py-4
+              text-center
+              text-xs
+              font-medium
+              text-gray-400
+              sm:flex-row
+              sm:px-8
+              lg:px-10
+            "
+          >
+            <p>
+              {copyright}
+            </p>
+
+            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-white">
               {legalLinks?.map((link, linkIdx) => (
-                <li key={linkIdx} className="underline hover:text-primary">
-                  <a href={link.href}>{link.name}</a>
+                <li
+                  key={linkIdx}
+                  className="underline transition-colors hover:text-[#D74664]"
+                >
+                  <a href={link.href}>
+                    {link.name}
+                  </a>
                 </li>
               ))}
             </ul>

@@ -28,12 +28,12 @@ import TopLabel from './pages/TopLabel'
 import Sound2 from './pages/Sound-2'
 import Subsound from './pages/Subsound'
 import BuyPage from './pages/BuyPage'
+import LandingPageTwo from './pages/LandingpageTwo'
 function App() {
 
 
   return (
     <>
-
       <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login />} />
@@ -49,7 +49,7 @@ function App() {
           <Route path='/billings' element={<Billing />} />
           <Route path='/plans' element={< Plan />} />
           <Route path='/notifications' element={< Noification />} />
-          <Route path='/landingPage' element={< LandingPage />} />
+          <Route path='/' element={< LandingPage />} />
           <Route path='/instrument' element={< Instrument />} />
           <Route path='/cinematics' element={< Cinematics />} />
           <Route path='/genres' element={< Genres />} />
@@ -62,6 +62,7 @@ function App() {
           <Route path='/Sound2' element={< Sound2 />} />
           <Route path='/subsound' element={< Subsound />} />
           <Route path='/buy' element={< BuyPage />} />
+          <Route path='/land' element={< LandingPageTwo />} />
         </Routes>
       </BrowserRouter>
     </>

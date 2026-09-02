@@ -26,6 +26,7 @@ import Subscrbe from './pages/Subscrbe'
 import Charts from './pages/Charts'
 import TopLabel from './pages/TopLabel'
 import Sound2 from './pages/Sound-2'
+import Subsound from './pages/Subsound'
 function App() {
 
 
@@ -58,6 +59,7 @@ function App() {
           <Route path='/Charts' element={< Charts />} />
           <Route path='/top labels' element={< TopLabel />} />
           <Route path='/Sound2' element={< Sound2 />} />
+          <Route path='/subsound' element={< Subsound />} />
         </Routes>
       </BrowserRouter>
     </>

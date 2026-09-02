@@ -40,7 +40,7 @@ function TabsList({
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
-      data-variant={variant}
+      line-variant={variant}
       className={cn(tabsListVariants({ variant }), className)}
       {...props} />
   );

@@ -42,7 +42,7 @@ function NavBar({ variant }) {
                 </div>
 
             </div> : <div>
-                <div className='bg-black w-full h-17 flex justify-evenly'>
+                <div className='bg-black w-full h-17 flex justify-evenly pr-15'>
                     <div className='flex'>
                         <button onClick={handleLogin}><h1 className='text-white pt-0 pl-15 text-2xl font-bold cursor-pointer'>LOGO</h1></button>
 

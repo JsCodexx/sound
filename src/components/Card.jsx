@@ -18,9 +18,9 @@ export function CardSmall({ variant, description }) {
         <div >
 
             {variant === "genres" ?
-                <div className="flex flex-col md:flex-row">
-                    <div div className="flex flex-col">
-                        <Card size="sm" className=" p-0 rounded-none ml-10 h-65  w-40">
+                <div className="flex flex-col ">
+                    <div className="flex md:flex-row flex-col">
+                        <Card size="sm" className=" p-0 rounded-none border-[#EBEBEB] border-1 ml-10 h-65  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -41,7 +41,7 @@ export function CardSmall({ variant, description }) {
                             </CardContent>
 
                         </Card>
-                        <Card size="sm" className=" p-0 rounded-none ml-4   w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -65,7 +65,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 h-65  w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1 h-65  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -89,7 +89,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4   w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -114,8 +114,8 @@ export function CardSmall({ variant, description }) {
                         </Card>
 
                     </div>
-                    <div className=" ml-6 flex flex-col md:flex-row ">
-                        <Card size="sm" className=" p-0 rounded-none ml-4 h-65 mt-[-15px]  w-40">
+                    <div className=" ml-6 flex  md:flex-row flex-col">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1 h-65 mt-[-15px]  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -139,7 +139,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3   w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3 border-[#EBEBEB] border-1   w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -163,7 +163,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 h-65 mt-[-15px]  w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1 h-65 mt-[-15px]  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -187,7 +187,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3   w-40">
+                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3 border-[#EBEBEB] border-1  w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -214,14 +214,12 @@ export function CardSmall({ variant, description }) {
                     </div>
                 </div>
                 :
-                <Card size="sm" className=" p-0 rounded-none ml-10  w-sm">
-                    <CardHeader className="flex justify-between bg-[#F5F5F5] h-10 text-left p-3 border-[#EBEBEB] rounded-none">
+                <Card size="sm" className="p-0 ml-10 border-1 h-70 border-[#EBEBEB] w-sm rounded-none overflow-hidden">
+                    <CardHeader className="flex justify-between bg-[#F5F5F5] h-10 text-left p-3 rounded-none border-b border-[#EBEBEB]">
                         <CardTitle className="font-extrabold text-2xl">{featureName}</CardTitle>
-                        <CardDescription className="text-[10px] text-red-700">
-                            View All
-                        </CardDescription>
+                        <CardDescription className="text-[10px] text-red-700"> View All </CardDescription>
                     </CardHeader>
-                    <CardContent className="h-40 flex gap-30 mt-0">
+                    <CardContent className="h-40 flex gap-30 mt-0 pt-4">
                         <div>
                             <ul className="flex flex-col gap-5 text-[#5C5C5C]">
                                 <li className="ml-2">Kicks</li>
@@ -233,7 +231,7 @@ export function CardSmall({ variant, description }) {
                         </div>
                         <div>
                             <ul className="flex flex-col gap-5 text-[#5C5C5C]">
-                                <li >Shares</li>
+                                <li>Shares</li>
                                 <li>Claps</li>
                                 <li>Cymbols</li>
                                 <li>Fills</li>
@@ -241,8 +239,8 @@ export function CardSmall({ variant, description }) {
                             </ul>
                         </div>
                     </CardContent>
-
                 </Card>
+
             }
 
         </div>

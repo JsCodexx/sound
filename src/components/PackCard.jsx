@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PackCard({ src, id, description, img, num, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
+export default function PackCard({ src, id, description, img, num,num1, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
     return (
         <div>
             {variant === "label" ? (
@@ -8,7 +8,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                     className={`bg-[#E9E9E9] w-full min-h-[64px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-4 py-3 ${ChangeRow ? "bg-[#FFFFFF]" : ""
                         }`}
                 >
-                  
+
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 lg:gap-10 min-w-0">
                         <img
                             src={src}
@@ -16,7 +16,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                             className="h-10 w-10 object-contain shrink-0"
                         />
 
-                    
+
                         <div className="flex items-center gap-3 min-w-0">
                             <h1 className="text-sm  shrink-0">{id}</h1>
 
@@ -25,7 +25,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                             </h1>
                         </div>
 
-                       
+
                         <div className="flex flex-wrap gap-2">
                             {description.map((tag) => (
                                 <button
@@ -38,7 +38,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-2 lg:pr-6 shrink-0">
+                    <div className="flex items-center  gap-2 lg:pr-6 shrink-0">
                         <img
                             src={img}
                             alt=""
@@ -53,7 +53,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                             <img
                                 src={showArrow}
                                 alt=""
-                                className="h-3 w-3 "
+                                className="h-3 w-3"
                             />
                         )}
                     </div>
@@ -88,7 +88,7 @@ export default function PackCard({ src, id, description, img, num, title, Change
                     </div>
 
 
-                    <div className="flex items-center gap-3 sm:gap-4 md:pr-5 self-end ">
+                    <div className="flex items-center  gap-3 sm:gap-4 md:pr-5  ">
                         <img
                             src={img}
                             alt=""
@@ -100,11 +100,16 @@ export default function PackCard({ src, id, description, img, num, title, Change
                         </p>
 
                         {showArrow && (
-                            <img
-                                src={showArrow}
-                                alt=""
-                                className="h-3 w-3 object-contain"
-                            />
+                            <>
+                                <img
+                                    src={showArrow}
+                                    alt=""
+                                    className="h-3 w-3 object-contain "
+                                />
+                                <p className={` text-xs sm:text-sm ${ChangeRow?"text-[#4F4F4F]":"text-[#E9E9E9]"}`}>
+                                    {num1}
+                                </p>
+                            </>
                         )}
                     </div>
                 </div>

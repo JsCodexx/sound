@@ -14,13 +14,13 @@ export default function LandingPage() {
 
                 <div className='relative '>
                     <img src="/src/assets/emoji.png" alt="" />
-                    <h1 className='font-poppins font-black absolute top-[50px] left-[121px] text-white text-[55px] w-[370px] h-[183px]'>Step into the
+                    <h1 className='font-poppins font-black absolute top-[50px] left-[121px] leading-none  text-white text-[55px] w-[370px] h-[183px]'>Step into the
                         producer's
                         playground</h1>
-                    <p className='font-poppins  absolute top-[310px] left-[121px] text-white text-[20px] w-[512px] h-[65px]'>Explore the
+                    <p className='font-poppins  absolute leading-none top-[250px] left-[121px] text-white text-[20px] w-[512px] h-[65px]'>Explore the
                         world’s best sample library and an unmatched marketplace of plugins and DAWs.</p>
-                    <button className='absolute top-90 left-[121px] cursor-pointer  bg-red-400 text-white font-bold pl-4 pr-4 pb-2 pt-2 
-                 text-sm  w-auto mt-4 rounded-sm px-1 py-1 text-red-700 ml-1 '>Try Free</button>
+                    <button className='absolute top-75 left-[121px] cursor-pointer  bg-[#CD4848] text-white font-bold pl-4 pr-4 pb-3 pt-3 
+                 text-sm  w-auto mt-4 rounded-sm px-1 py-1 text-white ml-1 '>Try Free</button>
                 </div>
                 <div className='flex'>
                     <div >

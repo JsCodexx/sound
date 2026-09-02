@@ -11,48 +11,47 @@ const defaultProps = {
   description: "Finely crafted blocks built with Shadcn UI.",
   sections: [
     {
-      title: "Product",
+      title: "Sounds",
       links: [
         { name: "Overview", href: "#" },
-        { name: "Pricing", href: "#" },
+        { name: "Browse the Catalog", href: "#" },
         { name: "Marketplace", href: "#" },
-        { name: "Features", href: "#" },
-        { name: "Integrations", href: "#" },
+        { name: "Trending sample packs", href: "#" },
+        { name: "What’s new", href: "#" },
       ],
     },
     {
-      title: "Company",
+      title: "Pricing",
       links: [
-        { name: "About", href: "#" },
-        { name: "Team", href: "#" },
-        { name: "Blog", href: "#" },
-        { name: "Careers", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Sound+", href: "#" },
+        { name: "Creater", href: "#" },
+        { name: "Creater+", href: "#" },
+
       ],
     },
     {
-      title: "Support",
+      title: "FAQS",
       links: [
-        { name: "Help center", href: "#" },
-        { name: "Documentation", href: "#" },
-        { name: "Status", href: "#" },
-        { name: "Community", href: "#" },
+        { name: "Download", href: "#" },
+        { name: "Payment", href: "#" },
+        { name: "Pricing", href: "#" },
+        { name: "Register", href: "#" },
       ],
     },
     {
-      title: "Resources",
+      title: "About",
       links: [
-        { name: "Guides", href: "#" },
-        { name: "Templates", href: "#" },
-        { name: "Sales", href: "#" },
-        { name: "Advertise", href: "#" },
+        { name: "Plans", href: "#" },
+
       ],
     },
   ],
-  copyright: "© 2024 Shadcnblocks.com. All rights reserved.",
+  copyright: "© 2023 company.com All Rights Reserved ",
   legalLinks: [
-    { name: "Terms and Conditions", href: "#" },
+    { name: "Terms of use", href: "#" },
     { name: "Privacy Policy", href: "#" },
+    { name: "Contact", href: "#" },
+    { name: "Help", href: "#" },
   ],
 };
 
@@ -163,27 +162,25 @@ const Footer2 = (props) => {
           <div
             className="
               flex
-              flex-col
-              items-center
-              justify-between
+              
+             pl-105
               gap-3
               bg-black
-              px-6
+             
               py-4
               text-center
               text-xs
               font-medium
               text-gray-400
-              sm:flex-row
-              sm:px-8
-              lg:px-10
+             
+              
             "
           >
             <p>
               {copyright}
             </p>
 
-            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-white">
+            <ul className="flex gap-3 text-gray-400 pl-5">
               {legalLinks?.map((link, linkIdx) => (
                 <li
                   key={linkIdx}
@@ -195,6 +192,7 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
+            <img src="/src/assets/icons.png" alt="" className="ml-15"/>
           </div>
         </footer>
       </div>

@@ -30,7 +30,7 @@ export function CardDemo({ src, title, packs, tags, variant }) {
                     </div>
 
                 </Card> :
-                <Card Card className="w-[320px] h-25 max-w-sm bg-[#F6F6F6] rounded-none " >
+                <Card Card className="w-[300px] h-25 max-w-sm bg-[#F6F6F6] rounded-none " >
                     <div className="flex gap-5">
                         <div>
                             <img src={src} alt={title} width={55} className="mt-1 ml-2" />
@@ -41,12 +41,12 @@ export function CardDemo({ src, title, packs, tags, variant }) {
                                 <h1 className="text-black font-semibold">{title}</h1>
                                 <p className="text-red-500">{packs}</p>
                             </div>
-                            <div className="flex gap-3">
-                                {tags.map((tag) => {
+                            <div className="flex gap-3 ">
+                                {tags.map((tag) => (
                                     <button className="w-[62.99px] h-[30.31px] rounded-2xl bg-[#EBEBEB]">
                                         {tag}
                                     </button>
-                                })}
+                                ))}
                             </div>
                         </div>
                     </div>

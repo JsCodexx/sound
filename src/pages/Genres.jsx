@@ -26,7 +26,7 @@ export default function Genres() {
                     </div>
                     <div className='hidden md:block' >
                         <img src="/src/assets/image86.png" alt="" className='absolute top-25 left-60 w-220' />
-                        <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-180 w-110' />
+                        <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-178 w-103' />
                     </div>
                     <div className='flex flex-col text-[#5C5C5C] gap-5 absolute top-20 left-25 md:top-120 md:left-70'>
                         <div className='flex gap-6 cursor-pointer '>

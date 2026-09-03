@@ -73,8 +73,8 @@ const Footer2 = (props) => {
   const visibleSections = (sections ?? []).slice(0, MAX_SECTIONS);
 
   return (
-    <section className={cn("w-full", className)}>
-      <div className="container mx-auto w-full  md:px-4 sm:px-6 lg:px-0">
+    <section className={cn("w-full text-center", className)}>
+      <div className="  w-full  md:px-4 sm:px-6 lg:px-0">
         <footer>
 
           <div
@@ -92,12 +92,13 @@ const Footer2 = (props) => {
               lg:gap-8
               lg:px-10
               lg:py-12
+            
             "
           >
 
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="flex flex-col items-start gap-4">
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-2xl md:text-2xl  font-bold">
                   LOGO
                 </h1>
 
@@ -163,14 +164,14 @@ const Footer2 = (props) => {
             className="
               flex
               
-             pl-105
+             md:pl-105
               gap-3
               bg-black
              
               py-4
               text-center
               text-xs
-              font-medium
+              md:font-medium
               text-gray-400
              
               
@@ -192,7 +193,7 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
-            <img src="/src/assets/icons.png" alt="" className="ml-15"/>
+            <img src="/src/assets/icons.png" alt="" className="md:ml-15"/>
           </div>
         </footer>
       </div>

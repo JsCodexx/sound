@@ -195,7 +195,7 @@ export default function TopLabel() {
                     </div>
                     <div className='flex flex-col gap-4'>
                         <h1 className=' text-red-400  font-bold md:ml-60 text-sm'>You are currently viewing company sounds</h1>
-                        <hr className='md:w-240 mr-0' />
+                        <hr className='md:w-240 w-70 mr-0' />
                         <div className='flex gap-10 ml-3'>
                             <NavLink to="/Charts">
                                 {({ isActive }) => (
@@ -214,9 +214,9 @@ export default function TopLabel() {
                             </NavLink>
                         </div>
                         <ComboboxBasic />
-                        <div className='text-sm flex  ml-40 justify-between '>
+                        <div className='text-sm flex  md:ml-40 justify-between '>
                             <p className='text-[#838383] '>LABEL</p>
-                            <p className='text-[#838383] pr-50'>GENERES</p>
+                            <p className='text-[#838383] md:pr-50'>GENERES</p>
                             <p className='text-[#838383] pr-10'>TOTAL PACK</p>
                         </div>
                         <div className='w-73 md:w-full'>

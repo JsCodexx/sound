@@ -1,27 +1,70 @@
-import React from 'react'
+import React, { act, useEffect } from 'react'
 import NavBar from '@/components/NavHome'
 import { Footer2 } from '@/components/footer2'
-
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { TabsLine } from '@/components/Menu'
 export default function LandingPage() {
+    const [index, setIndex] = useState(0)
+    
+    const img = [
+        {
+            src: " /src/assets/Mask group.jpg",
+            text: "waleed"
+        }
+        ,
+        {
+            src: " /src/assets/p1.png",
+            text: "Ali"
+        },
+        {
+            src: " /src/assets/p2.png",
+            text: "Abdullah"
+        },
+        {
+            src: " /src/assets/p3.png",
+            text: "waleed"
+        },
+
+
+    ]
+
+
     return (
         <>
-            <div className=''>
-                <NavBar variant="landing" />
+            <NavBar variant="landing" />
+            <div className='bg-[#CD4848] w-full h-15'>
+                <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
+            </div>
 
-                <div className='bg-[#CD4848] w-full h-15'>
-                    <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
-                </div>
 
-                <div className='relative '>
-                    <img src="/src/assets/emoji.png" alt="" />
-                    <h1 className='font-poppins font-black absolute animate-typing  whitespace-pre-wrap overflow-hidden  top-[50px] left-[121px] leading-none  text-white text-[55px] w-[370px] h-[183px]'>Step into the
+            <div className='relative  mx-auto container max-w-7xl '>
+
+                <div className="relative ">
+                    <img
+                        src="/src/assets/emoji.png"
+                        alt=""
+
+                    />
+
+                    <h1 className="font-poppins font-black absolute animate-typing whitespace-pre-wrap overflow-hidden top-[50px] left-[121px] leading-none text-white text-[55px] w-[370px] h-[183px]">
+                        Step into the
                         producer's
-                        playground</h1>
-                    <p className='font-poppins  absolute leading-none top-[250px] left-[121px] text-white text-[20px] w-[512px] h-[65px]'>Explore the
-                        world’s best sample library and an unmatched marketplace of plugins and DAWs.</p>
-                    <button className='absolute top-75 left-[121px] cursor-pointer  bg-[#CD4848] text-white font-bold pl-4 pr-4 pb-3 pt-3 
-                 text-sm  w-auto mt-4 rounded-sm px-1 py-1 text-white ml-1 '>Try Free</button>
+                        playground
+                    </h1>
+
+                    <p className="font-poppins absolute leading-none top-[250px] left-[121px] text-white text-[20px] w-[512px] h-[65px]">
+                        Explore the world's best sample library and an unmatched marketplace of plugins and DAWs.
+                    </p>
+
+                    <Link to="/land">
+                        <button className="absolute top-75 left-[121px] cursor-pointer bg-[#CD4848] text-white font-bold px-4 py-3 text-sm rounded-sm">
+                            Try Free
+                        </button>
+                    </Link>
                 </div>
+
+
                 <div className='flex'>
                     <div >
                         <img className='absolute right-190 top-160' src="src/assets/headphone.png" alt="" width={550} />
@@ -69,18 +112,39 @@ export default function LandingPage() {
 
                         </p>
                     </div>
-                    <img src="/src/assets/Vector.png" alt="" className='text-right top-610 absolute left-30 w-70 h-120' />
-                    <h1 className='font-extrabold text-white text-xl top-705 absolute left-57'>Jack Nitzsche</h1>
-                    <p className=' text-white text-[10px] top-712 absolute left-57'>Investor Group Coordinator</p>
-                    <img src="/src/assets/Mask group.jpg" alt="" className='text-right top-620 absolute left-60 w-50 h-80' />
-                    <div className='text-left top-620 absolute left-160 ' >
-                        <p className='text-[#808080]'>What creators are saying about Splice</p>
-                        <img src="/src/assets/Quotes.png" alt="" className='pt-10' />
-                        <p className='text-red-500 font-extrabold text-4xl'> Awesome <span className='text-[#202020] font-light  font-Poppins'>platform</span></p>
-                        <p className='w-100 text-[#808080] pt-5'>I am very impressed with this platform and i love the features. It is very fast. I got the same thing what I expected for.</p>
-                        <img src="/src/assets/Quotes.png" alt="" className='pt-20 ml-90' />
-                        <p className='text-[#808080] ml-55 mt-10'><span className='text-black'>01_____ </span>02 03 04</p>
+
+                    <div>
+                        <div>
+                            <img src="/src/assets/Vector.png" alt="" className='text-right top-610 absolute left-30 w-70 h-120' />
+
+
+                            <h1 className='font-extrabold text-white text-xl top-705 absolute left-57'>{img[index].text}</h1>
+                            <p className=' text-white text-[10px] top-712 absolute left-57'>Investor Group Coordinator</p>
+
+                            <img src={img[index].src} alt="" className='text-right top-620 absolute left-60 w-50 h-80' />
+
+
+
+
+
+                        </div>
+                        <div className='text-left top-620 absolute left-160 ' >
+                            <p className='text-[#808080]'>What creators are saying about Splice</p>
+                            <img src="/src/assets/Quotes.png" alt="" className='pt-10' />
+                            <p className='text-red-500 font-extrabold text-4xl'> Awesome <span className='text-[#202020] font-light  font-Poppins'>platform</span></p>
+                            <p className='w-100 text-[#808080] pt-5'>I am very impressed with this platform and i love the features. It is very fast. I got the same thing what I expected for.</p>
+                            <img src="/src/assets/Quotes.png" alt="" className='pt-20 ml-90' />
+                            <div className='flex mt-7 ml-70 gap-3'>
+
+                                {index === 0 ? <button onClick={() => { setIndex(0) }}> <p >1____</p></button> : <button onClick={() => { setIndex(0) }}> <p>1</p></button>}
+                                {index === 1 ? <button onClick={() => { setIndex(1) }}> <p>2____</p></button> : <button onClick={() => { setIndex(1) }}> <p>2</p></button>}
+                                {index === 2 ? <button onClick={() => { setIndex(2) }}> <p>3____</p></button> : <button onClick={() => { setIndex(2) }}> <p>3</p></button>}
+                                {index === 3 ? <button onClick={() => { setIndex(3) }}> <p>4____</p></button> : <button onClick={() => { setIndex(3) }}> <p>4</p></button>}
+
+                            </div>
+                        </div>
                     </div>
+
                     <img src="/src/assets/darkblue.png" alt="" className=' top-740 absolute left-0 h-130 w-400' />
                     <img src="/src/assets/head.png" alt="" className=' top-740 absolute left-0 w-100' />
                     <div className=' top-785 absolute left-125 '>
@@ -90,13 +154,13 @@ export default function LandingPage() {
                     </div>
                 </div>
 
+                <div className='className= top-870 absolute left-0 w-full '>
+                    <Footer2 />
+
+                </div >
 
             </div>
 
-            <div className='className= top-870 absolute left-0 w-316 '>
-                <Footer2 />
-
-            </div >
 
         </>
     )

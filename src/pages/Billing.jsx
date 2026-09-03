@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 import { Footer2 } from '@/components/footer2'
 import { AlertDialog } from '@/components/ui/alert-dialog'
 import { useState } from 'react'
-import { MyAlertDialog } from '@/components/Alert'
+
 import { TabsLine } from '@/components/Menu'
 import { AlertDialogContent } from '@/components/ui/alert-dialog'
-import { AlertDialogAction } from '@/components/ui/alert-dialog'
+
 import { AlertDialogCancel } from '@/components/ui/alert-dialog'
 
 function Billing() {

@@ -233,29 +233,40 @@ export default function Sound2() {
     ]
     return (
         <>
-            <NavBar />
-            {/* <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> */}
-            <main className="mx-auto w-full max-w-[1440px] px-8 relative">
-                <div className='flex ml-8 mt-5 gap-10 w-auto  '>
-                    <SideBar />
-                    <img src="src/assets/line.png" alt="" className='h-450' />
-                    <div className='flex flex-col '>
-                        <h1 className=' text-red-600 mb-5 font-bold ml-60'>You are currently viewing company sounds</h1>
-                        <hr className='w-240' />
-                        <div className='mt-10 relative '>
-                            <img src="/src/assets/m1.png" alt="" className='px-5 h-45 ml-0 pr-15 ' />
-                            <div className='absolute top-10 left-70'>
-                                <h1 className='font-semibold text-xl text-white mb-5 '>Subscribe to download sounds from 620 Packs</h1>
-                                <Link to="/subsound"> <img src="/src/assets/button.png" alt="" className='ml-30 cursor-pointer' /></Link>
+
+
+            <main className="mx-auto w-full max-w-360  ">
+                <NavBar />
+                <div className='flex  mt-5  w-auto  '>
+                    <div className='mt-13'>
+                        <SideBar variant="mobileSide" className="md:hidden block" />
+                    </div>
+                    <div className='mt-10'>
+                        <SideBar variant="desktop" className="md:block  hidden" />
+                    </div>
+
+
+                    <div className='flex flex-col relative '>
+                        <h1 className=' text-red-600 mb-5 font-bold text-center'>You are currently viewing company sounds</h1>
+                        <hr className='md:w-1050 w-0 absolute  right-0  top-10' />
+                        <div className='mt-10 relative md:block hidden '>
+                            <img src="/src/assets/m1.png" alt="" className=' md:w-230 ml-6 w-auto ' />
+                            <div className='absolute top-7 md:left-70 left-30'>
+                                <h1 className='font-semibold text-xl text-white mb-3 '>Subscribe to download sounds from 620 Packs</h1>
+                                <Link to="/subsound"> <button className='text-white font-bold text-xl ml-30 text-center bg-black  w-50 h-10 rounded-4xl'>GET STARTED</button> </Link>
                             </div>
 
                         </div>
-                        <div className='  flex gap-3 mr-5'>
-                            <div className=' mt-5 ml-5 w-85 h-60 bg-black rounded-2xl'>
+                        <div className='  flex md:flex-row flex-col gap-3 mr-5'>
+                            <div
+                                className=' mt-5 ml-5 w-85 h-60 bg-black rounded-2xl'>
 
-                                <img src="/src/assets/insideblacky.png" alt="" className='pb-5 ml-25 mt-4' />
-                                <img src="/src/assets/Power.png" alt="" className='pb-5 ml-25' />
-                                <img src="/src/assets/all.png" alt="" className='ml-13' />
+                                <img src="/src/assets/insideblacky.png" alt="" className='pb-3 ml-25 mt-4' />
+                                <h1 className='text-white font-bold text-2xl ml-25 pb-2'>Power <span className='text-gray-600 font-medium'>Tone</span></h1>
+                                <div className='flex ml-14 gap-2'>
+                                    <span className='text-gray-50'>All Genres | </span ><span className='text-gray-50' > Live Sounds  |</span> <span className='text-gray-50' >Rock  </span>
+                                </div>
+
                             </div>
                             <div className='mt-5 relative'>
                                 <img src="/src/assets/b1.png" alt="" className='w-145 h-60' />
@@ -266,21 +277,19 @@ export default function Sound2() {
                                         distracted by the readable content of a page when looking at its layout. The point of using
                                         Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
                                         'Content here, content here', making it look like readable English. Many desktop publishing
-                                        packages and web page editors now use Lorem Ipsum as their default model text, and a search
-                                        for
-                                        'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                    </p>
                                 </div>
 
                             </div>
 
 
                         </div>
-                        <div className='bg-[#F1F1F1] w-233 h-10 text-center mt-7 ml-6 pt-2 text-[#484747] font-medium'>
+                        <div className='bg-[#F1F1F1] md:w-233 w-auto h-10 text-center mt-7 md:ml-6 pt-2 text-[#484747] font-medium'>
                             <Link to="/buy"><h1 className='cursor-pointer'>Featured Release</h1></Link>
                         </div>
 
                         <p className='text-[#222222] font-medium font-Poppins ml-13 mt-5'>Trending This Week</p>
-                        <div className=' ml-13 mt-5 flex gap-3  flex-wrap'>
+                        <div className=' md:ml-13 mt-5 flex gap-3  flex-wrap'>
                             {cardData.map((data, index) => (
                                 <div className='w-74 text-[10px] '>
                                     <PackCard
@@ -296,10 +305,10 @@ export default function Sound2() {
 
                             ))}
                         </div>
-                        <div className='bg-[#F1F1F1] w-233 h-10 text-center mt-7 ml-8 pt-2 text-[#484747] font-medium'>
+                        <div className='bg-[#F1F1F1] md:w-233 w-auto h-10 text-center mt-7 md:ml-8 pt-2 text-[#484747] font-medium'>
                             <h1>Recent Release</h1>
                         </div>
-                        <div className='flex flex-wrap gap-4 mt-5 ml-10'>
+                        <div className='flex flex-wrap gap-4 mt-5 md:ml-10'>
                             {imgData.map((data, index) => (
                                 <CardDemo
                                     key={index}
@@ -319,7 +328,7 @@ export default function Sound2() {
 
                 </div>
             </main>
-            {/* </div> */}
+
         </>
     )
 }

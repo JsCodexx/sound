@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { TabsLine } from '@/components/Menu'
 export default function LandingPage() {
     const [index, setIndex] = useState(0)
-    
+
     const img = [
         {
             src: " /src/assets/Mask group.jpg",
@@ -38,9 +38,9 @@ export default function LandingPage() {
             </div>
 
 
-            <div className='relative  mx-auto container max-w-7xl '>
+            <div className='relative flex flex-col  mx-auto container max-w-7xl '>
 
-                <div className="relative ">
+                <div className="relative w-100%">
                     <img
                         src="/src/assets/emoji.png"
                         alt=""
@@ -65,8 +65,8 @@ export default function LandingPage() {
                 </div>
 
 
-                <div className='flex'>
-                    <div >
+                <div className='flex md:flex-row flex-col'>
+                    <div className='md:block hidden'>
                         <img className='absolute right-190 top-160' src="src/assets/headphone.png" alt="" width={550} />
                     </div>
                     <div className=' absolute left-125 top-190'>

@@ -197,9 +197,9 @@ export function CarouselSize({ variant }) {
                         <CarouselContent>
                             {imgData.map((data, index) => (
                                 <CarouselItem key={index} className="basis-1/1  md:ml-0 lg:basis-1/4">
-                                    <div className="p-0">
+                                    <div className="p-0 ml-6">
                                         <Card>
-                                            <CardContent className="flex  p-0">
+                                            <CardContent className="flex   pl-0">
                                                 <CardDemo
                                                     key={index}
                                                     src={data.src}
@@ -214,9 +214,9 @@ export function CarouselSize({ variant }) {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <div className="md:mt-100 mt-80 ">
-                            <CarouselPrevious className=""/>
-                            <CarouselNext />
+                        <div className=" ">
+                            <CarouselPrevious className="mt-75" />
+                            <CarouselNext className="mt-75" />
                         </div>
 
                     </Carousel>
@@ -267,12 +267,14 @@ export function CarouselSize({ variant }) {
                         }}
                         className="w-full  sm:max-w-xs md:max-w-2xl"
                     >
-                        <CarouselContent>
+
+
+                        <CarouselContent className="">
                             {cardData.map((data, index) => (
-                                <CarouselItem key={index} className="basis-1/1  md:lg:basis-1/4">
-                                    <div className="p-0 ml-20">
+                                <CarouselItem key={index} className="basis-1/1  md:basis-1/4">
+                                    <div className="p-0 ml-8.5">
                                         <Card>
-                                            <CardContent className="flex  p-0">
+                                            <CardContent className="flex gap-0 p-0">
                                                 <CardDemo
                                                     key={index}
                                                     src={data.src}
@@ -287,11 +289,11 @@ export function CarouselSize({ variant }) {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <div className="mt-100 ">
-                            <CarouselPrevious className=""/>
-                            <CarouselNext />
-                        </div>
 
+                        <div className=" ">
+                            <CarouselPrevious className="mt-75" />
+                            <CarouselNext className="mt-75" />
+                        </div>
                     </Carousel>
                 </>
             }

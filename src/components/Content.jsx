@@ -21,7 +21,7 @@ function Content({ variant }) {
                         <p className='pb-4 text-white'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
                     </div>
                 </div> :
-                <div className='flex justify-evenly '>
+                <div className='flex justify-evenly md:flex-row flex-col  '>
                     <div className='w-63 mt-15' >
                         <img src="/src/assets/cup.png" alt="" className='pb-4' />
                         <h3 className='pb-4 text-black'>100% royalty-free</h3>

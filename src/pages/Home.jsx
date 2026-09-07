@@ -107,15 +107,14 @@ function Home() {
             tags: "Soul surplus",
             free: "/src/assets/free2.png"
 
-
-            
         },
     ]
     return (
         <>
+            <NavBar />
             <div className='overflow-x-hidden'>
 
-                <NavBar />
+
 
                 <div className='bg-[#CD4848]  h-15'>
                     <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
@@ -144,7 +143,7 @@ function Home() {
                             <div><img src="/src/assets/arrowUp.png" alt="" /></div>
                         </div>
                     </div>
-                    <div className='flex md:flex-row flex-col justify-center items-center gap-10'>
+                    <div className='flex md:flex-row flex-col justify-center items-center md:px-0 px-1.5 gap-10'>
                         <div className=' mt-20 '>
                             <h1 className='md:text-2xl font-bold mb-3'>How company name </h1>
                             <p className='mb-4'>See what Splice is all about in this short video.</p>
@@ -167,7 +166,7 @@ function Home() {
 
                     <div className='md:text-center mt-15'>
                         <h1 className='font-bold text-2xl text-center'>Sounds</h1>
-                        <p className='md:w-300  text-gray-600 text-sm '>What's new
+                        <p className='md:w-300  text-gray-600 text-sm  px-1.5 md:px-0'>What's new
                             Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                     </div>
 
@@ -191,7 +190,7 @@ function Home() {
 
                     <div className='text-center mt-25'>
                         <h1 className='font-bold text-2xl'>What's Free</h1>
-                        <p className='md:w-300 text-gray-600'>What's new
+                        <p className='md:w-300 text-gray-600 px-1.5 md:px-0'>What's new
                             Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                     </div>
 

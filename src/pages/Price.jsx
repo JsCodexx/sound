@@ -19,7 +19,7 @@ function Price() {
                 <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h1 className='text-center text-sm md:text-3xl font-extrabold mt-8'>Start your free 14-day trial.
                         <br /> Cancel any time.</h1>
-                    <div className='flex justify-center items-center gap-4'>
+                    <div className='flex md:flex-row flex-col justify-center items-center gap-4'>
                         <div
                             onClick={() => setIsMonthly(!isMonthly)}
                             className='bg-[#151515]  mt-7 rounded-3xl px-2 py-1 cursor-pointer '
@@ -28,7 +28,7 @@ function Price() {
                                 <div className={` h-8 rounded-2xl text-sm px-4 text-white py-1.5  duration-300 ${isMonthly ? 'bg-[#D74664]' : 'bg-transparent text-gray-400 py-2'}`}>
                                     Monthly
                                 </div>
-                                <p className={`text-sm pt-1.5  h-8 px-2 rounded-2xl  duration-300 ${!isMonthly ? 'bg-[#D74664] font-semibold' : 'text-white'}`}>
+                                <p className={`text-sm pt-1.5  h-8 px-2 rounded-2xl  duration-300 ${!isMonthly ? 'bg-[#D74664] font-semibold text-white' : 'text-white'}`}>
                                     Annual
                                 </p>
                             </div>

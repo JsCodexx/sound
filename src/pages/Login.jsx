@@ -57,7 +57,7 @@ export default function Login() {
                         <h2 className='ml-10 mt-4 text-2xl font-bold text-gray-700'>Login to your Account</h2>
                         <p className='ml-10 mt-1 text-sm text-gray-700 p-0'>See what is going on with your business</p>
                         <img src="/src/assets/Frame1.png" alt="" className='ml-9 mt-6' />
-                        <img src="/src/assets/sign.png" alt="" className='ml-22 mt-6' />
+                       
                         <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
                             <label className='text-gray-700' htmlFor="">Email</label>
                             <input type="email" placeholder='waleed.py@gmail' className='border-[0.72px] border-[#D6EAFF] mt-2 px-3 py-1 ' />

@@ -10,10 +10,11 @@ import NavBar from '@/components/NavHome';
 function Price() {
     const [isMonthly, setIsMonthly] = useState(true);
     return (
-        <>
-            <div className='overflow-x-hidden'>
-                <NavBar />
-                <div className='bg-[#CD4848] w-full h-15'>
+        <div className='w-full'>
+            <NavBar />
+            <div className='bg-[#CD4848] w-full h-15'>
+                <div className='overflow-x-hidden container mx-auto max-w-7xl'>
+
                     <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
                 </div>
                 <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -53,7 +54,7 @@ function Price() {
                         </div>
                         <div className=' relative '>
                             <img className='h-70 md:mx-0 mx-auto' src="/src/assets/pic.png" alt="" width={350} />
-                            <img className='absolute h-50 top-10 right-70 rounded-2xl md:block hidden' src="/src/assets/small.png" alt="" width={120} />
+                            <img className='absolute h-50 top-10  right-70 rounded-2xl lg:block md-hidden hidden max-lg:hidden' src="/src/assets/small.png" alt="" width={120} />
                         </div>
 
                     </div>
@@ -61,8 +62,8 @@ function Price() {
                         <div className=' relative  w-176 h-100 '>
                             <img className='absolute top-0 left-5 md:left-20' src="/src/assets/fatGirl.png" alt="" />
                             <img className=' absolute md:left-55 left-40 md:top-20  ' src="/src/assets/sad.png" alt="" />
-                            <img className=' absolute left-90 top-0  md:block hidden' src="/src/assets/sing.png" alt="" />
-                            <img className=' absolute left-125 md:top-20 md:block hidden' src="/src/assets/drum.png" alt="" />
+                            <img className=' absolute left-90 top-0  lg:block md:hidden hidden' src="/src/assets/sing.png" alt="" />
+                            <img className=' absolute left-125 md:top-20 lg:block md:hidden hidden' src="/src/assets/drum.png" alt="" />
                         </div>
                         <div className='  flex flex-col justify-center item-center md:mt-25'>
                             <h1 className='text-2xl font-black '>The highest-quality samples on the market</h1>
@@ -82,8 +83,8 @@ function Price() {
                         </div>
                         <div className='relative '>
                             <img className=' ' src="/src/assets/concert.png" alt="" />
-                            <img className='absolute -top-30 left-80 md:block hidden' src="/src/assets/string.png" alt="" />
-                            <img className='absolute -bottom-30 right-30  md:block hidden' src="/src/assets/light.png" alt="" />
+                            <img className='absolute -top-30 left-80 lg:block md:hidden hidden max-lg:hidden' src="/src/assets/string.png" alt="" />
+                            <img className='absolute -bottom-30 right-30  md:block hidden ' src="/src/assets/light.png" alt="" />
                         </div>
                     </div>
                     <div className='flex md:flex-row flex-col gap-3 md:gap-10 mt-25 justify-center items-center'>
@@ -108,7 +109,7 @@ function Price() {
 
                 <Footer2 />
             </div>
-        </>
+        </div>
     )
 }
 

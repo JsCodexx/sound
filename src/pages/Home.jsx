@@ -110,15 +110,12 @@ function Home() {
         },
     ]
     return (
-        <>
+        <div className=''>
             <NavBar />
-            <div className='overflow-x-hidden'>
-
-
-
-                <div className='bg-[#CD4848]  h-15'>
-                    <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
-                </div>
+            <div className='bg-[#CD4848]  h-15'>
+                <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
+            </div>
+            <div className='overflow-x-hidden flex flex-col justify-center items-center'>
                 <div className=" w-100%  ">
                     <div className='text-center mt-5'>
                         <h1 className='font-bold text-3xl'>Explore</h1>
@@ -164,13 +161,13 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className='md:text-center mt-15'>
+                    <div className='md:text-center mt-15 flex flex-col md:px-0 px-4'>
                         <h1 className='font-bold text-2xl text-center'>Sounds</h1>
-                        <p className='md:w-300  text-gray-600 text-sm  px-1.5 md:px-0'>What's new
+                        <p className=' text-gray-600 text-sm  '>What's new
                             Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                     </div>
 
-                    <div className='flex flex-wrap gap-2 md:gap-6 justify-center item-center  '>
+                    <div className='flex flex-col md:flex-row gap-0 md:gap-6 justify-center item-center  '>
                         {cardData.map((data, index) => (
                             <CardDemo
                                 key={index}
@@ -194,7 +191,7 @@ function Home() {
                             Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                     </div>
 
-                    <div className='flex flex-wrap  gap-2 md:gap-6 justify-center items-center  '>
+                    <div className='flex flex-wrap w-full  gap-2 md:gap-6 justify-center items-center  '>
                         {cardData_2.map((data, index) => (
                             <CardDemo
                                 key={index}
@@ -213,12 +210,12 @@ function Home() {
                     </div>
                     <div className='relative  mt-25 w-full'>
                         <img src="/src/assets/song.png" alt="" />
-                        <div className='absolute top-10 flex  flex-col text-center justify-center items-center w-full  '>
-                            <h1 className='text-white text-3xl font-bold pb-3 '>Start Your Free Trial Today</h1>
+                        <div className='absolute top-0 md:top-10 flex  flex-col text-center justify-center items-center w-full  '>
+                            <h1 className='text-white md:text-3xl md:font-bold md:pb-3 '>Start Your Free Trial Today</h1>
 
-                            <p className='text-white text-sm  pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>
+                            <p className='text-white text-sm  md:pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>
                             <button onClick={handlePricePage} className=' md:block hidden text-white bg-[#CD4848] px-10 py-2 rounded-4xl '>Start Your Free Trial</button>
-                            <p className='text-white text-sm  mt-3'>Try risk-free for 14 days.</p>
+                            <p className='text-white text-sm  md:mt-3'>Try risk-free for 14 days.</p>
                         </div>
 
                     </div>
@@ -228,7 +225,7 @@ function Home() {
 
             </div >
             <Footer2 />
-        </>
+        </div>
     )
 }
 

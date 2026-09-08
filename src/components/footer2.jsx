@@ -164,7 +164,7 @@ const Footer2 = (props) => {
             className="
               flex
               
-             md:pl-105
+            
               gap-3
               bg-black
              
@@ -193,7 +193,7 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
-            <img src="/src/assets/icons.png" alt="" className="md:ml-15"/>
+            {/* <img src="/src/assets/icons.png" alt="" className="w-20" /> */}
           </div>
         </footer>
       </div>

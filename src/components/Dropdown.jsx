@@ -20,7 +20,7 @@ export function DropdownMenuShortcuts({ variant }) {
   const navigate = useNavigate()
 
   function goToLogin() {
-    navigate("/landingPage")
+    navigate("/login")
   }
   return (
     <>

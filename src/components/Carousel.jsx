@@ -54,6 +54,7 @@ export function CarouselSize({ variant }) {
             tags: "Company Stars"
         },
 
+
     ]
     const imgData = [
         {
@@ -98,11 +99,93 @@ export function CarouselSize({ variant }) {
             packs: "Here a healthy hel...",
             tags: "Company Stars"
         },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+
+    ]
+
+    const LandimgData = [
+        {
+            src: "/src/assets/x4.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x4.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/l1.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
+        {
+            src: "/src/assets/x5.png",
+            title: "House: Start Here",
+            packs: "Here a healthy hel...",
+            tags: "Company Stars"
+        },
 
     ]
     return (
         <>
-            {variant === "crouse" ?
+            {variant === "crouse" ? (
                 <>
                     <Carousel
                         opts={{
@@ -113,10 +196,10 @@ export function CarouselSize({ variant }) {
                     >
                         <CarouselContent>
                             {imgData.map((data, index) => (
-                                <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
-                                    <div className="p-0">
+                                <CarouselItem key={index} className="basis-1/1  md:basis-1/4">
+                                    <div className="p-0 ml-6">
                                         <Card>
-                                            <CardContent className="flex  p-0">
+                                            <CardContent className="flex   pl-0">
                                                 <CardDemo
                                                     key={index}
                                                     src={data.src}
@@ -131,23 +214,25 @@ export function CarouselSize({ variant }) {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <div className="mt-100">
-                            <CarouselPrevious />
-                            <CarouselNext />
+                        <div className=" ">
+                            <CarouselPrevious className="mt-75" />
+                            <CarouselNext className="mt-75" />
                         </div>
 
                     </Carousel>
-                </> : <>
+                </>
+            ) : variant === 'land' ? (
+                <>
                     <Carousel
                         opts={{
                             align: "start",
 
                         }}
-                        className="w-full  sm:max-w-xs md:max-w-2xl"
+                        className="w-full  sm:max-w-xs md:max-w-4xl"
                     >
                         <CarouselContent>
-                            {cardData.map((data, index) => (
-                                <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
+                            {LandimgData.map((data, index) => (
+                                <CarouselItem key={index} className="basis-1/2 lg:basis-1/7">
                                     <div className="p-0">
                                         <Card>
                                             <CardContent className="flex  p-0">
@@ -165,11 +250,48 @@ export function CarouselSize({ variant }) {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <div className="mt-100">
-                            <CarouselPrevious />
-                            <CarouselNext />
+                        <div className=" ">
+                            <CarouselPrevious className="md:ml-35 mt-80" />
+                            <CarouselNext className="md:ml-30 mt-80" />
                         </div>
 
+                    </Carousel>
+                </>
+
+            )
+                : <>
+                    <Carousel
+                        opts={{
+                            align: "start",
+
+                        }}
+                        className="w-full"
+                    >
+                        <CarouselContent className="">
+                            {cardData.map((data, index) => (
+                                <CarouselItem key={index} className="basis-1/1  md:basis-1/4">
+                                    <div className=" ">
+                                        <Card>
+                                            <CardContent className="flex   gap-0 p-0">
+                                                <CardDemo
+                                                    key={index}
+                                                    src={data.src}
+                                                    title={data.title}
+                                                    packs={data.packs}
+                                                    tags={data.tags}
+                                                    variant="Midi"
+                                                />
+                                            </CardContent>
+                                        </Card>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+
+                        <div className=" ">
+                            <CarouselPrevious className="mt-75" />
+                            <CarouselNext className="mt-75" />
+                        </div>
                     </Carousel>
                 </>
             }

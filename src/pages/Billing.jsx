@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 import { Footer2 } from '@/components/footer2'
 import { AlertDialog } from '@/components/ui/alert-dialog'
 import { useState } from 'react'
-import { MyAlertDialog } from '@/components/Alert'
+
 import { TabsLine } from '@/components/Menu'
 import { AlertDialogContent } from '@/components/ui/alert-dialog'
-import { AlertDialogAction } from '@/components/ui/alert-dialog'
+
 import { AlertDialogCancel } from '@/components/ui/alert-dialog'
 
 function Billing() {
@@ -48,13 +48,13 @@ function Billing() {
                             <h1 className="ml-0 w-65 text-xl font-bold w">Update Payment Method</h1>
 
                         </div>
-                        <hr className="mx-0" />
+                        <hr className="mx-0 w-70 md:w-full" />
 
                         <p className="text-gray-400 w-60 mt-4 text-[15px] mb-5">Updates will apply to all purchases made on company.</p>
-                        <img src="/src/assets/cards.png" alt="" />
-                        <div className="flex gap-5 ml-6">
-                            <button className="border-2 border-red-700 text-[#4A4A4A] w-40 h-10 mt-8 text-xl text-center py-0 px-3">Debit/Credit</button>
-                            <button className="border-2 border-[#E1E1E1] text-[#4A4A4A] w-40 h-10 mt-8 px-5"><img src="/src/assets/paypal.png" alt="" /></button>
+                        <img src="/src/assets/cards.png" alt="" className='w-70 md:w-full'/>
+                        <div className="flex md:gap-5 gap-1 md:ml-6">
+                            <button className="border-2 border-red-600 text-[#4A4A4A] w-35 md:w-40 h-10 mt-8 md:text-xl text-center py-0 px-3">Debit/Credit</button>
+                            <button className="border-2 border-[#E1E1E1] text-[#4A4A4A] w-35 md:w-40 h-10 mt-8 px-5"><img src="/src/assets/paypal.png" alt="" /></button>
                         </div>
                         <div className="flex flex-col mt-10 ml-5">
                             <label className="mb-5 font-semibold">Account Holder</label>

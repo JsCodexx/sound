@@ -4,9 +4,11 @@ import { Footer2 } from '@/components/footer2'
 import Content from '@/components/Content'
 import { useNavigate } from 'react-router-dom'
 import { CardDemo } from '@/components/Card-2'
-import { motion } from "motion/react";
+
 function Home() {
     const navigate = useNavigate()
+
+
 
     function handlePricePage() {
         navigate("/price")
@@ -104,109 +106,125 @@ function Home() {
             packs: "RnB",
             tags: "Soul surplus",
             free: "/src/assets/free2.png"
+
         },
     ]
     return (
-        <div
-
-        >
-
+        <div className=''>
             <NavBar />
-
-            <div className='bg-[#CD4848] w-full h-15'>
+            <div className='bg-[#CD4848]  h-15'>
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
-                <div className='text-center mt-5'>
-                    <h1 className='font-bold text-3xl'>Explore</h1>
-                    <p>Dive into the Splice subscription.</p>
-                </div>
-                <div className='mt-10 ml-80'>
-                    <img src="/src/assets/two.png" alt="" />
-                </div>
-                <div className='flex '>
-                    <div className=' mt-20 ml-25'>
-                        <h1 className='text-2xl font-bold mb-3'>How company name works</h1>
-                        <p className='mb-4'>See what Splice is all about in this short video.</p>
-                        <div className='relative'>
-                            <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
-                            <img src="/src/assets/pic.png" alt="" width={500} />
-                            <img className='absolute top-25 left-50' src="/src/assets/play.png" alt="" width={80} />
+            <div className='overflow-x-hidden flex flex-col justify-center items-center'>
+                <div className=" w-100%  ">
+                    <div className='text-center mt-5'>
+                        <h1 className='font-bold text-3xl'>Explore</h1>
+                        <p>Dive into the Splice subscription.</p>
+                    </div>
+                    <div className='mt-10 flex md:flex-row flex-col justify-center items-center gap-3'>
+
+                        <div className='border-black border-1 bg-[#EEEEEE] rounded-sm w-76 h-23  flex justify-evenly items-center'>
+                            <div><img src="/src/assets/sign.png" alt="" /></div>
+                            <div>
+                                <h1 className='font-bold text-xl'>Sounds</h1>
+                                <p className='text-gray-400 '>Royality-Free Samples</p>
+                            </div>
+                            <div><img src="/src/assets/arrowUp.png" alt="" /></div>
+                        </div>
+                        <div className='border-black border bg-[#EEEEEE] rounded-sm w-76 h-23  flex justify-evenly items-center'>
+                            <div><img src="/src/assets/dollar.png" alt="" /></div>
+                            <div>
+                                <h1 className='font-bold text-xl'>Beats</h1>
+                                <p className='text-gray-400 '>Royality-Free Samples</p>
+                            </div>
+                            <div><img src="/src/assets/arrowUp.png" alt="" /></div>
                         </div>
                     </div>
-                    <div className=' mt-20 ml-20'>
-                        <h1 className='text-2xl font-bold mb-3'>Find Your Plan</h1>
-                        <p className='mb-4'>See what Splice is all about in this short video.</p>
-                        <div className='relative '>
-                            <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
-                            <img src="/src/assets/square.png" alt="" width={500} />
-                            <img className='absolute top-25 left-50' src="/src/assets/play.png" alt="" width={80} />
+                    <div className='flex md:flex-row flex-col justify-center items-center md:px-0 px-1.5 gap-10'>
+                        <div className=' mt-20 '>
+                            <h1 className='md:text-2xl font-bold mb-3'>How company name </h1>
+                            <p className='mb-4'>See what Splice is all about in this short video.</p>
+                            <div className='relative'>
+                                <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
+                                <img src="/src/assets/pic.png" alt="" width={500} />
+                                <img className='absolute top-15 md:top-25 md:left-50 left-25 ' src="/src/assets/play.png" alt="" width={80} />
+                            </div>
+                        </div>
+                        <div className=' mt-20 '>
+                            <h1 className='md:text-2xl font-bold mb-3'>Find Your Plan</h1>
+                            <p className='mb-4'>See what Splice is all about in this short video.</p>
+                            <div className='relative '>
+                                <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
+                                <img src="/src/assets/square.png" alt="" width={500} />
+                                <img className='absolute top-15 md:top-25 md:left-50 left-25' src="/src/assets/play.png" alt="" width={80} />
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='text-center mt-15'>
-                    <h1 className='font-bold text-2xl'>Sounds</h1>
-                    <p className='w-300 text-gray-600'>What's new
-                        Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
-                </div>
-
-                <div className='flex flex-wrap gap-6 ml-17  '>
-                    {cardData.map((data, index) => (
-                        <CardDemo
-                            key={index}
-                            src={data.src}
-                            title={data.title}
-                            packs={data.packs}
-                            tags={data.tags}
-                            variant="Midi"
-                        />
-                    ))}
-                </div>
-
-                <div className='flex gap-2 absolute top-310 left-150 '>
-                    <img src="/src/assets/left.png" alt="" />
-                    <img src="/src/assets/right.png" alt="" />
-                </div>
-
-                <div className='text-center mt-25'>
-                    <h1 className='font-bold text-2xl'>What's Free</h1>
-                    <p className='w-300 text-gray-600'>What's new
-                        Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
-                </div>
-
-                <div className='flex flex-wrap gap-6 ml-17  '>
-                    {cardData_2.map((data, index) => (
-                        <CardDemo
-                            key={index}
-                            src={data.src}
-                            title={data.title}
-                            packs={data.packs}
-                            tags={data.tags}
-                            free={data.free}
-                            variant="Midi"
-                        />
-                    ))}
-                </div>
-                <div className='flex gap-2 absolute top-420 left-153 '>
-                    <img src="/src/assets/left.png" alt="" />
-                    <img src="/src/assets/right.png" alt="" />
-                </div>
-                <div className='relative  mt-25 w-full'>
-                    <img src="/src/assets/song.png" alt="" />
-                    <div className='absolute top-15  left-110'>
-                        <h1 className='text-white text-3xl font-bold pb-3'>Start Your Free Trial Today</h1>
-
-                        <p className='text-white text-sm ml-4 pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>
-                        <button onClick={handlePricePage} className='text-white bg-[#CD4848] px-10 py-2 rounded-4xl ml-15'>Start Your Free Trial</button>
-                        <p className='text-white text-sm ml-25 mt-3'>Try risk-free for 14 days.</p>
+                    <div className='md:text-center mt-15 flex flex-col md:px-0 px-4'>
+                        <h1 className='font-bold text-2xl text-center'>Sounds</h1>
+                        <p className=' text-gray-600 text-sm  '>What's new
+                            Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                     </div>
 
-                </div>
-            </div>
-            <Content />
-            <div className='w-full'><Footer2 /></div>
+                    <div className='flex flex-col md:flex-row gap-0 md:gap-6 justify-center item-center  '>
+                        {cardData.map((data, index) => (
+                            <CardDemo
+                                key={index}
+                                src={data.src}
+                                title={data.title}
+                                packs={data.packs}
+                                tags={data.tags}
+                                variant="Midi"
+                            />
+                        ))}
+                    </div>
 
+                    <div className='flex  justify-center items-center gap-3 '>
+                        <img src="/src/assets/left.png" alt="" />
+                        <img src="/src/assets/right.png" alt="" />
+                    </div>
+
+                    <div className='text-center mt-25'>
+                        <h1 className='font-bold text-2xl'>What's Free</h1>
+                        <p className='md:w-300 text-gray-600 px-1.5 md:px-0'>What's new
+                            Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
+                    </div>
+
+                    <div className='flex flex-wrap w-full  gap-2 md:gap-6 justify-center items-center  '>
+                        {cardData_2.map((data, index) => (
+                            <CardDemo
+                                key={index}
+                                src={data.src}
+                                title={data.title}
+                                packs={data.packs}
+                                tags={data.tags}
+                                free={data.free}
+                                variant="Midi"
+                            />
+                        ))}
+                    </div>
+                    <div className='flex justify-center items-center gap-4 '>
+                        <img src="/src/assets/left.png" alt="" />
+                        <img src="/src/assets/right.png" alt="" />
+                    </div>
+                    <div className='relative  mt-25 w-full'>
+                        <img src="/src/assets/song.png" alt="" />
+                        <div className='absolute top-0 md:top-10 flex  flex-col text-center justify-center items-center w-full  '>
+                            <h1 className='text-white md:text-3xl md:font-bold md:pb-3 '>Start Your Free Trial Today</h1>
+
+                            <p className='text-white text-sm  md:pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>
+                            <button onClick={handlePricePage} className=' md:block hidden text-white bg-[#CD4848] px-10 py-2 rounded-4xl '>Start Your Free Trial</button>
+                            <p className='text-white text-sm  md:mt-3'>Try risk-free for 14 days.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <Content />
+
+
+            </div >
+            <Footer2 />
         </div>
     )
 }

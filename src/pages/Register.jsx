@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '@/components/Nav'
-
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 function Register() {
     const [open, setOpen] = useState(false)
@@ -12,7 +12,7 @@ function Register() {
         setOpen(false)
     }
     return (
-        <div className={` ${open ? 'bg-[#000000C9]' : 'bg-transparent'}`}>
+        <div className='relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0'>
             <div className='relative' >
                 {/* <Nav /> */}
                 <div className='flex'>
@@ -32,7 +32,7 @@ function Register() {
                         <h2 className='ml-10 mt-4 text-2xl font-bold text-gray-700'>Sign up</h2>
                         <p className='ml-10 mt-1 text-sm text-gray-700 p-0'>See what is going on with your business</p>
                         <img src="/src/assets/Frame1.png" alt="" className='ml-9 mt-6' />
-                        <img src="/src/assets/sign.png" alt="" className='ml-22 mt-6' />
+
                         <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
                             <label className='text-gray-700' htmlFor="">Full Name</label>
                             <input type="text" className={` ${open ? 'border-[#000000C9]' : 'border-[0.72px] border-[#D6EAFF] mt-2'}`} />
@@ -52,8 +52,10 @@ function Register() {
                         <div className='flex justify-evenly mt-5'>
                             <p className='text-sm ml-10'>By Signing up i Agree the term and conditions</p>
                         </div>
-                        <img onClick={handleOpen} src="/src/assets/Frame7.png" alt="" className='ml-10 mt-10 cursor-pointer' />
-                        <p className='ml-22 mt-5 text-gray-500'>I already have an account<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
+                        <Link to="/login">   <button className='bg-black w-90 h-7 text-center text-white mt-5 ml-10' >
+                            Signup
+                        </button></Link>
+                        <p className='ml-22 mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
                     </div>
 
                 </div>

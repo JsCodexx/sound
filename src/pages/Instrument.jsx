@@ -5,47 +5,53 @@ import { CardSmall } from '@/components/Card'
 import SideBar from '@/components/SideBar'
 export default function Instrument() {
     return (
-        <div className="w-full min-h-screen">
+        <div className="w-full overflow-x-hidden">
             <NavBar />
 
-            <main className="mx-auto w-full max-w-[1440px] px-8 relative">
-                <div className='flex ml-8 mt-5 gap-5  w-100% overflow-x-hidden'>
-                    <SideBar />
+            <main className="mx-auto w-full max-w-360 ">
+                <div className='flex  mt-5   w-100% overflow-x-hidden'>
+                    <div className='mt-13'>
+                        <SideBar variant="mobileSide" className="md:hidden block" />
+                    </div>
+                    <div className='mt-10'>
+                        <SideBar variant="desktop" className="md:block  hidden" />
+                    </div>
+
 
                     <div className=' w-full'>
-                        <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
-                        <hr className='w-1050 absolute  right-0 ' />
-                        <img src="src/assets/line.png" alt="" className='h-1120 ml-15' />
+                        <h1 className=' text-red-400 text-sm  font-bold text-center mb-5'>You are currently viewing company sounds</h1>
+                        <hr className='md:w-1050 w-full absolute  right-0  ' />
 
+                        <div className=' w-full h-90 relative md:block hidden' >
+                            <img src="/src/assets/image86.png" alt="" className='absolute top-5 left-10 md:w-250' />
+                            <img src="/src/assets/f1.png" alt="" className='absolute top-5 left-145 md:w-115' />
+                        </div>
+                        <div className="flex flex-col  text-[#5C5C5C] ">
+                            <div className="flex gap-6 cursor-pointer pb-0 md:ml-8">
+                                <TabsLine />
+                            </div>
+
+                            <hr className="md:w-270 w-0 my-4 ml-4" />
+
+                            <div className="flex gap-5 flex-wrap md:ml-8">
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                                <CardSmall />
+                            </div>
+                        </div>
                     </div>
 
 
                 </div>
-                <div className='' >
-                    <img src="/src/assets/image86.png" alt="" className='absolute top-25 left-60 w-220' />
-                    <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-178 w-103' />
-                </div>
 
-                <div className="flex flex-col text-[#5C5C5C] gap-5 absolute top-120 left-70">
-                    <div className="flex gap-6 cursor-pointer">
-                        <TabsLine />
-                    </div>
 
-                    <hr className="w-230" />
-
-                    <div className="flex gap-5 flex-wrap  ">
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                        <CardSmall />
-                    </div>
-                </div>
 
             </main>
         </div>

@@ -48,7 +48,7 @@ const years = [
 
 export function FieldDemo() {
     return (
-        <div className="w-full max-w-md ml-90 mt-5 mb-10 border-2 px-4 py-4 rounded-xl">
+        <div className="w-full max-w-md  mt-5 mb-10 border-2 px-4 py-4 rounded-xl">
             <form>
                 <FieldGroup>
                     <FieldSet>
@@ -117,7 +117,7 @@ export function FieldDemo() {
                         </FieldGroup>
                     </FieldSet>
                     <Field orientation="horizontal">
-                        <Button type="submit" className="ml-40 bg-red-600 px-5 py-5 rounded-2xl">Submit</Button>
+                        <Button type="submit" className="md:ml-40 bg-red-600 px-5 py-5 rounded-2xl">Submit</Button>
 
                     </Field>
                 </FieldGroup>

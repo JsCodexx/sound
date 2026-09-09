@@ -368,24 +368,23 @@ export default function Charts() {
     ]
     return (
         <div>
-            <NavBar />
-            <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
+
+            <main className="mx-auto w-full max-w-360  ">
+
                 <div className='w-full'>
+                    <NavBar />
+                    <div className='mt-5 xl:hidden block'>
+                        <SideBar variant="mobileSide" className="" />
+                    </div>
+                    <div className='flex  mt-5 md:gap-0 gap-3 relative w-auto'>
 
-                    <div className='flex md:ml-8 mt-5 md:gap-5 gap-3 relative w-auto'>
-                        <div className='flex gap-10'>
-                            <SideBar />
-                            <div>
-                                <img src="src/assets/line.png" alt="" className='h-700' />
-                                {/* <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
-                                <hr className='w-1050 absolute  right-0 ' /> */}
-                            </div>
-
+                        <div className='mt-10 lg:block  hidden'>
+                            <SideBar variant="desktop" className="" />
                         </div>
 
-                        <div className='flex flex-col gap-4'>
-                            <h1 className=' text-red-400  font-bold text-sm md:ml-60'>You are currently viewing company sounds</h1>
-                            <hr className='md:w-250 mr-0' />
+                        <div className='flex flex-col gap-4 ml-3'>
+                            <h1 className=' text-red-400  font-bold text-sm text-center mb-10'>You are currently viewing company sounds</h1>
+                            <hr className='md:w-1050 w-0 absolute  right-0 top-10 ' />
                             <div className='flex gap-10 ml-3'>
                                 <NavLink to="/Charts">
                                     {({ isActive }) => (
@@ -403,12 +402,15 @@ export default function Charts() {
                                     )}
                                 </NavLink>
                             </div>
-                            <ComboboxBasic />
-                            <div className='text-sm flex mx-60 justify-between pr-25'>
+                            <div className='border-none'>
+                                <ComboboxBasic />
+                            </div>
+
+                            <div className='text-sm flex md:mx-60 justify-between pr-25'>
                                 <p className='text-[#838383]'>PACKS</p>
                                 <p className='text-[#838383]'>CONTENTS</p>
                             </div>
-                            <div className='w-75 md:w-250 ml-3'>
+                            <div className='w-full   px-3'>
                                 {cardData.map((data, index) => (
                                     <PackCard
                                         key={index}

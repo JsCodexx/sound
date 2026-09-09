@@ -81,42 +81,55 @@ export default function Midi() {
     return (
         <div>
             <NavBar />
-            <main className="mx-auto w-full max-w-[1440px] px-8 relative">
-                <div className='flex ml-8 mt-5 gap-5  w-100% overflow-x-hidden'>
-                    <SideBar />
+            <div className='mt-5'>
+                <SideBar variant="mobileSide" className="md:hidden block" />
+            </div>
+            <main className="mx-auto w-full max-w-[1440px]  ">
+                <div className='flex  mt-5 gap-0  w-100% overflow-x-hidden'>
+
+                    <div className='mt-11'>
+                        <SideBar variant="desktop" className="md:block  hidden" />
+                    </div>
+
 
                     <div className=' w-full'>
-                        <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
+                        <h1 className=' text-red-400  font-bold text-center mb-5'>You are currently viewing company sounds</h1>
                         <hr className='w-1050 absolute  right-0 ' />
-                        <img src="src/assets/line.png" alt="" className='h-300 ml-15' />
+                        <div className=' w-full h-90 relative lg:block hidden ' >
+                            <img src="/src/assets/image86.png" alt="" className='absolute top-[5%]  left-[2%] w-[93%]' />
+                            <img src="/src/assets/f1.png" alt="" className='absolute top-[5%] left-[53%] w-[43%]' />
+                        </div>
+                        <div className=' flex flex-col text-[#5C5C5C] gap-5 '>
+                            <div className='flex gap-6 cursor-pointer pt-3'>
+                                <TabsLine />
+                            </div>
+                            <hr />
+                            <div className='px-3 '>
+                                <div className=' mt-2 mb-2 text-center lg:text-start '>
+                                    <h1 className='font-bold text-xl'>Packs With MIDI Baselines</h1>
 
+                                </div>
+
+                                <div className='flex flex-wrap md:w-150 lg:w-full lg:justify-start   gap-2 justify-center items-center  '>
+                                    {cardData.map((data, index) => (
+                                        <CardDemo
+                                            key={index}
+                                            src={data.src}
+                                            title={data.title}
+                                            packs={data.packs}
+                                            tags={data.tags}
+                                            variant="Midi"
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
                 </div>
-                <div className='' >
-                    <img src="/src/assets/image86.png" alt="" className='absolute top-25 left-60 w-220' />
-                    <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-178 w-103' />
-                </div>
-                <div className='flex flex-col text-[#5C5C5C] gap-5 absolute top-120 left-70'>
-                    <div className='flex gap-6 cursor-pointer '>
-                        <TabsLine />
-                    </div>
-                    <hr className='w-230' />
-                    <h1 className='text-xl font-bold text-black'>Packs with MIDI Basslines</h1>
-                    <div className='flex flex-wrap gap-2 '>
-                        {cardData.map((data, index) => (
-                            <CardDemo
-                                key={index}
-                                src={data.src}
-                                title={data.title}
-                                packs={data.packs}
-                                tags={data.tags}
-                                variant="Midi"
-                            />
-                        ))}
-                    </div>
-                </div>
+
+
             </main>
         </div>
     )

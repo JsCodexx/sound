@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '@/components/Nav'
-
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 function Register() {
     const [open, setOpen] = useState(false)
@@ -12,12 +12,12 @@ function Register() {
         setOpen(false)
     }
     return (
-        <div className={` ${open ? 'bg-[#000000C9]' : 'bg-transparent'}`}>
-            <div className='relative' >
+        <div className=''>
+            <div className='relative ' >
                 {/* <Nav /> */}
-                <div className='flex'>
-                    <div className='relative'>
-                        <img className='h-screen w-200' src="/src/assets/blue.png" alt="" />
+                <div className='flex w-full'>
+                    <div className='relative lg:block hidden w-250'>
+                        <img className='h-screen ' src="/src/assets/blue.png" alt="" />
                         <img src="/src/assets/rectangle.png" alt="" className='absolute left-10 top-13' />
                         <img src="/src/assets/beats.png" alt="" className='absolute left-20 top-20' />
                         <img src="/src/assets/c.png" alt="" className='absolute left-38 top-15' />
@@ -27,33 +27,38 @@ function Register() {
                         <img src="/src/assets/l.png" alt="" className='absolute left-80 top-110' />
 
                     </div>
-                    <div>
-                        <img src="/src/assets/Group11.png" alt="" className='ml-10 mt-20' />
-                        <h2 className='ml-10 mt-4 text-2xl font-bold text-gray-700'>Sign up</h2>
-                        <p className='ml-10 mt-1 text-sm text-gray-700 p-0'>See what is going on with your business</p>
-                        <img src="/src/assets/Frame1.png" alt="" className='ml-9 mt-6' />
-                        <img src="/src/assets/sign.png" alt="" className='ml-22 mt-6' />
-                        <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
-                            <label className='text-gray-700' htmlFor="">Full Name</label>
-                            <input type="text" className={` ${open ? 'border-[#000000C9]' : 'border-[0.72px] border-[#D6EAFF] mt-2'}`} />
+                    <div className='flex flex-col justify-center items-center  w-150 '>
+                        <div className='flex flex-col mr-25 justify-start items-start px-3'>
+                            <img src="/src/assets/Group11.png" alt="" className=' mt-20' />
+                            <h2 className=' mt-4 text-2xl font-bold text-gray-700'>Sign up</h2>
+                            <p className=' mt-1 text-sm text-gray-700 p-0'>See what is going on with your business</p>
                         </div>
-                        <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
-                            <label className='text-gray-700' htmlFor="">User Name</label>
-                            <input type="email" className={` ${open ? 'border-[#000000C9]' : 'border-[0.72px] border-[#D6EAFF] mt-2'}`} />
+
+                        <img src="/src/assets/Frame1.png" alt="" className=' mt-6' />
+
+                        <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
+                            <label className='text-[#909090] font-semibold' htmlFor="">Full Name</label>
+                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
                         </div>
-                        <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
-                            <label className='text-gray-700' htmlFor="">Email</label>
-                            <input type="email" className={` ${open ? 'border-[#000000C9]' : 'border-[0.72px] border-[#D6EAFF] mt-2'}`} />
+                        <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
+                            <label className=' text-[#909090] font-semibold' htmlFor="">User Name</label>
+                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
                         </div>
-                        <div className='flex flex-col w-90 ml-10 mt-4 text-gray-700'>
-                            <label className='text-gray-700' htmlFor="">Password</label>
-                            <input type="password" className={` ${open ? 'border-[#000000C9]' : 'border-[0.72px] border-[#D6EAFF] mt-2'}`} />
+                        <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
+                            <label className=' text-[#909090] font-semibold' htmlFor="">Email</label>
+                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                        </div>
+                        <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
+                            <label className=' text-[#909090] font-semibold' htmlFor="">Password</label>
+                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex justify-evenly mt-5'>
-                            <p className='text-sm ml-10'>By Signing up i Agree the term and conditions</p>
+                            <p className='text-sm '>By Signing up i Agree the term and conditions</p>
                         </div>
-                        <img onClick={handleOpen} src="/src/assets/Frame7.png" alt="" className='ml-10 mt-10 cursor-pointer' />
-                        <p className='ml-22 mt-5 text-gray-500'>I already have an account<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
+                        <Link to="/login">   <button className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
+                            Sign up
+                        </button></Link>
+                        <p className=' mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
                     </div>
 
                 </div>

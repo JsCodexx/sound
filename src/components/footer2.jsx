@@ -115,7 +115,9 @@ const Footer2 = (props) => {
                     type="button"
                     className="
                       h-10
-                      w-40
+                      md:w-40
+                      lg-w-40
+
                       rounded-sm
                       bg-[#D74664]
                       px-4
@@ -162,7 +164,7 @@ const Footer2 = (props) => {
 
           <div
             className="
-              flex
+              flex-row
               
             
               gap-3
@@ -181,7 +183,7 @@ const Footer2 = (props) => {
               {copyright}
             </p>
 
-            <ul className="flex gap-3 text-gray-400 pl-5">
+            <ul className="flex-col md:flex-row lg-flex-row gap-3 text-gray-400 pl-5">
               {legalLinks?.map((link, linkIdx) => (
                 <li
                   key={linkIdx}

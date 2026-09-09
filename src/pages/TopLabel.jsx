@@ -182,13 +182,14 @@ export default function TopLabel() {
     return (
         <div>
             <NavBar />
+            <div className='mt-5  xl:hidden block'>
+                <SideBar variant="mobileSide" className="" />
+            </div>
             <main className="mx-auto w-full max-w-[1440px] ">
                 <div className='flex mt-5 gap-3 md:gap-0 relative w-auto'>
-                    <div className='mt-12'>
-                        <SideBar variant="mobileSide" className="md:hidden block" />
-                    </div>
-                    <div className='mt-10'>
-                        <SideBar variant="desktop" className="md:block  hidden" />
+
+                    <div className='mt-10 lg:block  hidden'>
+                        <SideBar variant="desktop" className="" />
                     </div>
                     <div className='flex flex-col gap-4 ml-5'>
                         <h1 className=' text-red-400  font-bold text-center text-sm mb-10'>You are currently viewing company sounds</h1>
@@ -216,7 +217,7 @@ export default function TopLabel() {
                             <p className='text-[#838383] md:pr-50'>GENERES</p>
                             <p className='text-[#838383] pr-10'>TOTAL PACK</p>
                         </div>
-                        <div className='w-auto md:w-full'>
+                        <div className='w-full'>
                             {cardData.map((data, index) => (
                                 <PackCard
                                     key={index}

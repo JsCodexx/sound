@@ -192,12 +192,12 @@ export function CarouselSize({ variant }) {
                             align: "start",
 
                         }}
-                        className="w-full  sm:max-w-xs md:max-w-2xl"
+                        className="lg:w-195  "
                     >
                         <CarouselContent>
                             {imgData.map((data, index) => (
-                                <CarouselItem key={index} className="basis-1/1  md:basis-1/4">
-                                    <div className="p-0 ml-6">
+                                <CarouselItem key={index} className="md:basis-1/2 sm:1/1  lg:basis-1/4">
+                                    <div className="p-0 ">
                                         <Card>
                                             <CardContent className="flex   pl-0">
                                                 <CardDemo
@@ -265,14 +265,14 @@ export function CarouselSize({ variant }) {
                             align: "start",
 
                         }}
-                        className="w-full"
+                        className="lg:w-195"
                     >
                         <CarouselContent className="">
                             {cardData.map((data, index) => (
-                                <CarouselItem key={index} className="basis-1/1  md:basis-1/4">
-                                    <div className=" ">
+                                <CarouselItem key={index} className=" md:basis-1/2 sm:1/1 lg:basis-1/4">
+                                    <div className="  ">
                                         <Card>
-                                            <CardContent className="flex   gap-0 p-0">
+                                            <CardContent className="   gap-0 p-0">
                                                 <CardDemo
                                                     key={index}
                                                     src={data.src}

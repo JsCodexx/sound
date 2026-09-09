@@ -110,7 +110,7 @@ function Home() {
         },
     ]
     return (
-        <div className=''>
+        <div className=' '>
             <NavBar />
             <div className='bg-[#CD4848]  h-15'>
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
@@ -118,12 +118,12 @@ function Home() {
             <div className='overflow-x-hidden flex flex-col justify-center items-center'>
                 <div className=" w-100%  ">
                     <div className='text-center mt-5'>
-                        <h1 className='font-bold text-3xl'>Explore</h1>
-                        <p>Dive into the Splice subscription.</p>
+                        <h1 className='font-bold text-3xl text-[#3A3A3A]'>Explore</h1>
+                        <p className='text-[#909090]'>Dive into the Splice subscription.</p>
                     </div>
                     <div className='mt-10 flex md:flex-row flex-col justify-center items-center gap-3'>
 
-                        <div className='border-black border-1 bg-[#EEEEEE] rounded-sm w-76 h-23  flex justify-evenly items-center'>
+                        <div className='border-black border-1 bg-[#EEEEEE]  rounded-sm w-76 h-23  flex justify-evenly items-center'>
                             <div><img src="/src/assets/sign.png" alt="" /></div>
                             <div>
                                 <h1 className='font-bold text-xl'>Sounds</h1>
@@ -140,10 +140,10 @@ function Home() {
                             <div><img src="/src/assets/arrowUp.png" alt="" /></div>
                         </div>
                     </div>
-                    <div className='flex md:flex-row flex-col justify-center items-center md:px-0 px-1.5 gap-10'>
+                    <div className='flex lg:flex-row flex-col justify-center items-center px-2 gap-5'>
                         <div className=' mt-20 '>
-                            <h1 className='md:text-2xl font-bold mb-3'>How company name </h1>
-                            <p className='mb-4'>See what Splice is all about in this short video.</p>
+                            <h1 className='md:text-2xl text-[#3A3A3A] font-bold mb-3'>How company name </h1>
+                            <p className='mb-4 text-[#909090] font-semibold'>See what Splice is all about in this short video.</p>
                             <div className='relative'>
                                 <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
                                 <img src="/src/assets/pic.png" alt="" width={500} />
@@ -151,8 +151,8 @@ function Home() {
                             </div>
                         </div>
                         <div className=' mt-20 '>
-                            <h1 className='md:text-2xl font-bold mb-3'>Find Your Plan</h1>
-                            <p className='mb-4'>See what Splice is all about in this short video.</p>
+                            <h1 className='md:text-2xl text-[#3A3A3A] font-bold mb-3'>Find Your Plan</h1>
+                            <p className='mb-4 text-[#909090] font-semibold'>See what Splice is all about in this short video.</p>
                             <div className='relative '>
                                 <img className='absolute top-0' src="/src/assets/black.png" alt="" width={500} />
                                 <img src="/src/assets/square.png" alt="" width={500} />
@@ -160,49 +160,52 @@ function Home() {
                             </div>
                         </div>
                     </div>
+                    <div className='px-3'>
+                        <div className='flex flex-col justify-center items-center gap-3 mt-25'>
+                            <h1 className='font-bold text-4xl text-[#3A3A3A]'>Sound</h1>
+                            <p className='text-black font-medium'>What's New</p>
+                            <p className='  text-[#909090] font-semibold'>What's new
+                                Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
+                        </div>
 
-                    <div className='md:text-center mt-15 flex flex-col md:px-0 px-4'>
-                        <h1 className='font-bold text-2xl text-center'>Sounds</h1>
-                        <p className=' text-gray-600 text-sm  '>What's new
-                            Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
+                        <div className='flex flex-wrap w-full  gap-2 md:gap-6 justify-center items-center  '>
+                            {cardData.map((data, index) => (
+                                <CardDemo
+                                    key={index}
+                                    src={data.src}
+                                    title={data.title}
+                                    packs={data.packs}
+                                    tags={data.tags}
+                                    variant="Midi"
+                                />
+                            ))}
+                        </div>
                     </div>
-
-                    <div className='flex flex-col md:flex-row gap-0 md:gap-6 justify-center item-center  '>
-                        {cardData.map((data, index) => (
-                            <CardDemo
-                                key={index}
-                                src={data.src}
-                                title={data.title}
-                                packs={data.packs}
-                                tags={data.tags}
-                                variant="Midi"
-                            />
-                        ))}
-                    </div>
-
                     <div className='flex  justify-center items-center gap-3 '>
                         <img src="/src/assets/left.png" alt="" />
                         <img src="/src/assets/right.png" alt="" />
                     </div>
+                    <div className='px-3'>
+                        <div className='flex flex-col justify-center items-center gap-3 mt-25'>
+                            <h1 className='font-bold text-4xl text-[#3A3A3A]'>What's Free</h1>
+                            <p className='text-black font-medium'>What's New</p>
+                            <p className=' text-[#909090] font-semibold '>What's new
+                                Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
+                        </div>
 
-                    <div className='text-center mt-25'>
-                        <h1 className='font-bold text-2xl'>What's Free</h1>
-                        <p className='md:w-300 text-gray-600 px-1.5 md:px-0'>What's new
-                            Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
-                    </div>
-
-                    <div className='flex flex-wrap w-full  gap-2 md:gap-6 justify-center items-center  '>
-                        {cardData_2.map((data, index) => (
-                            <CardDemo
-                                key={index}
-                                src={data.src}
-                                title={data.title}
-                                packs={data.packs}
-                                tags={data.tags}
-                                free={data.free}
-                                variant="Midi"
-                            />
-                        ))}
+                        <div className='flex flex-wrap w-full   gap-2 md:gap-6 justify-center items-center  '>
+                            {cardData_2.map((data, index) => (
+                                <CardDemo
+                                    key={index}
+                                    src={data.src}
+                                    title={data.title}
+                                    packs={data.packs}
+                                    tags={data.tags}
+                                    free={data.free}
+                                    variant="Midi"
+                                />
+                            ))}
+                        </div>
                     </div>
                     <div className='flex justify-center items-center gap-4 '>
                         <img src="/src/assets/left.png" alt="" />

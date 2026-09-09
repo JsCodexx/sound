@@ -10,12 +10,12 @@ export function CardDemo({ src, title, packs, tags, variant, free }) {
     return (
         <>
             {variant === "Midi" ?
-                <Card Card className=" h-65 w-full   md:w-[140px] mb-8 mt-2   p-0 " >
-                    <div className="flex gap-5  justify-center items-center ">
-                        <div className="flex flex-col  ">
-                            <div className="relative w-full" >
-                                <img src={src} alt={title} className=" rounded-sm h-40 w-75  md:w-45" />
-                                <img src={free} width={55} className="absolute top-0 md:left-21  left-61" />
+                <Card Card className=" h-65 w-full lg:w-40    mb-8 mt-2   p-0 " >
+                    <div className="flex gap-0 justify-center items-center ">
+                        <div className="  ">
+                            <div className="relative w-full " >
+                                <img src={src} alt={title} className=" rounded-sm lg:w-full w-110 h-47" />
+                                <img src={free} width={55} className="absolute top-0 right-0" />
                             </div>
 
                             <div className="flex flex-col gap-3">
@@ -31,21 +31,21 @@ export function CardDemo({ src, title, packs, tags, variant, free }) {
                     </div>
 
                 </Card> :
-                <Card Card className="w-[300px] h-25 max-w-sm bg-[#F6F6F6] rounded-none " >
-                    <div className="flex gap-5">
+                <Card Card className=" h-30 max-w-sm bg-[#F6F6F6] rounded-none " >
+                    <div className="flex justify-center items-center gap-5 ">
                         <div>
                             <img src={src} alt={title} width={55} className="mt-1 ml-2" />
 
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <div className="flex gap-5 mt-2">
+                            <div className="flex gap-5 mt-2 ml-4">
                                 <h1 className="text-black font-semibold">{title}</h1>
                                 <p className="text-red-500">{packs}</p>
                             </div>
-                            <div className="flex gap-3 ">
+                            <div className="flex gap-3 px-2 ">
                                 {tags.map((tag) => (
-                                    <button className="w-[62.99px] h-[30.31px] rounded-2xl bg-[#EBEBEB]">
+                                    <button className="px-4 py-3 rounded-2xl bg-[#EBEBEB]">
                                         {tag}
                                     </button>
                                 ))}

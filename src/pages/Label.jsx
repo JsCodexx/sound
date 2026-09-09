@@ -82,29 +82,29 @@ export default function Label() {
     return (
         <div>
             <NavBar />
-            <main className="mx-auto w-full max-w-[1440px]  relative">
-                <div className='flex  mt-5 gap-0  w-100% overflow-x-hidden'>
-                    <div className='mt-18'>
-                        <SideBar variant="mobileSide" className="md:hidden block" />
-                    </div>
+            <div className='mt-5'>
+                <SideBar variant="mobileSide" className="md:hidden block" />
+            </div>
+            <main className="mx-auto w-full max-w-360  ">
+                <div className='flex   mt-5 gap-0  w-100% overflow-x-hidden'>
+
                     <div className='mt-11'>
                         <SideBar variant="desktop" className="md:block  hidden" />
                     </div>
 
-
                     <div className=' w-full'>
-                        <h1 className=' text-red-400  md:font-bold text-center mb-0'>You are currently viewing company sounds</h1>
+                        <h1 className=' text-red-400  md:font-bold text-center mb-5'>You are currently viewing company sounds</h1>
                         <hr className='w-1050 absolute  right-0 ' />
-                        <div className=' w-full h-90 relative md:block hidden' >
-                            <img src="/src/assets/image86.png" alt="" className='absolute top-5 left-10 md:w-250' />
-                            <img src="/src/assets/f1.png" alt="" className='absolute top-5 left-145 md:w-115' />
+                        <div className=' w-full h-90 relative lg:block hidden ' >
+                            <img src="/src/assets/image86.png" alt="" className='absolute top-[5%]  left-[2%] w-[93%]' />
+                            <img src="/src/assets/f1.png" alt="" className='absolute top-[5%] left-[53%] w-[43%]' />
                         </div>
-                        <div className='flex flex-col text-[#5C5C5C] gap-5 md:ml-8 '>
-                            <div className='flex gap-6 cursor-pointer '>
+                        <div className='flex  flex-col text-[#5C5C5C] gap-5 md:ml-8 '>
+                            <div className='flex gap-6 cursor-pointer mb-0'>
                                 <TabsLine />
                             </div>
-                            <hr className='md:w-230 w-0' />
-                            <div className='flex flex-wrap gap-2 md:ml-8 px-auto '>
+                            <hr className='mx-2' />
+                            <div className='flex font-semibold flex-wrap gap-2 lg:ml-2 lg:justify-start  justify-center item-center '>
                                 {cardData.map((data, index) => (
                                     <CardDemo
                                         key={index}

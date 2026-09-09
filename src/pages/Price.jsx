@@ -13,11 +13,11 @@ function Price() {
         <div className='w-full'>
             <NavBar />
             <div className='bg-[#CD4848] w-full h-15'>
-                <div className='overflow-x-hidden container mx-auto max-w-7xl'>
+                <div className='overflow-x-hidden '>
 
                     <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
                 </div>
-                <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="w-full">
                     <h1 className='text-center text-sm md:text-3xl font-extrabold mt-8'>Start your free 14-day trial.
                         <br /> Cancel any time.</h1>
                     <div className='flex md:flex-row flex-col justify-center items-center gap-4'>
@@ -45,7 +45,7 @@ function Price() {
                     <div className='   mt-5 text-center pt-3  text-white font-bold justify-center items-center flex-col flex'> <button className=' cursor-pointer bg-[#D971F1] px-4 py-2 text-center rounded-sm text-2xl'>Start a free trial</button>
                         <h1 className='text-center cursor-pointer mt-3  text-black'>Cancel at any time</h1></div>
 
-                    <div className='flex md:flex-row flex-col gap-3 md:gap-17 mt-20'>
+                    <div className='flex md:flex-row flex-col justify-center items-center gap-20 mt-20 px-3'>
                         <div className='mt-15 '>
                             <h1 className='text-2xl font-black pb-4  md:ml-30'>How does company work?</h1>
                             <p className='md:w-130  md:ml-30'>Get new credits every month to purchase samples, presets, and MIDI.
@@ -58,12 +58,12 @@ function Price() {
                         </div>
 
                     </div>
-                    <div className='  mt-20 flex md:flex-row flex-col '>
-                        <div className=' relative  w-176 h-100 '>
+                    <div className='  mt-20 flex md:flex-row flex-col justify-center items-center px-3'>
+                        <div className=' relative  w-176 h-100 lg:block hidden'>
                             <img className='absolute top-0 left-5 md:left-20' src="/src/assets/fatGirl.png" alt="" />
                             <img className=' absolute md:left-55 left-40 md:top-20  ' src="/src/assets/sad.png" alt="" />
-                            <img className=' absolute left-90 top-0  lg:block md:hidden hidden' src="/src/assets/sing.png" alt="" />
-                            <img className=' absolute left-125 md:top-20 lg:block md:hidden hidden' src="/src/assets/drum.png" alt="" />
+                            <img className=' absolute left-90 top-0 ' src="/src/assets/sing.png" alt="" />
+                            <img className=' absolute left-125 md:top-20 ' src="/src/assets/drum.png" alt="" />
                         </div>
                         <div className='  flex flex-col justify-center item-center md:mt-25'>
                             <h1 className='text-2xl font-black '>The highest-quality samples on the market</h1>
@@ -73,21 +73,21 @@ function Price() {
                         </div>
                     </div>
 
-                    <div className='flex md:flex-row gap-10 flex-col mt-20 md:mt-80 justify-center item-center'>
-                        <div className='flex flex-col justify-center item-center'>
+                    <div className='flex md:flex-row gap-10 flex-col mt-20 md:mt-80 justify-center item-center px-3'>
+                        <div className='flex flex-col text-center'>
                             <h1 className='text-2xl font-black '>Limitless inspiration from hundreds of genres</h1>
                             <h3 className=' md:w-140 mt-5'>Combine samples from house to cinematic, techno to trap, and EDM to ambient to creat
                                 e something unique. We’ve traveled around the world to record inspiring samples—from glaciers in Iceland to
                                 abandoned mines in Utah.
                             </h3>
                         </div>
-                        <div className='relative '>
+                        <div className='relative flex justify-center items-center'>
                             <img className=' ' src="/src/assets/concert.png" alt="" />
                             <img className='absolute -top-30 left-80 lg:block md:hidden hidden max-lg:hidden' src="/src/assets/string.png" alt="" />
                             <img className='absolute -bottom-30 right-30  md:block hidden ' src="/src/assets/light.png" alt="" />
                         </div>
                     </div>
-                    <div className='flex md:flex-row flex-col gap-3 md:gap-10 mt-25 justify-center items-center'>
+                    <div className='flex md:flex-row flex-col gap-3 md:gap-10 mt-25 justify-center items-center px-3'>
                         <div className='md:w-63 mt-15' >
                             <img src="/src/assets/cup.png" alt="" className='pb-4 ' />
                             <h3 className='pb-4 text-black'>100% royalty-free</h3>

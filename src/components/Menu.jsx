@@ -21,13 +21,13 @@ export function TabsLine({ variant, set }) {
 
                     < Tabs >
                         <TabsList className=" flex flex-wrap  gap-2 md:mb-0 mb-8 md:w-full  md:gap-0  md:flex-row" variant="lines">
-                            <button onClick={sound}><TabsTrigger value="overview" className="">Overview</TabsTrigger ></button >
-                            <Link to="/instrument"><TabsTrigger value="analytics" className="">Instrument</TabsTrigger></Link>
-                            <Link to="/cinematics"> <TabsTrigger value="cn" className="">Cinematic FX</TabsTrigger></Link>
-                            <Link to="/genres"> <TabsTrigger value="genes" className="">Genres</TabsTrigger></Link>
-                            <Link to="/label"><TabsTrigger value="label" className="">Labels</TabsTrigger></Link>
-                            <Link to="/present"> <TabsTrigger value="present" className="">Presets</TabsTrigger></Link>
-                            <Link to="/Midi"> <TabsTrigger value="midi" className="">MIDI</TabsTrigger></Link>
+                            <button onClick={sound} font-bold text-black><TabsTrigger value="overview" className="font-bold ">Overview</TabsTrigger ></button >
+                            <Link to="/instrument"><TabsTrigger value="analytics" className="font-bold">Instrument</TabsTrigger></Link>
+                            <Link to="/cinematics"> <TabsTrigger value="cn" className="font-bold">Cinematic FX</TabsTrigger></Link>
+                            <Link to="/genres"> <TabsTrigger value="genes" className="font-bold">Genres</TabsTrigger></Link>
+                            <Link to="/label"><TabsTrigger value="label" className="font-bold">Labels</TabsTrigger></Link>
+                            <Link to="/present"> <TabsTrigger value="present" className="font-bold">Presets</TabsTrigger></Link>
+                            <Link to="/Midi"> <TabsTrigger value="midi" className="font-bold">MIDI</TabsTrigger></Link>
 
                         </TabsList >
                     </Tabs>

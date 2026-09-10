@@ -5,8 +5,8 @@ import { X } from 'lucide-react';
 
 export default function HoverCards() {
     return (
-        <div className='flex flex-wrap justify-center items-center gap-6 mt-12 mb-15 cursor-pointer  '>
-            <div className='bg-black hover:bg-[#D74664]  px-6 text-start py-6 rounded-lg transition-all duration-100 ease-in-out hover:-translate-y-2 hover:scale-[1.1] '>
+        <div className='flex flex-wrap justify-center items-center gap-6  mt-12 mb-15 cursor-pointer  '>
+            <div className='bg-black hover:bg-[#D74664]  px-6 text-start py-6 rounded-lg transition-all duration-700 ease-in-out hover:-translate-y-2 hover:scale-[1.1] '>
                 <div className='text-white   pt-7 flex flex-col group gap-5 '>
                     <h1 className='text-2xl'>Sounds+</h1>
                     <p className='text-4xl text-[#FFFFFF] font-[Manrope] font-semibold'>$35 <span className='text-sm text-gray-300 font-light'>/Month</span></p>
@@ -47,7 +47,7 @@ export default function HoverCards() {
                 </div>
             </div>
             {/* card-2 */}
-            <div className='bg-black hover:bg-[#D74664] group px-6 py-6 rounded-lg transition-all duration-100 ease-in-out hover:-translate-y-2 hover:scale-[1.1]'>
+            <div className='bg-black hover:bg-[#D74664] group px-6 py-6 rounded-lg transition-all duration-700 ease-in-out hover:-translate-y-2 hover:scale-[1.1]'>
                 <div className='text-white  pt-7 flex flex-col gap-5'>
                     <h1 className='text-2xl'>Creator+</h1>
                     <p className='text-4xl text-[#FFFFFF] font-[Manrope] font-semibold'>$45 <span className='text-sm text-gray-300 font-light'>/Month</span></p>
@@ -88,7 +88,7 @@ export default function HoverCards() {
                 </div>
             </div>
             {/* card-3 */}
-            <div className='bg-black hover:bg-[#D74664] group px-6 py-6  rounded-lg transition-all duration-100 ease-in-out hover:-translate-y-2 hover:scale-[1.1]'>
+            <div className='bg-black hover:bg-[#D74664] group px-6 py-6  rounded-lg transition-all duration-700 ease-in-out hover:-translate-y-2 hover:scale-[1.1]'>
                 <div className='text-white  pt-7 flex flex-col gap-5'>
                     <h1 className='text-2xl'>Creator+</h1>
                     <p className='text-4xl text-[#FFFFFF] font-[Manrope] font-semibold'>$35 <span className='text-sm text-gray-300 font-light'>/Month</span></p>

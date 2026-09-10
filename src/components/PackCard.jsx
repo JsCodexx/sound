@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { ToggleDemo } from './Toggle'
+import { Plus } from 'lucide-react'
+import { EllipsisVertical } from 'lucide-react';
 export default function PackCard({ src, id, description, img, num, num1, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
     return (
         <div>
@@ -13,7 +15,7 @@ export default function PackCard({ src, id, description, img, num, num1, title, 
                         <img
                             src={src}
                             alt=""
-                            className=" shrink-0"
+                            className=" shrink-0 w-20"
                         />
 
 
@@ -61,11 +63,11 @@ export default function PackCard({ src, id, description, img, num, num1, title, 
 
             ) : variant === "chart" ? (
                 <div
-                    className={`bg-[#E9E9E9]   min-h-17.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0   ${ChangeRow ? "bg-white" : ""
+                    className={`bg-[#E9E9E9]   w-full min-h-17.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0   ${ChangeRow ? "bg-white" : ""
                         }`}
                 >
 
-                    <div className="flex items-center gap-3 sm:gap-5 md:gap-10 lg:gap-20 min-w-0">
+                    <div className="flex items-center gap-3 sm:gap-5 md:gap-10 lg:gap-20 ">
                         <img
                             src={src}
                             alt=""
@@ -151,8 +153,13 @@ export default function PackCard({ src, id, description, img, num, num1, title, 
                                     <p>{keys}</p>
                                     <p>{BPM}</p>
                                 </div>
-                                <div className='ml-50 mt-5'>
-                                    <img src={three} alt="" className='' />
+                                <div className='ml-50 mt-5 flex'>
+                                    <div className='h-10 pt-0 '>
+                                        <ToggleDemo />
+                                    </div>
+
+                                    <Plus />
+                                    <EllipsisVertical />
                                 </div>
                             </div>
 

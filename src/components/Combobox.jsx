@@ -9,6 +9,7 @@ import {
     ComboboxList,
 } from "@/components/ui/combobox"
 
+import { useState } from "react";
 const frameworks = [
     <b className=""> All Levels</b>,
     "acustic audio",
@@ -29,17 +30,29 @@ const frameworks = [
 ]
 
 export function ComboboxBasic() {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="w-full xl:w-260">
-            <Combobox items={frameworks} className="rounded-none">
-                <div className="border-none">
+        <div className="w-full xl:w-260 relative">
 
-                    <ComboboxInput placeholder="All Levels" className="rounded-none px-3 py-5" />
+            {isOpen && (
+                <div className="fixed inset-0 z-40 bg-black/10 backdrop-blur-sm" />
+            )}
+
+            <Combobox
+                items={frameworks}
+                className="rounded-none relative z-50"
+            >
+                <div className="border-none">
+                    <ComboboxInput
+                        placeholder="All Levels"
+                        className="rounded-none px-0 py-5"
+                        onFocus={() => setIsOpen(true)}
+                        onBlur={() => setIsOpen(false)}
+                    />
                 </div>
 
                 <ComboboxContent className="rounded-none">
                     <ComboboxEmpty>No items found.</ComboboxEmpty>
-
                     <ComboboxList className="border rounded-none">
                         {(item) => (
                             <ComboboxItem key={item} value={item} className="rounded-none">

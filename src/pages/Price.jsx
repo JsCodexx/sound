@@ -26,10 +26,10 @@ function Price() {
                             className='bg-[#151515]  mt-7 rounded-3xl px-2 py-1 cursor-pointer '
                         >
                             <div className='flex gap-0 items-center'>
-                                <div className={` h-8 rounded-2xl text-sm px-4 text-white py-1.5  duration-300 ${isMonthly ? 'bg-[#D74664]' : 'bg-transparent text-gray-400 py-2'}`}>
+                                <div className={` h-8 rounded-2xl text-sm px-4 text-white py-1.5 transition-all ease-in-out duration-700 ${isMonthly ? 'bg-[#D74664]' : 'bg-transparent text-gray-400 py-2'}`}>
                                     Monthly
                                 </div>
-                                <p className={`text-sm pt-1.5  h-8 px-2 rounded-2xl  duration-300 ${!isMonthly ? 'bg-[#D74664] font-semibold text-white' : 'text-white'}`}>
+                                <p className={`text-sm pt-1.5  h-8 px-2 rounded-2xl transition-all ease-in-out duration-700 ${!isMonthly ? 'bg-[#D74664] font-semibold text-white' : 'text-white'}`}>
                                     Annual
                                 </p>
                             </div>

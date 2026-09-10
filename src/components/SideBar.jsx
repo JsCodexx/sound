@@ -29,7 +29,7 @@ export default function SideBar({ variant }) {
                                     <NavLink to="/sound" onClick={() => setCurrent("Browse")}>
                                         {({ isActive }) => (
 
-                                            <h1 className={`text-black cursor-pointer md:pr-0 pr-1 ${isActive ? 'font-bold' : ''}`} >
+                                            <h1 className={`text-[#909090] font-semibold cursor-pointer md:pr-0 pr-1 ${isActive ? 'font-bold text-black' : ''}`} >
                                                 Browse
                                             </h1>
 
@@ -39,7 +39,7 @@ export default function SideBar({ variant }) {
 
                                     <NavLink to="/Charts" onClick={() => setCurrent("Charts")}>
                                         {({ isActive }) => (
-                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold text-black' : ''}`}>
                                                 Charts
                                             </h1>
                                         )}
@@ -49,7 +49,7 @@ export default function SideBar({ variant }) {
                                     <h1 className='text-[#909090] font-semibold mb-4'> Library</h1>
                                     <NavLink to="/Sound2" onClick={() => setCurrent("Sound")}>
                                         {({ isActive }) => (
-                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold text-black' : ''}`}>
                                                 Sounds
                                             </h1>
                                         )}

@@ -5,7 +5,7 @@ export default function Login() {
         <div className=' flex justify-center items-center'>
             <div className='w-360   h-screen'>
                 <div className='flex  '>
-                    <div className='bg-[#000000] lg:block hidden  w-220 h-screen '>
+                    <div className='bg-[#000000] lg:block hidden  w-200 h-screen '>
                         <div className='flex gap-8 mt-[5%]'>
 
                             <div className=' flex justify-center items-center bg-[#CD4848] h-[209px] w-[139px]'>
@@ -44,40 +44,38 @@ export default function Login() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div className='flex flex-col justify-center items-center  w-135  '>
-                        <div className='flex flex-col mr-25 justify-center items-center lg:justify-start lg:items-start px-3'>
+                    <div className='flex flex-col justify-start items-center lg:w-120  w-full  '>
+                        <div className='flex flex-col lg:mr-20 justify-center items-center lg:justify-start lg:items-start px-3'>
                             <img src="/src/assets/Group11.png" alt="" className=' mt-20' />
-                            <h2 className=' mt-4 text-2xl font-bold text-gray-700'>Log In</h2>
-                            <p className=' mt-1 text-sm text-gray-700 p-0'>See what is going on with your business</p>
+                            <h2 className=' mt-4 text-3xl font-medium text-[#404041] '>Login your Account</h2>
+                            <p className=' mt-1 text-sm text-[#909090]  p-0'>See what is going on with your business</p>
                         </div>
 
-                        <img src="/src/assets/Frame1.png" alt="" className=' mt-6' />
+                        <img src="/src/assets/Frame1.png" alt="" className=' mt-6 lg:w-90 w-60' />
+                        <p p className='mt-5 text-[#909090]'>---------or Sign in with Email----------</p>
 
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
-                            <label className='text-[#909090] font-semibold' htmlFor="">Full Name</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <label className=' text-[#909090] ' htmlFor="">Email</label>
+                            <input type="text" placeholder='waleed@gamil.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
-                            <label className=' text-[#909090] font-semibold' htmlFor="">User Name</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <label className=' text-[#909090] ' htmlFor="">Password</label>
+                            <input type="text" placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
-                        <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
-                            <label className=' text-[#909090] font-semibold' htmlFor="">Email</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
-                        </div>
-                        <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
-                            <label className=' text-[#909090] font-semibold' htmlFor="">Password</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
-                        </div>
-                        <div className='flex justify-evenly mt-5'>
-                            <p className='text-sm '>By Signing up i Agree the term and conditions</p>
+                        <div className='flex justify-center items-center lg:gap-20 gap-3 mt-5 w-full'>
+                            <div className='flex  gap-2'>
+                                <input type="checkbox" className='accent-[#404041] w-3' />
+                                <label htmlFor="abc" className='text-[#909090]'>Remember Me</label>
+                            </div>
+                            <div>
+                                <Link to="/Forget"> <p className='text-[#404041]'>Forget Password?</p></Link>
+                            </div>
                         </div>
                         <Link to="/home">   <button className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
-                           Log In
+                            Log In
                         </button></Link>
-                        <p className=' mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
+                        <Link to="/Register"><p className=' mt-5 text-gray-500'>Not Resgister Yet?<span className='text-black  font-bold cursor-pointer' > Create an account</span> </p></Link>
                     </div>
                 </div>
             </div>

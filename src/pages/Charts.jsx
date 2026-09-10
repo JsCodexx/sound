@@ -402,15 +402,15 @@ export default function Charts() {
                                     )}
                                 </NavLink>
                             </div>
-                            <div className='border-none'>
+                            <div className='border-none '>
                                 <ComboboxBasic />
                             </div>
 
-                            <div className='text-sm flex md:mx-60 justify-between pr-25'>
+                            <div className='text-sm flex md:justify-between pr-25'>
                                 <p className='text-[#838383]'>PACKS</p>
                                 <p className='text-[#838383]'>CONTENTS</p>
                             </div>
-                            <div className='w-full   px-3'>
+                            <div className='w-full flex flex-col  px-3'>
                                 {cardData.map((data, index) => (
                                     <PackCard
                                         key={index}

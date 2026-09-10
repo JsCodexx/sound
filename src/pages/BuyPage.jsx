@@ -3,6 +3,7 @@ import NavBar from '@/components/NavHome'
 import SideBar from '@/components/SideBar'
 import { NavigationMenuDemo } from '@/components/Arrowtabs'
 import PackCard from '@/components/PackCard'
+import { ToggleDemo } from '@/components/Toggle'
 export default function BuyPage() {
     const cardData = [
         {
@@ -161,7 +162,7 @@ export default function BuyPage() {
                                     <div className='flex gap-3 mt-8'>
                                         <button className='bg-[#CD4848] w-[115px] h-[35px] rounded-4xl text-white font-semibold'>GET PACK</button>
                                         <button className='border-[#CD4848] border-2 w-[115px] h-[35px] rounded-4xl text-red-700 font-semibold'>PREVIEW</button>
-                                        <img src="/src/assets/heart.png" alt="" className='w-5 h-5 mt-2 cursor-pointer' />
+                                      <ToggleDemo/>
                                     </div>
                                 </div>
                             </div>

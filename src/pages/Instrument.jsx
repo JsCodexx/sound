@@ -22,7 +22,9 @@ export default function Instrument() {
 
                         <div className=' w-full h-90 relative lg:block hidden ' >
                             <img src="/src/assets/image86.png" alt="" className='absolute top-[5%]  left-[2%] w-[93%]' />
+                            <p className='absolute top-[50%] left-[10%] text-white font-bold text-4xl'>Vocal Future <span className='font-light'>Electronica</span> </p>
                             <img src="/src/assets/f1.png" alt="" className='absolute top-[5%] left-[53%] w-[43%]' />
+
                         </div>
                         <div className="flex flex-col   text-[#5C5C5C] ">
                             <div className="flex gap-6 cursor-pointer pb-5 md:ml-8">

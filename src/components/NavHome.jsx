@@ -133,6 +133,7 @@ function NavBar({ variant }) {
                                     {volume && (
                                         <div className="absolute right-0 top-11">
                                             <SliderVertical />
+
                                         </div>
                                     )}
                                 </div>
@@ -171,6 +172,7 @@ function NavBar({ variant }) {
                                     {volume && (
                                         <div className="absolute right-0 top-11">
                                             <SliderVertical />
+
                                         </div>
                                     )}
                                 </div>

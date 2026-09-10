@@ -1,11 +1,13 @@
 import React from 'react'
-
-export default function PackCard({ src, id, description, img, num,num1, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
+import { ToggleDemo } from './Toggle'
+import { Plus } from 'lucide-react'
+import { EllipsisVertical } from 'lucide-react';
+export default function PackCard({ src, id, description, img, num, num1, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
     return (
         <div>
             {variant === "label" ? (
                 <div
-                    className={`bg-[#E9E9E9] w-full min-h-[64px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-4 py-3 ${ChangeRow ? "bg-[#FFFFFF]" : ""
+                    className={`bg-[#E9E9E9] w-full min-h-[64px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3  ${ChangeRow ? "bg-[#FFFFFF]" : ""
                         }`}
                 >
 
@@ -13,7 +15,7 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
                         <img
                             src={src}
                             alt=""
-                            className="w-10 h-10 sm:w-12 sm:h-12  shrink-0"
+                            className=" shrink-0 w-20"
                         />
 
 
@@ -61,15 +63,15 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
 
             ) : variant === "chart" ? (
                 <div
-                    className={`bg-[#E9E9E9] w-full min-h-[70px] flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0 p-3 md:px-5 ${ChangeRow ? "bg-white" : ""
+                    className={`bg-[#E9E9E9]   w-full min-h-17.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0   ${ChangeRow ? "bg-white" : ""
                         }`}
                 >
 
-                    <div className="flex items-center gap-3 sm:gap-5 md:gap-10 lg:gap-20 min-w-0">
+                    <div className="flex items-center gap-3 sm:gap-5 md:gap-10 lg:gap-20 ">
                         <img
                             src={src}
                             alt=""
-                            className="w-10 h-10 sm:w-12 sm:h-12  shrink-0"
+                            className=" shrink-0 "
                         />
 
                         <h1 className="text-sm sm:text-base md:text-lg shrink-0">
@@ -106,7 +108,7 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
                                     alt=""
                                     className="h-3 w-3 object-contain "
                                 />
-                                <p className={` text-xs sm:text-sm ${ChangeRow?"text-[#4F4F4F]":"text-[#E9E9E9]"}`}>
+                                <p className={` text-xs sm:text-sm ${ChangeRow ? "text-[#4F4F4F]" : "text-[#E9E9E9]"}`}>
                                     {num1}
                                 </p>
                             </>
@@ -121,8 +123,8 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
                     <div className={` bg-[#E9E9E9] w-full h-auto flex justify-between ${ChangeColoum ? '' : 'bg-[#FFFFFF]'}`}>
 
                         <div className='flex gap-8'>
-                            <div className='flex gap-0'>
-                                <img src={src} alt="" className='px-3 py-3' />
+                            <div className='flex gap-4'>
+                                <img src={src} alt="" className=' ' />
                                 <h1 className='mt-5 font-semibold text-sm'>{id}</h1>
                             </div>
 
@@ -151,8 +153,13 @@ export default function PackCard({ src, id, description, img, num,num1, title, C
                                     <p>{keys}</p>
                                     <p>{BPM}</p>
                                 </div>
-                                <div className='ml-50 mt-5'>
-                                    <img src={three} alt="" className='' />
+                                <div className='ml-50 mt-5 flex'>
+                                    <div className='h-10 pt-0 '>
+                                        <ToggleDemo />
+                                    </div>
+
+                                    <Plus />
+                                    <EllipsisVertical />
                                 </div>
                             </div>
 

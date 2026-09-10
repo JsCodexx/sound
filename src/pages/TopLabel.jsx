@@ -182,20 +182,18 @@ export default function TopLabel() {
     return (
         <div>
             <NavBar />
-            <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
-                <div className='flex md:ml-8 mt-5 gap-5 relative w-auto'>
-                    <div className='flex gap-10'>
-                        <SideBar />
-                        <div>
-                            <img src="src/assets/line.png" alt="" className='h-700' />
-                            {/* <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
-                                           <hr className='w-1050 absolute  right-0 ' /> */}
-                        </div>
+            <div className='mt-5  xl:hidden block'>
+                <SideBar variant="mobileSide" className="" />
+            </div>
+            <main className="mx-auto w-full max-w-[1440px] ">
+                <div className='flex mt-5 gap-3 md:gap-0 relative w-auto'>
 
+                    <div className='mt-10 lg:block  hidden'>
+                        <SideBar variant="desktop" className="" />
                     </div>
-                    <div className='flex flex-col gap-4'>
-                        <h1 className=' text-red-400  font-bold md:ml-60 text-sm'>You are currently viewing company sounds</h1>
-                        <hr className='md:w-240 mr-0' />
+                    <div className='flex flex-col gap-4 ml-5'>
+                        <h1 className=' text-red-400  font-bold text-center text-sm mb-10'>You are currently viewing company sounds</h1>
+                        <hr className='md:w-1050 w-0 absolute  right-0 top-10 ' />
                         <div className='flex gap-10 ml-3'>
                             <NavLink to="/Charts">
                                 {({ isActive }) => (
@@ -214,12 +212,12 @@ export default function TopLabel() {
                             </NavLink>
                         </div>
                         <ComboboxBasic />
-                        <div className='text-sm flex  ml-40 justify-between '>
+                        <div className='text-sm flex  md:ml-40 justify-between '>
                             <p className='text-[#838383] '>LABEL</p>
-                            <p className='text-[#838383] pr-50'>GENERES</p>
+                            <p className='text-[#838383] md:pr-50'>GENERES</p>
                             <p className='text-[#838383] pr-10'>TOTAL PACK</p>
                         </div>
-                        <div className='w-73 md:w-full'>
+                        <div className='w-full'>
                             {cardData.map((data, index) => (
                                 <PackCard
                                     key={index}

@@ -17,36 +17,41 @@ export default function Genres() {
         <div>
             <div >
                 <NavBar />
-                <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
-                    <div className='flex ml-8 mt-5 gap-5  w-100% overflow-x-hidden'>
-                        <SideBar />
+                <div className='mt-5'>
+                    <SideBar variant="mobileSide" className="md:hidden block" />
+                </div>
+                <main className="mx-auto w-full max-w-[1440px]   ">
+                    <div className='flex  ml-0 mt-5 gap-0 flex-row   w-100% overflow-x-hidden'>
+
+                        <div className='mt-11'>
+                            <SideBar variant="desktop" className="md:block  hidden" />
+                        </div>
+
 
                         <div className=' w-full'>
-                            <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
+                            <h1 className=' text-red-400  md:font-bold text-center mb-5'>You are currently viewing company sounds</h1>
                             <hr className='w-1050 absolute  right-0 ' />
-                            <img src="src/assets/line.png" alt="" className='h-1120 ml-15' />
+                            <div className=' w-full h-90 relative lg:block hidden ' >
+                                <img src="/src/assets/image86.png" alt="" className='absolute top-[5%]  left-[2%] w-[93%]' />
+                                <p className='absolute top-[50%] left-[10%] text-white font-bold text-4xl'>Vocal Future <span className='font-light'>Electronica</span> </p>
+                                <img src="/src/assets/f1.png" alt="" className='absolute top-[5%] left-[53%] w-[43%]' />
+                            </div>
+                            <div className='flex flex-col text-[#5C5C5C] gap-5 '>
+                                <div className='flex gap-6 cursor-pointer pb-4 md:ml-8'>
+                                    <TabsLine />
 
-                        </div>
+                                </div>
+                                <hr />
 
-
-                    </div>
-                    <div className='hidden md:block' >
-                        <img src="/src/assets/image86.png" alt="" className='absolute top-25 left-60 w-220' />
-                        <img src="/src/assets/f1.png" alt="" className='absolute top-25 left-178 w-103' />
-                    </div>
-                    <div className='flex flex-col text-[#5C5C5C] gap-5 absolute top-20 left-25 md:top-120 md:left-70'>
-                        <div className='flex gap-6 cursor-pointer '>
-                            <TabsLine />
-
-                        </div>
-                        <hr className='md:w-230 w-75 mt-5' />
-
-                        <div className=' '>
+                                <div className=' md:ml-8 md:px-0 px-2'>
 
 
-                            <CardSmall variant="genres" description={genres} />
+                                    <CardSmall variant="genres" description={genres} />
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </main>
             </div>
 

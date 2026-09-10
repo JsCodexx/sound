@@ -73,8 +73,8 @@ const Footer2 = (props) => {
   const visibleSections = (sections ?? []).slice(0, MAX_SECTIONS);
 
   return (
-    <section className={cn("w-full", className)}>
-      <div className="container mx-auto w-full  md:px-4 sm:px-6 lg:px-0">
+    <section className={cn("w-full text-center", className)}>
+      <div className="  w-full  md:px-4 sm:px-6 lg:px-0">
         <footer>
 
           <div
@@ -92,16 +92,17 @@ const Footer2 = (props) => {
               lg:gap-8
               lg:px-10
               lg:py-12
+            
             "
           >
 
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="flex flex-col items-start gap-4">
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-2xl md:text-2xl  font-bold">
                   LOGO
                 </h1>
 
-                <p className="text-base font-medium">
+                <p className="text-base font-medium text-gray-300">
                   Subscribe to our newsletter
                 </p>
 
@@ -114,12 +115,14 @@ const Footer2 = (props) => {
                     type="button"
                     className="
                       h-10
-                      w-40
+                      md:w-40
+                      lg-w-40
+
                       rounded-sm
                       bg-[#D74664]
                       px-4
                       text-sm
-                      font-semibold
+                      font-light
                       transition-colors
                       hover:bg-[#c63d59]
                       focus:outline-none
@@ -137,12 +140,12 @@ const Footer2 = (props) => {
 
 
             {visibleSections.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 text-sm font-semibold tracking-tight">
+              <div key={sectionIdx} className="">
+                <h3 className="mb-4 text-sm text-gray-300 font-semibold tracking-tight">
                   {section.title}
                 </h3>
 
-                <ul className="space-y-3 text-sm text-white">
+                <ul className="space-y-3 text-sm  text-white">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
@@ -161,16 +164,18 @@ const Footer2 = (props) => {
 
           <div
             className="
-              flex
+              flex-row
               
-             pl-105
+            flex
+            justify-center 
+            items-center
               gap-3
               bg-black
              
               py-4
               text-center
               text-xs
-              font-medium
+              md:font-medium
               text-gray-400
              
               
@@ -180,11 +185,11 @@ const Footer2 = (props) => {
               {copyright}
             </p>
 
-            <ul className="flex gap-3 text-gray-400 pl-5">
+            <ul className="flex-col lg:flex-row flex gap-3 text-gray-400 pl-5">
               {legalLinks?.map((link, linkIdx) => (
                 <li
                   key={linkIdx}
-                  className="underline transition-colors hover:text-[#D74664]"
+                  className=" transition-colors hover:text-[#D74664]"
                 >
                   <a href={link.href}>
                     {link.name}
@@ -192,7 +197,11 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
-            <img src="/src/assets/icons.png" alt="" className="ml-15"/>
+            <div className="flex gap-0 cursor-pointer">
+              <img src="/src/assets/twit.png" alt="" className="w-10 h-8 mt-1" />
+              <img src="/src/assets/instagram.png" alt="" className="w-10" />
+              <img src="/src/assets/facebook.png" alt="" className="w-10" />
+            </div>
           </div>
         </footer>
       </div>

@@ -5,17 +5,22 @@ import { FieldDemo } from '@/components/RequestForm'
 import { Footer2 } from '@/components/footer2'
 function Submitrequest() {
     return (
-        <div>
+        <>
             <Nav />
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <InputGroupInlineStart />
-                <hr className='mt-5' />
-                <p className='ml-90 mt-5 text-sm'>Help center</p>
-                <p className='ml-90 mt-5 text-xl font-bold'>Submit a request</p>
-                <FieldDemo />
+            <div className=''>
+
+                <div className="flex  flex-col justify-start items-center container mx-auto max-w-7xl  ">
+                    <InputGroupInlineStart />
+                    <hr className='mt-5' />
+                    <p className='w-125 mt-5 text-sm'>Help center</p>
+                    <p className=' w-125 mt-5 text-xl font-bold'>Submit a request</p>
+                    <FieldDemo />
+                   
+                </div>
+
             </div>
             <Footer2 />
-        </div>
+        </>
     )
 }
 

@@ -9,53 +9,8 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export function CarouselSize({ variant }) {
-    const cardData = [
-        {
-            src: "/src/assets/x1.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x3.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x1.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x3.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x3.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x3.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x3.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
+export function CarouselSize({ variant, packs }) {
 
-
-    ]
     const imgData = [
         {
             src: "/src/assets/x4.png",
@@ -195,17 +150,17 @@ export function CarouselSize({ variant }) {
                         className="lg:w-195  "
                     >
                         <CarouselContent>
-                            {imgData.map((data, index) => (
+                            {packs?.map((data, index) => (
                                 <CarouselItem key={index} className="md:basis-1/2 sm:1/1  lg:basis-1/4">
                                     <div className="p-0 ">
                                         <Card>
                                             <CardContent className="flex   pl-0">
                                                 <CardDemo
                                                     key={index}
-                                                    src={data.src}
+
                                                     title={data.title}
-                                                    packs={data.packs}
-                                                    tags={data.tags}
+                                                    packs={data.description}
+                                                    tags={data.status}
                                                     variant="Midi"
                                                 />
                                             </CardContent>
@@ -215,8 +170,8 @@ export function CarouselSize({ variant }) {
                             ))}
                         </CarouselContent>
                         <div className=" ">
-                            <CarouselPrevious className="mt-75" />
-                            <CarouselNext className="mt-75" />
+                            <CarouselPrevious className="mt-85" />
+                            <CarouselNext className="mt-85" />
                         </div>
 
                     </Carousel>
@@ -268,17 +223,17 @@ export function CarouselSize({ variant }) {
                         className="lg:w-195"
                     >
                         <CarouselContent className="">
-                            {cardData.map((data, index) => (
+                            {packs?.map((data, index) => (
                                 <CarouselItem key={index} className=" md:basis-1/2 sm:1/1 lg:basis-1/4">
                                     <div className="  ">
                                         <Card>
                                             <CardContent className="   gap-0 p-0">
                                                 <CardDemo
                                                     key={index}
-                                                    src={data.src}
+
                                                     title={data.title}
-                                                    packs={data.packs}
-                                                    tags={data.tags}
+                                                    packs={data.description}
+                                                    tags={data.status}
                                                     variant="Midi"
                                                 />
                                             </CardContent>
@@ -289,8 +244,8 @@ export function CarouselSize({ variant }) {
                         </CarouselContent>
 
                         <div className=" ">
-                            <CarouselPrevious className="mt-75" />
-                            <CarouselNext className="mt-75" />
+                            <CarouselPrevious className="mt-85" />
+                            <CarouselNext className="mt-85" />
                         </div>
                     </Carousel>
                 </>

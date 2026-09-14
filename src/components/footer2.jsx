@@ -197,7 +197,7 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-0 cursor-pointer">
+            <div className="flex lg:flex-row flex-col gap-0 cursor-pointer">
               <img src="/src/assets/twit.png" alt="" className="w-10 h-8 mt-1" />
               <img src="/src/assets/instagram.png" alt="" className="w-10" />
               <img src="/src/assets/facebook.png" alt="" className="w-10" />

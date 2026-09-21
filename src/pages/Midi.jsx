@@ -97,6 +97,7 @@ export default function Midi() {
                         <hr className='w-1050 absolute  right-0 ' />
                         <div className=' w-full h-90 relative lg:block hidden ' >
                             <img src="/src/assets/image86.png" alt="" className='absolute top-[5%]  left-[2%] w-[93%]' />
+                            <p className='absolute top-[47%] left-[8%] text-white font-bold text-4xl'>Vocal Future <span className='font-light'>Electronica</span> </p>
                             <img src="/src/assets/f1.png" alt="" className='absolute top-[5%] left-[53%] w-[43%]' />
                         </div>
                         <div className=' flex flex-col text-[#5C5C5C] gap-5 '>

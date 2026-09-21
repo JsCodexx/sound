@@ -9,12 +9,13 @@ function Submitrequest() {
             <Nav />
             <div className=''>
 
-                <div className="flex  flex-col justify-center items-center container mx-auto max-w-7xl  ">
+                <div className="flex  flex-col justify-start items-center container mx-auto max-w-7xl  ">
                     <InputGroupInlineStart />
                     <hr className='mt-5' />
-                    <p className='w-100 mt-5 text-sm'>Help center</p>
-                    <p className=' w-100 mt-5 text-xl font-bold'>Submit a request</p>
+                    <p className='w-125 mt-5 text-sm'>Help center</p>
+                    <p className=' w-125 mt-5 text-xl font-bold'>Submit a request</p>
                     <FieldDemo />
+                   
                 </div>
 
             </div>

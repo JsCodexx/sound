@@ -65,7 +65,7 @@ export function DropdownMenuShortcuts({ variant }) {
                   </div>
                 </div>
                 <div>
-                  
+
                 </div>
               </div>
 
@@ -76,28 +76,38 @@ export function DropdownMenuShortcuts({ variant }) {
         <>
           <DropdownMenu classname="bg-black mt-10">
             <DropdownMenuTrigger render={<img src="/src/assets/Ellipse 10.png" alt="" className=' cursor-pointer h-10 mt-0' />} />
-            <DropdownMenuContent >
+            <DropdownMenuContent className="w-55 flex flex-col justify-start items-start mt-2 shadow-gray-300" >
               <DropdownMenuGroup>
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuItem>
-                  Profile
-
-                </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuLabel className="text-red-500">View profile</DropdownMenuLabel>
+                <DropdownMenuItem className="text-[#909090]">
                   Billing
 
                 </DropdownMenuItem>
+                <DropdownMenuItem className="text-[#909090]">
+                  Plans
+
+                </DropdownMenuItem>
+
+
                 <Link to="/settings">
-                  <DropdownMenuItem>
+                  <DropdownMenuItem className="text-[#909090]">
                     Settings
 
                   </DropdownMenuItem>
                 </Link>
+               <DropdownMenuItem className="text-[#909090]">
+                  Terms of service
+
+                </DropdownMenuItem>
+               <DropdownMenuItem className="text-[#909090]">
+                  Privacy policy
+
+                </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
 
               <button onClick={goToLogin}>
-                <DropdownMenuItem className="hover:bg-red-400" >
+                <DropdownMenuItem className="hover:bg-red-400 text-[#C7C7C7]" >
                   Log out
 
                 </DropdownMenuItem>

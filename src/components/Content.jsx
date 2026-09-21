@@ -22,20 +22,20 @@ function Content({ variant }) {
                     </div>
                 </div> :
                 <div className='flex justify-center items-center gap-10 md:flex-row flex-col  '>
-                    <div className='w-63 mt-15' >
+                    <div className='w-63 mt-15 flex flex-col justify-center items-center' >
                         <img src="/src/assets/cup.png" alt="" className='pb-4' />
                         <h3 className='pb-4 text-black font-bold text-xl'>100% royalty-free</h3>
-                        <p className='pb-4 text-[#909090] font-semibold'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
+                        <p className='pb-4 text-[#909090] font-semibold text-center'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
                     </div>
-                    <div className='w-63 mt-15' >
+                    <div className='w-63 mt-15 flex flex-col justify-center items-center' >
                         <img src="/src/assets/cross.png" alt="" className='pb-4' />
                         <h3 className='pb-4 text-black font-bold text-xl'>100% royalty-free</h3>
-                        <p className='pb-4 text-[#909090] font-semibold'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
+                        <p className='pb-4 text-[#909090] font-semibold text-center'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
                     </div>
-                    <div className='w-63 mt-8.5' >
-                        <img src="/src/assets/download.png" alt="" className='pb-4' />
+                    <div className='w-63 mt-8.5 flex flex-col justify-center items-center' >
+                        <img src="/src/assets/download.png" alt="" className='pb-4 ' />
                         <h3 className='pb-4 text-black font-bold text-xl'>100% royalty-free</h3>
-                        <p className='pb-4 text-[#909090] font-semibold'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
+                        <p className='pb-4 text-[#909090] font-semibold text-center'>Use  samples to create anything. They’re cleared for commercial use in new works.</p>
                     </div>
                 </div>
             }

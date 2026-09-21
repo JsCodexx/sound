@@ -27,7 +27,7 @@ function Register() {
                         <img src="/src/assets/l.png" alt="" className='absolute left-80 top-110' />
 
                     </div>
-                    <div className='flex flex-col justify-center items-center  w-150 '>
+                    <div className='flex flex-col justify-start items-center  w-150 '>
                         <div className='flex flex-col mr-25 justify-start items-start px-3'>
                             <img src="/src/assets/Group11.png" alt="" className=' mt-20' />
                             <h2 className=' mt-4 text-2xl font-bold text-gray-700'>Sign up</h2>
@@ -38,27 +38,27 @@ function Register() {
 
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
                             <label className='text-[#909090] font-semibold' htmlFor="">Full Name</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">User Name</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">Email</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" placeholder='Waleed@gmail.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">Password</label>
-                            <input type="text" className="py-1 px-2 border border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex justify-evenly mt-5'>
-                            <p className='text-sm '>By Signing up i Agree the term and conditions</p>
+                            <p className='text-sm '>By signing up i agree the Term and Conditions</p>
                         </div>
                         <Link to="/login">   <button className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
                             Sign up
                         </button></Link>
-                        <p className=' mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signup</span> </p>
+                        <p className=' mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signin</span> </p>
                     </div>
 
                 </div>

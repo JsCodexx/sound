@@ -102,7 +102,7 @@ const Footer2 = (props) => {
                   LOGO
                 </h1>
 
-                <p className="text-base font-medium">
+                <p className="text-base font-medium text-gray-300">
                   Subscribe to our newsletter
                 </p>
 
@@ -122,7 +122,7 @@ const Footer2 = (props) => {
                       bg-[#D74664]
                       px-4
                       text-sm
-                      font-semibold
+                      font-light
                       transition-colors
                       hover:bg-[#c63d59]
                       focus:outline-none
@@ -140,12 +140,12 @@ const Footer2 = (props) => {
 
 
             {visibleSections.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 text-sm font-semibold tracking-tight">
+              <div key={sectionIdx} className="">
+                <h3 className="mb-4 text-sm text-gray-300 font-semibold tracking-tight">
                   {section.title}
                 </h3>
 
-                <ul className="space-y-3 text-sm text-white">
+                <ul className="space-y-3 text-sm  text-white">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
@@ -166,7 +166,9 @@ const Footer2 = (props) => {
             className="
               flex-row
               
-            
+            flex
+            justify-center 
+            items-center
               gap-3
               bg-black
              
@@ -183,11 +185,11 @@ const Footer2 = (props) => {
               {copyright}
             </p>
 
-            <ul className="flex-col md:flex-row lg-flex-row gap-3 text-gray-400 pl-5">
+            <ul className="flex-col lg:flex-row flex gap-3 text-gray-400 pl-5">
               {legalLinks?.map((link, linkIdx) => (
                 <li
                   key={linkIdx}
-                  className="underline transition-colors hover:text-[#D74664]"
+                  className=" transition-colors hover:text-[#D74664]"
                 >
                   <a href={link.href}>
                     {link.name}
@@ -195,7 +197,11 @@ const Footer2 = (props) => {
                 </li>
               ))}
             </ul>
-            {/* <img src="/src/assets/icons.png" alt="" className="w-20" /> */}
+            <div className="flex gap-0 cursor-pointer">
+              <img src="/src/assets/twit.png" alt="" className="w-10 h-8 mt-1" />
+              <img src="/src/assets/instagram.png" alt="" className="w-10" />
+              <img src="/src/assets/facebook.png" alt="" className="w-10" />
+            </div>
           </div>
         </footer>
       </div>

@@ -2,9 +2,9 @@ import { Slider } from "@/components/ui/slider"
 
 export function SliderVertical() {
     return (
-        <div className="mx-auto flex w-full max-w-xs items-center  justify-center gap-6">
+        <div className="mx-auto flex w-5 rounded-b-2xl max-w-xs pb-3 items-center bg-black  justify-center gap-6">
             <Slider
-                defaultValue={[50]}
+                defaultValue={[100]}
                 max={100}
                 step={1}
                 orientation="vertical"

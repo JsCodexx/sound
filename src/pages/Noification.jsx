@@ -14,72 +14,72 @@ export default function Noification() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h1 className='text-center text-4xl font-bold mt-5'>Settings</h1>
                 <p className='text-center text-gray-500 mt-3'>Account setting and payment seetting</p>
-                <div className=' mt-5 flex gap-8 ml-13 md:ml-115 mb-5'>
+                <div className=' mt-5 flex gap-8 justify-center items-center mb-5'>
 
                     <TabsLine variant="setting" />
 
                 </div>
                 <hr />
-                <h1 className='md:ml-93 ml-15 text-2xl  mt-5 font-bold'>Notifications</h1>
+                <h1 className='lg:ml-93  text-start text-2xl  mt-5 font-bold text-[#404041]'>Notifications</h1>
 
 
                 <div className='flex justify-center item-center gap-60 md:gap-85 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Photo</h1>
-                    <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>Photo</h1>
+                    <input type="checkbox" className='mt-7  border-2 border-gray-500 accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-79 gap-54 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Username</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>Username</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-75 gap-60 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Email Adress</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>Email Adress</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-80 gap-62 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Full Name</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>Full Name</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 {/* ... */}
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
-                <h1 className=' md:ml-90 ml-15 text-sm mt-5 mb-5 font-semibold'>From Anyone</h1>
+                <h1 className=' md:ml-90 ml-15 text-sm mt-5 mb-5 text-[#404041] font-semibold'>From Anyone</h1>
                 <hr className='md:mx-85' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
-                <h1 className=' md:ml-90 ml-15 text-sm mt-5 mb-5 font-semibold'>From Company Name</h1>
+                <h1 className=' md:ml-90 ml-15 text-sm mt-5 mb-5  text-[#404041] font-semibold'>From Company Name</h1>
                 <hr className='md:mx-85' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
                 <div className='flex justify-center item-center md:gap-85 gap-64 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
+                    <h1 className=' text-sm mt-6 text-[#909090] font-semibold'>User Id</h1>
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />

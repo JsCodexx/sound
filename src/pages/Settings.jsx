@@ -67,14 +67,14 @@ function Settings() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h1 className='text-center text-4xl font-bold mt-5'>Settings</h1>
                 <p className='text-center text-gray-500 mt-3'>Account setting and payment seetting</p>
-                <div className=' mt-5 flex gap-8 ml-13 md:ml-115 mb-5'>
+                <div className=' mt-5 flex gap-8 justify-center items-center mb-5'>
 
                     <TabsLine variant="setting" />
 
                 </div>
                 <hr className='bg-transparent' />
-                <div className='flex md:ml-100 ml-14 gap-50 md:gap-100'>
-                    <h1 className=' text-2xl font-bold mt-5'>Profile</h1>
+                <div className='flex justify-center items-center gap-50 md:gap-100'>
+                    <h1 className=' text-2xl font-bold mt-5 text-[#404041]'>Profile</h1>
                     {!edit ?
                         <button onClick={handleClick}><img src="/src/assets/pencil.png" alt="" className='w-5 h-5 mt-7 cursor-pointer' /></button> :
                         <div className='flex md:flex-row flex-col gap-4'>
@@ -85,62 +85,63 @@ function Settings() {
                     }
 
                 </div>
-                <div className='flex md:ml-100 ml-15 md:gap-110 gap-55  mt-5 mb-5'>
-                    <h1 className=' md:text-sm mt-6'>Photo</h1>
+                <div className='flex justify-center items-center md:gap-110 gap-55  mt-5 mb-5'>
+                    <h1 className=' text-black font-semibold ml-5 md:text-sm mt-6'>Photo</h1>
                     <img src="/src/assets/Ellipse 10.png" alt="" className='w-10 h-10 mt-4 cursor-pointer' />
                 </div>
-                <hr className='bg-transparent mx-65 md:ml-95' />
-                <div className='flex md:ml-100 ml-15 md:gap-90 gap-50 mt-5 mb-5'>
+                <hr className='bg-transparent mx-80  ' />
+                <div className='flex justify-center items-center md:gap-100 gap-50 mt-5 mb-5'>
                     {edit ?
-                        <div className='flex md:gap-90 gap-35 '>
-                            <h1 className=' md:text-sm mt-6'>Username</h1>
+                        <div className='flex  md:gap-90 gap-35 '>
+                            <h1 className='  md:text-sm mt-6'>Username</h1>
+
                             <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.username} name='username' onClick={changeInput} />
                         </div> :
                         <>
-                            <h1 className=' text-sm mt-6'>Username</h1>
-                            <p className='mt-5 '>Waleed </p>
+                            <h1 className=' text-sm mt-6 ml-5 text-black font-semibold'>Username</h1>
+                            <p className='mt-5 text-[#909090]'>Waleed </p>
                         </>
 
                     }
 
                 </div>
-                <hr className='bg-transparent mx-65 md:ml-95' />
-                <div className='flex md:ml-100 ml-15 md:gap-85 gap-40 mt-5 mb-5'>
+                <hr className='bg-transparent mx-80  ' />
+                <div className='flex justify-center items-center md:gap-85 gap-40 mt-5 mb-5'>
                     {edit ?
-                        <div className='flex md:gap-80 gap-30 '>
+                        <div className='flex md:gap-80 gap-30  '>
                             <h1 className=' text-sm mt-6'>Email Adress</h1>
                             <input className='mt-5 border-[#cd4848a2] border-2 w-45 px-2 py-2 rounded-4xl' type="text" value={tempData.email} name='email' onClick={changeInput} />
                         </div> :
                         <>
-                            <h1 className=' text-sm mt-6'>Email Adress</h1>
-                            <p className='mt-5 '>WaleedSiddiqui.py</p>
+                            <h1 className=' text-sm mt-6 ml-5 pl-8 text-black font-semibold'>Email Adress</h1>
+                            <p className='mt-5 text-[#909090]'>WaleedSiddiqui.py</p>
                         </>
 
                     }
                 </div>
-                <hr className='bg-transparent mx-65 md:ml-95' />
-                <div className='flex md:ml-100 ml-15 md:gap-90 gap-40 mt-5 mb-5'>
+                <hr className='bg-transparent mx-80  ' />
+                <div className='flex justify-center items-center md:gap-90 gap-40 mt-5 mb-5'>
                     {edit ?
                         <div className='flex md:gap-90 gap-40 '>
                             <h1 className=' text-sm mt-6'>Full Name</h1>
                             <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.fullName} name='fullName' onClick={changeInput} />
                         </div> :
                         <>
-                            <h1 className=' text-sm mt-6'>Full Name</h1>
-                            <p className='mt-5 '>Waleed Siddiqui</p>
+                            <h1 className=' text-sm mt-6 text-black font-semibold pl-7'>Full Name</h1>
+                            <p className='mt-5 text-[#909090] '>Waleed Siddiqui</p>
                         </>
 
                     }
                 </div>
-                <hr className='bg-transparent mx-65 md:ml-95' />
-                <div className='flex md:ml-100 ml-15 md:gap-110 gap-50 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>User Id</h1>
-                    <p className='mt-5 '>123456</p>
+                <hr className='bg-transparent mx-80  ' />
+                <div className='flex justify-center items-center md:gap-110 gap-50 mt-5 mb-5'>
+                    <h1 className=' text-sm mt-6 text-black font-semibold pl-7'>User Id</h1>
+                    <p className='mt-5 text-[#909090]'>123456</p>
                 </div>
-                <hr className='bg-transparent mx-65 md:ml-95' />
-                <h1 className=' md:ml-98 ml-15 text-2xl font-bold mt-5'>Details</h1>
-                <div className='flex md:ml-100 ml-15 md:gap-90 gap-40 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6 font-semibold'>Password</h1>
+                <hr className='bg-transparent mx-80  ' />
+                <h1 className=' text-2xl font-bold text-[#404041] mt-5 lg:ml-85'>Security</h1>
+                <div className='flex justify-center items-center md:gap-90 gap-40 mt-5 mb-5'>
+                    <h1 className=' text-sm mt-6 font-semibold pl-8'>Password</h1>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
                             <button onClick={handleOpen}><p className='mt-5 text-red-800 font-semibold cursor-pointer' >Change Password</p></button>
@@ -179,13 +180,11 @@ function Settings() {
                                     Done
                                 </button>
                             </AlertDialogCancel>
-
                         </AlertDialogContent>
                     </AlertDialog>
-
                 </div>
-                <div className='flex md:ml-100 ml-15 md:gap-67 gap-40 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6 font-semibold'>Delete  Account</h1>
+                <div className='flex justify-center items-center md:gap-90 gap-40 mt-5 mb-5'>
+                    <h1 className=' text-sm mt-6 font-semibold pl-10'>Delete  Account</h1>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
                             <button > <p className='mt-5 text-[#C5C5C5] font-semibold cursor-pointer hover:text-red-800'>Delete account</p></button>

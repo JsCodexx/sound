@@ -39,18 +39,18 @@ export default function SideBar({ variant }) {
 
                                     <NavLink to="/Charts" onClick={() => setCurrent("Charts")}>
                                         {({ isActive }) => (
-                                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold' : ''}`}>
                                                 Charts
                                             </h1>
                                         )}
                                     </NavLink>
                                 </div>
-                                <div c>
-                                    <h1 className='text-black '>Library</h1>
+                                <div >
+                                    <h1 className='text-[#909090] font-semibold mb-4'> Library</h1>
                                     <NavLink to="/Sound2" onClick={() => setCurrent("Sound")}>
                                         {({ isActive }) => (
-                                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                                Sound
+                                            <h1 className={`text-[#909090] font-semibold cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                                Sounds
                                             </h1>
                                         )}
                                     </NavLink>

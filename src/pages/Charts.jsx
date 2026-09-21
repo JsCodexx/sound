@@ -373,12 +373,13 @@ export default function Charts() {
 
                 <div className='w-full'>
                     <NavBar />
+                    <div className='mt-5 xl:hidden block'>
+                        <SideBar variant="mobileSide" className="" />
+                    </div>
                     <div className='flex  mt-5 md:gap-0 gap-3 relative w-auto'>
-                        <div className='mt-12'>
-                            <SideBar variant="mobileSide" className="md:hidden block" />
-                        </div>
-                        <div className='mt-10'>
-                            <SideBar variant="desktop" className="md:block  hidden" />
+
+                        <div className='mt-10 lg:block  hidden'>
+                            <SideBar variant="desktop" className="" />
                         </div>
 
                         <div className='flex flex-col gap-4 ml-3'>
@@ -401,12 +402,15 @@ export default function Charts() {
                                     )}
                                 </NavLink>
                             </div>
-                            <ComboboxBasic />
+                            <div className='border-none'>
+                                <ComboboxBasic />
+                            </div>
+
                             <div className='text-sm flex md:mx-60 justify-between pr-25'>
                                 <p className='text-[#838383]'>PACKS</p>
                                 <p className='text-[#838383]'>CONTENTS</p>
                             </div>
-                            <div className='w-auto md:w-250 ml-3'>
+                            <div className='w-full   px-3'>
                                 {cardData.map((data, index) => (
                                     <PackCard
                                         key={index}

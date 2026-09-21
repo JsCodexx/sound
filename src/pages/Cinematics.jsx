@@ -3,7 +3,39 @@ import NavBar from '@/components/NavHome'
 import { TabsLine } from '@/components/Menu'
 import SideBar from '@/components/SideBar'
 import { CarouselSize } from '@/components/Carousel'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Packdata } from '@/api/Sounds/packs'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useNavigate } from 'react-router-dom'
 export default function Cinematics() {
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
+    const [pack, setPack] = useState()
+
+    async function datapack() {
+        try {
+            showloading()
+            const labelData = await Packdata()
+            const dataRemaing = labelData.data.items
+            setPack(dataRemaing)
+            console.log(dataRemaing, "pack")
+
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
+        }
+
+    }
+    useEffect(() => {
+        datapack()
+
+    }, [])
     return (
         <div className='overflow-x-hidden'>
             <NavBar />
@@ -41,7 +73,8 @@ export default function Cinematics() {
                                         </p>
                                     </div>
                                     <div className='ml-5  '>
-                                        <CarouselSize variant="crouse" />
+                                        {loading && <BlocksWave />}
+                                        {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                     </div>
                                     <div><p className='text-center cursor-pointer mt-10 text-red-500 font-semibold'>See All </p></div>
                                 </div>

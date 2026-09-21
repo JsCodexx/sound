@@ -5,180 +5,40 @@ import { NavLink } from 'react-router-dom'
 import PackCard from '@/components/PackCard'
 import SideBar from '@/components/SideBar'
 import { ComboboxBasic } from '@/components/Combobox'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Labeldata } from '@/api/Sounds/labels'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 export default function TopLabel() {
-    const cardData = [
-        {
-            src: "/src/assets/p1.png",
-            id: "1",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "2",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-            ,
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "3",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "4",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "5",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "6",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "7",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "8",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "9",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "10",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "11",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "12",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "13",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "14",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "15",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "16",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "17",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "18",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "19",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "20",
-            title: "Sample Magics",
-            description: ["All Genres", "Techno", "House"],
-            img: "/src/assets/red.png",
-            num: "85 Packs",
-            showArrow: "/src/assets/arror.png"
-        },
-    ]
+
+    const [label, setLabel] = useState()
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
+    console.log(label, "labels")
+    async function Labels() {
+        try {
+            showloading()
+            const data = await Labeldata()
+            const datamin = data.data.items
+            setLabel(datamin)
+            console.log(datamin, "label")
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
+        }
+
+    }
+    useEffect(() => {
+        Labels()
+    }, [])
+
+
     return (
         <div>
             <NavBar />
@@ -218,15 +78,16 @@ export default function TopLabel() {
                             <p className='text-[#838383] pr-10'>TOTAL PACK</p>
                         </div>
                         <div className='w-full'>
-                            {cardData.map((data, index) => (
+                            {loading && <BlocksWave />}
+                            {!loading && label?.map((data, index) => (
                                 <PackCard
                                     key={index}
                                     id={data.id}
-                                    src={data.src}
-                                    title={data.title}
-                                    description={data.description}
-                                    img={data.img}
-                                    num={data.num}
+
+                                    title={data.name}
+                                    description={data.genres}
+
+
                                     ChangeRow={index % 2 === 1}
                                     variant="label"
 

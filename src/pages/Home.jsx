@@ -4,125 +4,71 @@ import { Footer2 } from '@/components/footer2'
 import Content from '@/components/Content'
 import { useNavigate } from 'react-router-dom'
 import { CardDemo } from '@/components/Card-2'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Songs } from '@/api/Sounds/songs'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { Createuser } from '@/contextApi/usercontext'
+
+
 
 function Home() {
+    const [song, setSong] = useState()
+    const navigateLogin = useNavigate()
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const { formData } = useContext(Createuser)
+
+
+
+
+
+    // song api
+    async function songData() {
+        try {
+            showloading()
+
+            const datasong = await Songs()
+            const minData = datasong.data.items
+            console.log(datasong)
+            setSong(minData)
+
+
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigateLogin("/login")
+
+            }
+
+        } finally {
+            hideloading()
+        }
+
+    }
+    useEffect(() => {
+        songData()
+    }, [])
     const navigate = useNavigate()
-
-
 
     function handlePricePage() {
         navigate("/price")
     }
-    const cardData = [
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "Astral lounge  ",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "Bradd web",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-    ]
-    const cardData_2 = [
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free.png"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "Astral lounge  ",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "Bradd web",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus",
-            free: "/src/assets/free2.png"
 
-        },
-    ]
     return (
         <div className=' '>
             <NavBar />
+
             <div className='bg-[#CD4848]  h-15'>
                 <p className='text-white text-sm text-center pt-5 font-bold'>For a limited time, subscribe to here and get Live music lite for free.   <span className='text-yellow-500 cursor-pointer font-bold underline'>Get started</span> </p>
             </div>
             <div className='overflow-x-hidden flex flex-col justify-center items-center'>
                 <div className=" w-100%  ">
                     <div className='text-center mt-5'>
-                        <h1 className='font-bold text-3xl text-[#3A3A3A]'>Explore</h1>
+                        <h1 className='font-bold text-3xl text-[#3A3A3A]'>Welcome <span className='text-green-500'>{formData.fullname}</span> </h1>
                         <p className='text-[#909090]'>Dive into the Splice subscription.</p>
                     </div>
                     <div className='mt-10 flex md:flex-row flex-col justify-center items-center gap-3'>
-
                         <div className='border-black border-1 bg-[#EEEEEE]  rounded-sm w-76 h-23  flex justify-evenly items-center'>
                             <div><img src="/src/assets/sign.png" alt="" /></div>
                             <div>
@@ -169,17 +115,19 @@ function Home() {
                         </div>
 
                         <div className='flex flex-wrap w-full  gap-2 md:gap-6 justify-center items-center  '>
-                            {cardData.map((data, index) => (
+                            {loading && <BlocksWave />}
+                            {!loading && song?.map((data, index) => (
                                 <CardDemo
                                     key={index}
-                                    src={data.src}
+
                                     title={data.title}
-                                    packs={data.packs}
-                                    tags={data.tags}
+                                    packs={data.key}
+                                    tags={data.pack_id}
                                     variant="Midi"
                                 />
                             ))}
                         </div>
+
                     </div>
                     <div className='flex  justify-center items-center gap-3 '>
                         <img src="/src/assets/left.png" alt="" />
@@ -193,14 +141,15 @@ function Home() {
                                 Splice comes with access to millions of the freshest samples, one-shots, loops, MIDI and presets. Here’s the latest.</p>
                         </div>
 
-                        <div className='flex flex-wrap w-full   gap-2 md:gap-6 justify-center items-center  '>
-                            {cardData_2.map((data, index) => (
+                        <div className='flex flex-wrap w-full   gap-2 md:gap-6 justify-center items-center  ' key="100">
+                            {loading && <BlocksWave />}
+                            {!loading && song?.map((data, index) => (
                                 <CardDemo
-                                    key={index}
-                                    src={data.src}
+
+
                                     title={data.title}
-                                    packs={data.packs}
-                                    tags={data.tags}
+                                    packs={data.key}
+                                    tags={data.pack_id}
                                     free={data.free}
                                     variant="Midi"
                                 />

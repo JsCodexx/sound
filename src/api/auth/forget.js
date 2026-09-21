@@ -1,9 +1,10 @@
 import axios from "axios";
 
-export const Refresh = async (sessionData) => {
+export const ForgetApi = async (email) => {
+  console.log(email)
   try {
     const res = await axios.post(
-      `https://sound-backend.vercel.app/refresh?refresh_token=${sessionData}`,
+      `https://sound-backend.vercel.app/forgot-password?email=${email}`,
     );
     console.log(res, "refresh");
     return res;
@@ -11,4 +12,3 @@ export const Refresh = async (sessionData) => {
     console.log(error);
   }
 };
-

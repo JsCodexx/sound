@@ -13,7 +13,7 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
 
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 lg:gap-10 min-w-0">
                         <img
-                            src={src}
+                            src="/src/assets/p1.png"
                             alt=""
                             className=" shrink-0 w-20"
                         />
@@ -28,27 +28,41 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
                         </div>
 
 
-                        <div className="flex flex-wrap gap-2">
-                            {description.map((tag) => (
-                                <button
-                                    key={tag}
-                                    className="min-w-[79px] h-[32px] px-3 rounded-2xl text-xs sm:text-sm text-[#4F4F4F] bg-white whitespace-nowrap"
-                                >
-                                    {tag}
-                                </button>
+                        <div className="flex flex-wrap  gap-2">
+                            {description?.map((tag) => (
+                                <>
+                                    <h1
+                                        key={tag}
+                                        className="min-w-[79px] h-[32px] px-3 rounded-2xl text-xs sm:text-sm text-[#4F4F4F] py-1 bg-white whitespace-nowrap"
+                                    >
+                                        {tag.slug}
+                                    </h1>
+                                    <h1
+                                        key={tag}
+                                        className="min-w-[79px] h-[32px] px-3 rounded-2xl text-xs sm:text-sm text-[#4F4F4F] py-1 bg-white whitespace-nowrap"
+                                    >
+                                        {tag.name}
+                                    </h1>
+                                    <h1
+                                        key={tag}
+                                        className="min-w-[79px] h-[32px] px-3 rounded-2xl text-xs sm:text-sm text-[#4F4F4F] py-1 bg-white whitespace-nowrap"
+                                    >
+                                        Data set
+                                    </h1>
+                                </>
                             ))}
                         </div>
                     </div>
 
                     <div className="flex items-center  gap-2 lg:pr-6 shrink-0">
                         <img
-                            src={img}
+                            src="/src/assets/red.png"
                             alt=""
                             className="h-3 w-3 object-contain"
                         />
 
                         <p className="text-[#4F4F4F] text-xs sm:text-sm">
-                            {num}
+                            85 Packs
                         </p>
 
                         {showArrow && (
@@ -69,7 +83,7 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
 
                     <div className="flex items-center gap-3 sm:gap-5 md:gap-10 lg:gap-20 ">
                         <img
-                            src={src}
+                            src="/src/assets/p2.png"
                             alt=""
                             className=" shrink-0 "
                         />
@@ -92,7 +106,7 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
 
                     <div className="flex items-center  gap-3 sm:gap-4 md:pr-5  ">
                         <img
-                            src={img}
+                            src="/src/assets/z2.png"
                             alt=""
                             className="h-8 w-7 sm:h-10 sm:w-8 object-contain"
                         />
@@ -104,7 +118,7 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
                         {showArrow && (
                             <>
                                 <img
-                                    src={showArrow}
+                                    src="/src/assets/arror.png"
                                     alt=""
                                     className="h-3 w-3 object-contain "
                                 />
@@ -120,7 +134,7 @@ export default function PackCard({ src, id, description, img, num, num1, pack, t
 
             {
                 variant === "small" ?
-                    <div className={` bg-[#E9E9E9] w-full h-auto flex justify-between ${ChangeColoum ? '' : 'bg-[#FFFFFF]'}`}>
+                    <div className={` bg-[#E9E9E9]  h-auto flex justify-between ${ChangeColoum ? '' : 'bg-[#FFFFFF]'}`}>
 
                         <div className='flex gap-8'>
                             <div className='flex gap-4'>

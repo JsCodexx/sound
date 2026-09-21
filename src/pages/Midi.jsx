@@ -3,81 +3,47 @@ import NavBar from '@/components/NavHome'
 import { TabsLine } from '@/components/Menu'
 import { CardDemo } from '@/components/Card-2'
 import SideBar from '@/components/SideBar'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Songs } from '@/api/Sounds/songs'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { Createuser } from '@/contextApi/usercontext'
+import { useNavigate } from 'react-router-dom'
 export default function Midi() {
-    const cardData = [
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "Astral lounge  ",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "Bradd web",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "Bradd web",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l3.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l1.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-        {
-            src: "/src/assets/l2.png",
-            title: "The Front Porch",
-            packs: "RnB",
-            tags: "Soul surplus"
-        },
-    ]
+    const [song, setSong] = useState()
+    const navigate = useNavigate()
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const { fullname } = useContext(Createuser);
+    console.log(fullname)
+
+
+
+
+    // song api
+    async function songData() {
+        try {
+            showloading()
+
+            const datasong = await Songs()
+            const minData = datasong.data.items
+            setSong(minData)
+            console.log(datasong)
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+
+        } finally {
+            hideloading()
+        }
+
+    }
+    useEffect(() => {
+        songData()
+    }, [])
+
     return (
         <div>
             <NavBar />
@@ -111,14 +77,15 @@ export default function Midi() {
 
                                 </div>
 
-                                <div className='flex flex-wrap md:w-150 lg:w-full lg:justify-start   gap-2 justify-center items-center  '>
-                                    {cardData.map((data, index) => (
+                                <div className='flex flex-wrap md:w-150 lg:w-full   gap-2 justify-center items-center  '>
+                                    {loading && <BlocksWave />}
+                                    {!loading && song?.map((data, index) => (
                                         <CardDemo
                                             key={index}
-                                            src={data.src}
+
                                             title={data.title}
-                                            packs={data.packs}
-                                            tags={data.tags}
+                                            packs={data.key}
+                                            tags={data.pack_id}
                                             variant="Midi"
                                         />
                                     ))}

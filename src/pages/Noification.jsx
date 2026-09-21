@@ -4,7 +4,26 @@ import { Link } from 'react-router-dom'
 import { CheckboxInvalid } from '@/components/Checkbox'
 import { Footer2 } from '@/components/footer2'
 import { TabsLine } from '@/components/Menu'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { NotificationData } from '@/api/Sounds/notification'
+
 export default function Noification() {
+    const [notify, setNotify] = useState()
+    console.log(notify)
+  async  function notifyData() {
+        try {
+            const data = await NotificationData()
+            console.log(data, "not")
+            setNotify(data)
+        } catch (error) {
+            alert(error)
+        }
+
+    }
+    useEffect(() => {
+        notifyData()
+    }, [])
     return (
         <div>
             <NavBar />
@@ -83,7 +102,7 @@ export default function Noification() {
                     <input type="checkbox" className='mt-7  accent-red-500 w-20 ' />
                 </div>
                 <hr className='md:mx-90' />
-                <button className='rounded-4xl bg-[#CD4848] text-white text-center md:ml-125 ml-35 mt-10 text-sm mb-10 py-3 px-10 cursor-pointer hover:bg-red-800'>Update</button>
+                <button onClick={notifyData} className='rounded-4xl bg-[#CD4848] text-white text-center md:ml-125 ml-35 mt-10 text-sm mb-10 py-3 px-10 cursor-pointer hover:bg-red-800'>Update</button>
             </div>
             <Footer2 />
 

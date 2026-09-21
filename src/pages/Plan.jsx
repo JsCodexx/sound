@@ -3,7 +3,14 @@ import NavBar from '@/components/NavHome'
 import { Link } from 'react-router-dom'
 import { Footer2 } from '@/components/footer2'
 import { TabsLine } from '@/components/Menu'
+import { useNavigate } from 'react-router-dom'
+
+
 function Plan() {
+    const navigate = useNavigate()
+    function goToPlan() {
+        navigate("/price")
+    }
     return (
         <div>
             <NavBar />
@@ -28,7 +35,7 @@ function Plan() {
                         design tactics from the pros, make a beat with Beatmaker, or
                         grab that synth you've been 👀 for a low monthly price.
                     </p>
-                    <button className='rounded-4xl bg-[#CD4848] text-white text-center m mt-10 text-sm mb-10 py-3 px-4 cursor-pointer hover:bg-red-800'>Choose A Plan</button>
+                    <button onClick={goToPlan} className='rounded-4xl bg-[#CD4848] text-white text-center m mt-10 text-sm mb-10 py-3 px-4 cursor-pointer hover:bg-red-800'>Choose A Plan</button>
                 </div>
             </div>
             <Footer2 />

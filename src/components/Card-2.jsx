@@ -4,7 +4,7 @@ import {
 } from "@/components/ui/card"
 
 
-export function CardDemo({ src, title, packs, tags, variant, free }) {
+export function CardDemo({ src, title, packs, tags, variant, key }) {
 
     console.log(src, title, packs, tags, "data")
     return (
@@ -15,7 +15,8 @@ export function CardDemo({ src, title, packs, tags, variant, free }) {
                         <div className="  ">
                             <div className="relative w-full " >
                                 <img src="/src/assets/x5.png" alt={title} className=" rounded-sm lg:w-full w-110 h-47" />
-                                <img src={free} width={55} className="absolute top-0 right-0" />
+                                {key === "100" ? <img src="/src/assets/free2.png" width={55} className="absolute top-0 right-0" /> : ""}
+
 
                             </div>
 
@@ -35,20 +36,28 @@ export function CardDemo({ src, title, packs, tags, variant, free }) {
                 <Card Card className=" h-30 max-w-sm bg-[#F6F6F6] rounded-none " >
                     <div className="flex justify-center items-center gap-5 ">
                         <div>
-                            <img src={src} alt={title} width={55} className="mt-1 ml-2" />
+                            <img src="/src/assets/c2.png" alt={title} width={55} className="mt-1 ml-2" />
 
                         </div>
 
                         <div className="flex flex-col gap-3">
                             <div className="flex gap-5 mt-2 ml-4">
                                 <h1 className="text-black font-semibold">{title}</h1>
-                                <p className="text-red-500">{packs}</p>
+                                <p className="text-red-500">{packs} packs</p>
                             </div>
                             <div className="flex gap-3 px-2 ">
                                 {tags.map((tag) => (
-                                    <button className="px-4 py-3 rounded-2xl bg-[#EBEBEB]">
-                                        {tag}
-                                    </button>
+                                    <>
+                                        <button className="px-4 py-1 text-sm rounded-2xl bg-[#EBEBEB]">
+                                            {tag.id}
+                                        </button>
+                                        <button className="px-4 py-1 text-sm rounded-2xl bg-[#EBEBEB]">
+                                            {tag.name}
+                                        </button>
+                                        <button className="px-4 py-1 text-sm rounded-2xl bg-[#EBEBEB]">
+                                            {tag.slug}
+                                        </button>
+                                    </>
                                 ))}
                             </div>
 

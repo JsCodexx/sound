@@ -3,81 +3,40 @@ import NavBar from '@/components/NavHome'
 import { TabsLine } from '@/components/Menu'
 import { CardDemo } from '@/components/Card-2'
 import SideBar from '@/components/SideBar'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Labeldata } from '@/api/Sounds/labels'
 export default function Label() {
-    const cardData = [
-        {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c1.png",
-            title: "Audio Lab",
-            packs: "56 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c2.png",
-            title: "Power Tone",
-            packs: "256 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c3.png",
-            title: "Art house",
-            packs: "56 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c1.png",
-            title: "Power Tone",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c2.png",
-            title: "Art House",
-            packs: "96 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c1.png",
-            title: "Art Waleed",
-            packs: "9 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c3.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c3.png",
-            title: "Art House",
-            packs: "96 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c1.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-        {
-            src: "/src/assets/c2.png",
-            title: "Art House",
-            packs: "956 Packs",
-            tags: ["Edm", "Vocals", "Future "]
-        },
-    ]
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
+    const [label, setLabel] = useState()
+
+
+    // labeldata
+    async function resdata() {
+        try {
+            showloading()
+            const labelData = await Labeldata()
+            const dataRemaing = labelData.data.items
+            setLabel(dataRemaing)
+            console.log(dataRemaing, "label")
+
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
+        }
+    }
+    useEffect(() => {
+        resdata()
+    }, [])
+
 
     return (
         <div>
@@ -106,14 +65,13 @@ export default function Label() {
                                 <TabsLine />
                             </div>
                             <hr className='mx-2' />
-                            <div className='flex font-semibold flex-wrap gap-2 lg:ml-2 lg:justify-start  justify-center item-center '>
-                                {cardData.map((data, index) => (
+                            <div className='flex font-semibold w-250 h-full flex-wrap gap-2 lg:ml-2  justify-center item-center '>
+                                {loading && <BlocksWave />}
+                                {!loading && label?.map((data) => (
                                     <CardDemo
-                                        key={index}
-                                        src={data.src}
-                                        title={data.title}
-                                        packs={data.packs}
-                                        tags={data.tags}
+                                        title={data.name}
+                                        packs={data.id}
+                                        tags={data.genres}
                                     />
                                 ))}
                             </div>

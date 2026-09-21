@@ -2,7 +2,7 @@ import React from 'react'
 import { ToggleDemo } from './Toggle'
 import { Plus } from 'lucide-react'
 import { EllipsisVertical } from 'lucide-react';
-export default function PackCard({ src, id, description, img, num, num1, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
+export default function PackCard({ src, id, description, img, num, num1, pack, title, ChangeRow, showArrow, variant, ChangeColoum, icon, time, keys, three, BPM }) {
     return (
         <div>
             {variant === "label" ? (
@@ -124,13 +124,13 @@ export default function PackCard({ src, id, description, img, num, num1, title, 
 
                         <div className='flex gap-8'>
                             <div className='flex gap-4'>
-                                <img src={src} alt="" className=' ' />
+                                <img src="/src/assets/small1.png" alt="" className=' ' />
                                 <h1 className='mt-5 font-semibold text-sm'>{id}</h1>
                             </div>
 
                             <div className='flex flex-col gap-1  mt-3'>
                                 <h1 className='text-[#5D5D5E] font-bold'>{title}</h1>
-                                <img src={img} alt="" className='h-5 w-14' />
+                                <h1 className='text-black h-8 w-10'>{pack}</h1>
                             </div>
                         </div>
 

@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
+import { Loginapi } from '@/api/auth/login'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 export default function Login() {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState()
+    const navigate = useNavigate()
+    const Apidata = async () => {
+        try {
+
+            const loginData = await Loginapi(email, password)
+            console.log(loginData, "logindata")
+            if (loginData) {
+                navigate("/home")
+            }
+            localStorage.setItem("token", loginData.access_token)
+            sessionStorage.setItem("refresh", loginData.refresh_token)
+          
+        } catch (error) {
+            alert(error)
+        }
+    }
     return (
         <div className=' flex justify-center items-center'>
             <div className='w-360   h-screen'>
@@ -57,11 +78,11 @@ export default function Login() {
 
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
                             <label className=' text-[#909090] ' htmlFor="">Email</label>
-                            <input type="text" placeholder='waleed@gamil.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" onChange={(e) => setEmail(e.target.value)} placeholder='waleed@gamil.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
                             <label className=' text-[#909090] ' htmlFor="">Password</label>
-                            <input type="text" placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
+                            <input type="text" onChange={(e) => setPassword(e.target.value)} placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex justify-center items-center lg:gap-20 gap-3 mt-5 w-full'>
                             <div className='flex  gap-2'>
@@ -72,9 +93,9 @@ export default function Login() {
                                 <Link to="/Forget"> <p className='text-[#404041]'>Forget Password?</p></Link>
                             </div>
                         </div>
-                        <Link to="/home">   <button className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
+                        <button onClick={Apidata} className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
                             Log In
-                        </button></Link>
+                        </button>
                         <Link to="/Register"><p className=' mt-5 text-gray-500'>Not Resgister Yet?<span className='text-black  font-bold cursor-pointer' > Create an account</span> </p></Link>
                     </div>
                 </div>

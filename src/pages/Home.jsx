@@ -213,11 +213,11 @@ function Home() {
                     </div>
                     <div className='relative  mt-25 w-full'>
                         <img src="/src/assets/song.png" alt="" />
-                        <div className='absolute top-0 md:top-18 flex  flex-col text-center justify-center items-center w-full  '>
+                        <div className='absolute top-0 lg:top-18 flex  flex-col text-center justify-center items-center w-full  '>
                             <h1 className='text-white md:text-3xl md:font-bold md:pb-3 '>Start Your Free Trial Today</h1>
 
                             <p className='text-white text-sm  md:pb-5 '>Get full access to Splice tools, skills, and free sounds.</p>
-                            <button onClick={handlePricePage} className=' md:block hidden font-bold text-white bg-[#CD4848] px-10 py-2 rounded-4xl '>Start Your Free Trial</button>
+                            <button onClick={handlePricePage} className=' md:block hidden lg:block font-bold text-white text-sm  bg-[#CD4848] px-5 py-1 lg:px-10 lg:py-2 rounded-4xl '>Start Your Free Trial</button>
                             <p className='text-white text-sm  md:mt-3'>Try risk-free for 14 days.</p>
                         </div>
 

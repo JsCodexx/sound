@@ -61,7 +61,7 @@ function Settings() {
     return (
         <div className={'bg-transparent'}>
             <NavBar />
-            <div className='bg-[#CD4848] w-full h-15'>
+            <div className='bg-[#CD4848] text-sm w-full h-15'>
                 <p className='text-white text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -73,41 +73,41 @@ function Settings() {
 
                 </div>
                 <hr className='bg-transparent' />
-                <div className='flex ml-100 gap-100'>
+                <div className='flex md:ml-100 ml-14 gap-50 md:gap-100'>
                     <h1 className=' text-2xl font-bold mt-5'>Profile</h1>
                     {!edit ?
                         <button onClick={handleClick}><img src="/src/assets/pencil.png" alt="" className='w-5 h-5 mt-7 cursor-pointer' /></button> :
-                        <div className='flex gap-4'>
+                        <div className='flex md:flex-row flex-col gap-4'>
                             <button className='bg-[#f1f1f1] text-[#A0A0A0] w-[78px] h-24px h-10 mt-5 rounded-4xl ' onClick={handleCancel}>Cancel</button>
-                            <button className='text-[12px] text-white bg-black font-bold w-[98px] h-24px h-10 mt-5 rounded-4xl ' onClick={handleSave}>Save Changes</button>
+                            <button className='text-[12px] text-white bg-black px-2 md:px-0 py-1 md:font-bold w-[85px] md:w-[95px] h-24px h-10 md:mt-5 rounded-4xl ' onClick={handleSave}>Save Changes</button>
 
                         </div>
                     }
 
                 </div>
-                <div className='flex ml-100 gap-110 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6'>Photo</h1>
+                <div className='flex md:ml-100 ml-15 md:gap-110 gap-55  mt-5 mb-5'>
+                    <h1 className=' md:text-sm mt-6'>Photo</h1>
                     <img src="/src/assets/Ellipse 10.png" alt="" className='w-10 h-10 mt-4 cursor-pointer' />
                 </div>
-                <hr className='bg-transparent mx-65 ml-95' />
-                <div className='flex ml-100 gap-90 mt-5 mb-5'>
+                <hr className='bg-transparent mx-65 md:ml-95' />
+                <div className='flex md:ml-100 ml-15 md:gap-90 gap-50 mt-5 mb-5'>
                     {edit ?
-                        <div className='flex gap-90 '>
-                            <h1 className=' text-sm mt-6'>Username</h1>
+                        <div className='flex md:gap-90 gap-35 '>
+                            <h1 className=' md:text-sm mt-6'>Username</h1>
                             <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.username} name='username' onClick={changeInput} />
                         </div> :
                         <>
                             <h1 className=' text-sm mt-6'>Username</h1>
-                            <p className='mt-5 '>Waleed Siddiqui</p>
+                            <p className='mt-5 '>Waleed </p>
                         </>
 
                     }
 
                 </div>
-                <hr className='bg-transparent mx-65 ml-95' />
-                <div className='flex ml-100 gap-85 mt-5 mb-5'>
+                <hr className='bg-transparent mx-65 md:ml-95' />
+                <div className='flex md:ml-100 ml-15 md:gap-85 gap-40 mt-5 mb-5'>
                     {edit ?
-                        <div className='flex gap-80 '>
+                        <div className='flex md:gap-80 gap-30 '>
                             <h1 className=' text-sm mt-6'>Email Adress</h1>
                             <input className='mt-5 border-[#cd4848a2] border-2 w-45 px-2 py-2 rounded-4xl' type="text" value={tempData.email} name='email' onClick={changeInput} />
                         </div> :
@@ -118,10 +118,10 @@ function Settings() {
 
                     }
                 </div>
-                <hr className='bg-transparent mx-65 ml-95' />
-                <div className='flex ml-100 gap-90 mt-5 mb-5'>
+                <hr className='bg-transparent mx-65 md:ml-95' />
+                <div className='flex md:ml-100 ml-15 md:gap-90 gap-40 mt-5 mb-5'>
                     {edit ?
-                        <div className='flex gap-90 '>
+                        <div className='flex md:gap-90 gap-40 '>
                             <h1 className=' text-sm mt-6'>Full Name</h1>
                             <input className='mt-5 border-[#cd4848a2] border-2 w-35 px-2 py-2 rounded-4xl' type="text" value={tempData.fullName} name='fullName' onClick={changeInput} />
                         </div> :
@@ -132,20 +132,20 @@ function Settings() {
 
                     }
                 </div>
-                <hr className='bg-transparent mx-65 ml-95' />
-                <div className='flex ml-100 gap-110 mt-5 mb-5'>
+                <hr className='bg-transparent mx-65 md:ml-95' />
+                <div className='flex md:ml-100 ml-15 md:gap-110 gap-50 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6'>User Id</h1>
                     <p className='mt-5 '>123456</p>
                 </div>
-                <hr className='bg-transparent mx-65 ml-95' />
-                <h1 className=' ml-98 text-2xl font-bold mt-5'>Details</h1>
-                <div className='flex ml-100 gap-90 mt-5 mb-5'>
+                <hr className='bg-transparent mx-65 md:ml-95' />
+                <h1 className=' md:ml-98 ml-15 text-2xl font-bold mt-5'>Details</h1>
+                <div className='flex md:ml-100 ml-15 md:gap-90 gap-40 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6 font-semibold'>Password</h1>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
                             <button onClick={handleOpen}><p className='mt-5 text-red-800 font-semibold cursor-pointer' >Change Password</p></button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent>
+                        <AlertDialogContent className="">
                             <p className="mb-5 text-red-800 font-semibold">
                                 Change password
                             </p>
@@ -184,8 +184,8 @@ function Settings() {
                     </AlertDialog>
 
                 </div>
-                <div className='flex ml-100 gap-67 mt-5 mb-5'>
-                    <h1 className=' text-sm mt-6 font-semibold'>Delete Company Account</h1>
+                <div className='flex md:ml-100 ml-15 md:gap-67 gap-40 mt-5 mb-5'>
+                    <h1 className=' text-sm mt-6 font-semibold'>Delete  Account</h1>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
                             <button > <p className='mt-5 text-[#C5C5C5] font-semibold cursor-pointer hover:text-red-800'>Delete account</p></button>
@@ -194,7 +194,7 @@ function Settings() {
                             <img
                                 src="/src/assets/del.png"
                                 width={70}
-                                className="ml-38 mb-5"
+                                className="md:ml-38 ml-30 mb-5"
                                 alt="Delete account"
                             />
 
@@ -202,7 +202,7 @@ function Settings() {
                                 Are you sure you want to delete your account?
                             </p>
                             <AlertDialogCancel className="w-30 bg-white border-0">
-                                <div className="flex ml-60 gap-8">
+                                <div className="flex md:ml-60 ml-43 gap-8">
                                     <button
                                         className="bg-[#E7E7E7] w-20 h-10 rounded-3xl"
 

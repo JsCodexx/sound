@@ -1,47 +1,68 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-export default function SideBar() {
+import { DropdownMenuShortcuts } from './Dropdown'
+export default function SideBar({ variant }) {
     const [current, setCurrent] = useState()
     console.log(current)
 
 
     return (
-        <div className=''>
-            <div className='flex flex-col gap-10 mt-5 '>
-                <h1 className='text-black font-extrabold cursor-pointer '>{current}</h1>
-                <div>
+        <>
+            {variant === "mobileSide" ?
+                <>
 
-                    <NavLink to="/sound" onClick={() => setCurrent("Browse")}>
-                        {({ isActive }) => (
-
-                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`} >
-                                Browse
-                            </h1>
+                    <div className=''>
+                        <DropdownMenuShortcuts variant="mobi" />
+                    </div>
 
 
-                        )}
-                    </NavLink>
+                </> :
+                variant === "desktop" ?
 
-                    <NavLink to="/Charts" onClick={() => setCurrent("Charts")}>
-                        {({ isActive }) => (
-                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                Charts
-                            </h1>
-                        )}
-                    </NavLink>
-                </div>
-                <div c>
-                    <h1 className='text-black '>Library</h1>
-                    <NavLink to="/Sound2" onClick={() => setCurrent("Sound")}>
-                        {({ isActive }) => (
-                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
-                                Sound
-                            </h1>
-                        )}
-                    </NavLink>
-                </div>
-            </div>
-        </div>
+                    <div className='md:block hidden'>
+                        <div className='flex '>
+                            <div className='flex flex-col gap-5 md:gap-10 mt-0 ml-5  md:ml-15'>
+                                <h1 className='text-black font-extrabold cursor-pointer '>{current}</h1>
+                                <div>
+
+                                    <NavLink to="/sound" onClick={() => setCurrent("Browse")}>
+                                        {({ isActive }) => (
+
+                                            <h1 className={`text-black cursor-pointer md:pr-0 pr-1 ${isActive ? 'font-bold' : ''}`} >
+                                                Browse
+                                            </h1>
+
+
+                                        )}
+                                    </NavLink>
+
+                                    <NavLink to="/Charts" onClick={() => setCurrent("Charts")}>
+                                        {({ isActive }) => (
+                                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                                Charts
+                                            </h1>
+                                        )}
+                                    </NavLink>
+                                </div>
+                                <div c>
+                                    <h1 className='text-black '>Library</h1>
+                                    <NavLink to="/Sound2" onClick={() => setCurrent("Sound")}>
+                                        {({ isActive }) => (
+                                            <h1 className={`text-black cursor-pointer ${isActive ? 'font-bold' : ''}`}>
+                                                Sound
+                                            </h1>
+                                        )}
+                                    </NavLink>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="src/assets/line.png" alt="" className='h-650 md:ml-15 ' />
+                            </div>
+                        </div>
+                    </div> : ""
+            }
+
+        </>
     )
 }

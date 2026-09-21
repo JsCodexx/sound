@@ -28,7 +28,7 @@ export function NavigationMenuDemo({ variant }) {
 
                     <div className="flex gap-3">
                         {variant === "present" ?
-                            <div className="flex gap-117">
+                            <div className="flex md:flex-row flex-col gap-3 md:gap-117">
                                 <div className="flex gap-4">
                                     <NavigationMenuItem>
                                         <NavigationMenuTrigger className="border-1 border-[#868e9648]  rounded-2xl text-[#868E96]">Instruments</NavigationMenuTrigger>
@@ -89,7 +89,7 @@ export function NavigationMenuDemo({ variant }) {
                             </div>
                             :
                             <div className="flex md:gap-55  flex-col gap-3 md:flex-row">
-                                <div className="flex gap-4">
+                                <div className="flex  gap-1 md:gap-4">
                                     <NavigationMenuItem>
                                         <NavigationMenuTrigger className="border-1 border-[#868e9648] rounded-2xl text-[#868E96]">Instruments</NavigationMenuTrigger>
                                         <NavigationMenuContent>

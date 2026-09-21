@@ -14,14 +14,14 @@ function Help() {
                 <p className='text-white text-sm text-center pt-5'>For a limited time, subscribe to here and get Live music lite for free.<span className='text-yellow-500 cursor-pointer'>Get started</span> </p>
             </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8" >
-                <div className='flex gap-0'>
+                <div className='flex gap-2 justify-center items-center  flex-col '>
                     <InputGroupInlineStart />
-                    <Link to="/Submit"><button className='md:ml-130 md:w-40 text-sm bg-black text-white px-2 mt-5 rounded-xl cursor-pointer py-2'>Click for Request</button></Link>
+                    <Link to="/Submit"><button className=' md:w-35 text-sm bg-black text-white px-1 mt-5 rounded-xl cursor-pointer py-2'>Click for Request</button></Link>
 
                 </div>
 
                 <img className='mt-5 px-85 ml-2 h-50 ' src="/src/assets/song.png" alt="" />
-                <div className='mt-10  md:ml-85 mr-80 w-90 md:w-150 '>
+                <div className='mt-10  flex  flex-col justify-center items-center '>
                     <h1 className='font-bold text-2xl mb-10 '>How do Sounds credits work?
                     </h1>
                     <p className='mb-10'>TION ON CONTRACTS FOR THE INTERNATIONAL SALE OF GOODS IS EXPRESSLY EXCLUDED FROM THIS AGREEMENT AND SHALL NOT APPLY IN ANY INSTA,N,CE.</p>

@@ -20,7 +20,7 @@ export function TabsLine({ variant, set }) {
                 : 
 
                     < Tabs >
-                        <TabsList className=" flex  flex-wrap w-80 md:w-full md:flex-wrap gap-0  md:flex-row" variant="lines">
+                        <TabsList className=" flex flex-wrap  gap-2 md:mb-0 mb-8 md:w-full  md:gap-0  md:flex-row" variant="lines">
                             <button onClick={sound}><TabsTrigger value="overview" className="">Overview</TabsTrigger ></button >
                             <Link to="/instrument"><TabsTrigger value="analytics" className="">Instrument</TabsTrigger></Link>
                             <Link to="/cinematics"> <TabsTrigger value="cn" className="">Cinematic FX</TabsTrigger></Link>

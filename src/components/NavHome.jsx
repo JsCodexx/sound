@@ -27,7 +27,7 @@ function NavBar({ variant }) {
     }
 
     return (
-        <nav className="w-full bg-black text-white relative z-50">
+        <nav className="w-100% bg-black text-white relative z-50">
 
 
             <div className="hidden md:flex min-h-[68px] w-full items-center justify-between px-4 lg:px-8 xl:px-14">
@@ -145,7 +145,7 @@ function NavBar({ variant }) {
             </div>
 
 
-            <div className="md:hidden min-h-[64px] flex items-center justify-between px-4">
+            <div className="md:hidden w-100% min-h-[64px] flex items-center justify-between px-4">
 
 
                 <button onClick={handleLogin}>
@@ -194,7 +194,7 @@ function NavBar({ variant }) {
 
 
             {mobileMenu && (
-                <div className="md:hidden border-t border-gray-800 px-4 py-5 space-y-4">
+                <div className="md:hidden border-t border-gray-800 px-4 py-5 ">
 
 
                     {variant !== 'landing' && (

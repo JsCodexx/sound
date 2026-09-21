@@ -6,7 +6,7 @@ function Faqs() {
     return (
         <>
             <div >
-                <div className='relative '>
+                <div className='relative overflow-x-hidden '>
                     <NavBar />
                     <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0" >
                         <h1 className='text-center mt-6 pb-4 text-4xl font-bold' >FAQs</h1>

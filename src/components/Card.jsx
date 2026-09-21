@@ -19,8 +19,8 @@ export function CardSmall({ variant, description }) {
 
             {variant === "genres" ?
                 <div className="flex flex-col ">
-                    <div className="flex md:flex-row flex-col">
-                        <Card size="sm" className=" p-0 rounded-none border-[#EBEBEB] border-1 ml-0 h-65  w-40">
+                    <div className="flex md:flex-row flex-col md:gap-0 gap-5">
+                        <Card size="sm" className=" p-0 rounded-none border-[#EBEBEB] border-1 ml-0 h-65  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -41,7 +41,7 @@ export function CardSmall({ variant, description }) {
                             </CardContent>
 
                         </Card>
-                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1  w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 border-[#EBEBEB] border-1  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -65,7 +65,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1 h-65  w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 border-[#EBEBEB] border-1 h-65  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -89,7 +89,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1  w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 border-[#EBEBEB] border-1  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -114,8 +114,8 @@ export function CardSmall({ variant, description }) {
                         </Card>
 
                     </div>
-                    <div className=" ml-0 flex  md:flex-row flex-col">
-                        <Card size="sm" className=" p-0 rounded-none ml-0 border-[#EBEBEB] border-1 h-65 mt-[-15px]  w-40">
+                    <div className=" ml-0 flex  md:flex-row flex-col md:gap-0 gap-5">
+                        <Card size="sm" className=" p-0 rounded-none ml-0 border-[#EBEBEB] border-1 h-65 mt-[-15px]  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -139,7 +139,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3 border-[#EBEBEB] border-1   w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 mt-3 border-[#EBEBEB] border-1   md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -163,7 +163,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 border-[#EBEBEB] border-1 h-65 mt-[-15px]  w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 border-[#EBEBEB] border-1 h-65 mt-[-15px]  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{gene}</CardTitle>
 
@@ -187,7 +187,7 @@ export function CardSmall({ variant, description }) {
 
                         </Card>
 
-                        <Card size="sm" className=" p-0 rounded-none ml-4 mt-3 border-[#EBEBEB] border-1  w-40">
+                        <Card size="sm" className=" p-0 rounded-none md:ml-4 mt-3 border-[#EBEBEB] border-1  md:w-40">
                             <CardHeader className=" bg-[#F5F5F5] h-10 p-3 border-[#EBEBEB] rounded-none">
                                 <CardTitle className="font-Poppins font-bold text-left ml-5 text-[20px]">{Pop}</CardTitle>
 
@@ -214,7 +214,7 @@ export function CardSmall({ variant, description }) {
                     </div>
                 </div>
                 :
-                <Card size="sm" className="p-0 ml-0 border-1 h-70 border-[#EBEBEB] w-112.5 rounded-none overflow-hidden">
+                <Card size="sm" className="p-0 ml-0 border-1 h-70 border-[#EBEBEB] md:w-112.5 rounded-none overflow-hidden">
                     <CardHeader className="flex justify-between bg-[#F5F5F5] h-10 text-left p-3 rounded-none border-b border-[#EBEBEB]">
                         <CardTitle className="font-extrabold text-2xl">{featureName}</CardTitle>
                         <CardDescription className="text-[10px] text-red-700"> View All </CardDescription>

@@ -10,9 +10,9 @@ export function CardDemo({ src, title, packs, tags, variant, free }) {
     return (
         <>
             {variant === "Midi" ?
-                <Card Card className=" h-65 w-[140px] mb-8 mt-2   p-0 " >
+                <Card Card className=" h-65 w-[195px]  md:w-[140px] mb-8 mt-2   p-0 " >
                     <div className="flex gap-5   ">
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col  ">
                             <div className="relative" >
                                 <img src={src} alt={title} width={55} className=" rounded-sm h-40 w-45" />
                                 <img src={free} width={55} className="absolute top-0 left-21" />

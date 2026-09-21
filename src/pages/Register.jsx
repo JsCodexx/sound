@@ -12,7 +12,7 @@ function Register() {
         setOpen(false)
     }
     return (
-        <div className={` ${open ? 'bg-[#000000C9]' : 'bg-transparent'}`}>
+       <div className='relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0'>
             <div className='relative' >
                 {/* <Nav /> */}
                 <div className='flex'>

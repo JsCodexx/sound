@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from '@/components/Nav'
 import { AlertDialog } from '@/components/ui/alert-dialog'
-import { MyAlertDialog } from '@/components/Alert'
+
 import { AlertDialogTrigger } from '@/components/ui/alert-dialog'
 import { AlertDialogContent } from '@/components/ui/alert-dialog'
 import { AlertDialogCancel } from '@/components/ui/alert-dialog'

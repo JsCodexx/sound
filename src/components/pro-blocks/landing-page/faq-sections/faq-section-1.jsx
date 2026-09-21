@@ -27,7 +27,7 @@ export function FaqSection1() {
           <AccordionItem value="item-1" >
             <div >
               <div>
-                <AccordionTrigger className="text-left decoration-accent  font-bold text-xl" onClick={help}>
+                <AccordionTrigger className="text-left decoration-accent  font-bold md:text-xl" onClick={help}>
                   How do Sounds credits work?
                 </AccordionTrigger>
               </div>
@@ -36,35 +36,35 @@ export function FaqSection1() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
+            <AccordionTrigger className="text-left md:text-xl decoration-accent font-bold" onClick={help}>
               What is shadcn/ui kit for Figma?
             </AccordionTrigger>
 
           </AccordionItem>
 
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
+            <AccordionTrigger className="text-left md:text-xl decoration-accent font-bold" onClick={help}>
               I'm not familiar with shadcn/ui. Can I still use this kit?
             </AccordionTrigger>
 
           </AccordionItem>
 
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
+            <AccordionTrigger className="text-left md:text-xl decoration-accent font-bold" onClick={help}>
               Can I create multi-brand design systems with this UI kit?
             </AccordionTrigger>
 
           </AccordionItem>
 
           <AccordionItem value="item-5" >
-            <AccordionTrigger className="text-left text-xl decoration-accent font-bold" onClick={help}>
+            <AccordionTrigger className="text-left md:text-xl decoration-accent font-bold" onClick={help}>
               How will this kit save me time?
             </AccordionTrigger>
 
           </AccordionItem>
 
           <AccordionItem value="item-6" className="">
-            <AccordionTrigger className="text-left text-xl decoration-accent font-bold " onClick={help}>
+            <AccordionTrigger className="text-left md:text-xl decoration-accent font-bold " onClick={help}>
               How does this improve my collaboration with developers?
             </AccordionTrigger>
 

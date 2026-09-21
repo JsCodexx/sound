@@ -17,14 +17,14 @@ export default function Genres() {
         <div>
             <div >
                 <NavBar />
-                <main className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative">
-                    <div className='flex ml-8 mt-5 gap-5  w-100% overflow-x-hidden'>
+                <main className="mx-auto w-full max-w-[1440px]  md:px-8 relative">
+                    <div className='flex md:ml-8 ml-5 mt-5 gap-5 flex-row   w-100% overflow-x-hidden'>
                         <SideBar />
 
                         <div className=' w-full'>
-                            <h1 className=' text-red-400  font-bold ml-60 mb-5'>You are currently viewing company sounds</h1>
+                            <h1 className=' text-red-400  font-bold md:ml-60 mb-5'>You are currently viewing company sounds</h1>
                             <hr className='w-1050 absolute  right-0 ' />
-                            <img src="src/assets/line.png" alt="" className='h-1120 ml-15' />
+                            <img src="src/assets/line.png" alt="" className='md:h-320 h-600  md:ml-15' />
 
                         </div>
 

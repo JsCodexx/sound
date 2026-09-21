@@ -15,9 +15,9 @@ export function InputGroupInlineStart() {
     return (
 
         <div className="" >
-            <Field className="">
+            <Field className="w-115">
 
-                <InputGroup className="mt-5  rounded-none md:ml-87 ">
+                <InputGroup className="mt-5  rounded-none md:ml-87  ">
                     <InputGroupInput id="inline-start-input" placeholder="How can we help?" />
                     <InputGroupAddon align="inline-start">
                         <SearchIcon className="text-muted-foreground" />

@@ -385,7 +385,7 @@ export default function Charts() {
 
                         <div className='flex flex-col gap-4'>
                             <h1 className=' text-red-400  font-bold text-sm md:ml-60'>You are currently viewing company sounds</h1>
-                            <hr className='md:w-250 mr-0' />
+                            <hr className='md:w-250 w-70 mr-0' />
                             <div className='flex gap-10 ml-3'>
                                 <NavLink to="/Charts">
                                     {({ isActive }) => (
@@ -404,7 +404,7 @@ export default function Charts() {
                                 </NavLink>
                             </div>
                             <ComboboxBasic />
-                            <div className='text-sm flex mx-60 justify-between pr-25'>
+                            <div className='text-sm flex md:mx-60 justify-between pr-25'>
                                 <p className='text-[#838383]'>PACKS</p>
                                 <p className='text-[#838383]'>CONTENTS</p>
                             </div>

@@ -2,10 +2,14 @@ import React from 'react'
 import NavBar from '@/components/NavHome'
 import { Footer2 } from '@/components/footer2'
 import { Link } from 'react-router-dom'
+import { AlertDialog } from '@/components/ui/alert-dialog'
 
+import { AlertDialogTrigger } from '@/components/ui/alert-dialog'
+import { AlertDialogContent } from '@/components/ui/alert-dialog'
+import { AlertDialogCancel } from '@/components/ui/alert-dialog'
 import { useState } from 'react'
 import { TabsLine } from '@/components/Menu'
-import { MyAlertDialog } from '@/components/Alert'
+
 
 function Settings() {
     const [open, setOpen] = useState(false)
@@ -137,17 +141,92 @@ function Settings() {
                 <h1 className=' ml-98 text-2xl font-bold mt-5'>Details</h1>
                 <div className='flex ml-100 gap-90 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6 font-semibold'>Password</h1>
+                    <AlertDialog>
+                        <AlertDialogTrigger asChild>
+                            <button onClick={handleOpen}><p className='mt-5 text-red-800 font-semibold cursor-pointer' >Change Password</p></button>
+                        </AlertDialogTrigger>
+                        <AlertDialogContent>
+                            <p className="mb-5 text-red-800 font-semibold">
+                                Change password
+                            </p>
 
-                    <button onClick={handleOpen}><p className='mt-5 text-red-800 font-semibold cursor-pointer' >Change Password</p></button>
+                            <label>Enter new password</label>
+                            <div className="flex gap-5">
+                                <input
+                                    type="text"
+                                    className="w-50 border-2 mb-5"
+                                />
+                                <p className="text-gray-400">
+                                    Case sensitive
+                                </p>
+                            </div>
+
+                            <label>Confirm new password</label>
+                            <div className="flex gap-5">
+                                <input
+                                    type="text"
+                                    className="w-50 border-2 mb-4"
+                                />
+                                <p className="text-red-800">
+                                    Opp! password don't match
+                                </p>
+                            </div>
+                            <AlertDialogCancel className="w-30 bg-white border-0">
+                                <button
+
+                                    className="bg-black text-white w-20 rounded-2xl ml-0 py-1 cursor-pointer"
+                                >
+                                    Done
+                                </button>
+                            </AlertDialogCancel>
+
+                        </AlertDialogContent>
+                    </AlertDialog>
+
                 </div>
                 <div className='flex ml-100 gap-67 mt-5 mb-5'>
                     <h1 className=' text-sm mt-6 font-semibold'>Delete Company Account</h1>
-                    <button onClick={opendeletea}> <p className='mt-5 text-[#C5C5C5] font-semibold cursor-pointer hover:text-red-800'>Delete account</p></button>
+                    <AlertDialog>
+                        <AlertDialogTrigger asChild>
+                            <button > <p className='mt-5 text-[#C5C5C5] font-semibold cursor-pointer hover:text-red-800'>Delete account</p></button>
+                        </AlertDialogTrigger>
+                        <AlertDialogContent>
+                            <img
+                                src="/src/assets/del.png"
+                                width={70}
+                                className="ml-38 mb-5"
+                                alt="Delete account"
+                            />
+
+                            <p className="mb-5 px-10 ml-5">
+                                Are you sure you want to delete your account?
+                            </p>
+                            <AlertDialogCancel className="w-30 bg-white border-0">
+                                <div className="flex ml-60 gap-8">
+                                    <button
+                                        className="bg-[#E7E7E7] w-20 h-10 rounded-3xl"
+
+                                    >
+                                        Yes
+                                    </button>
+
+                                    <button
+                                        className="bg-[#CD4848] text-white w-20 h-10 rounded-3xl"
+
+                                    >
+                                        No
+                                    </button>
+                                </div>
+                            </AlertDialogCancel>
+
+                        </AlertDialogContent>
+                    </AlertDialog>
+
 
                 </div>
-                {open && <MyAlertDialog open={close} />}
+                {/* {open && <MyAlertDialog open={close} />}
                 {edit && <MyAlertDialog edit={closeEdit} />}
-                {deleteAcount && <MyAlertDialog deleteAcount={closedeletea} />}
+                {deleteAcount && <MyAlertDialog deleteAcount={closedeletea} />} */}
             </div>
             <Footer2 />
         </div>

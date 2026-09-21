@@ -3,7 +3,7 @@ import React from 'react'
 export default function Login() {
     return (
         <>
-            <div>
+             <div className='relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0'>
                 <div className='flex'>
                     <div className='bg-[#000000]  w-213.5 h-screen relative'>
                         <div className='w-[139.56px] absolute h-[209.7px] top-[25.45px] left-[63.96px] bg-[#CD4848]'>

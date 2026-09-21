@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 
 export default function HoverCards() {
     return (
-        <div className='flex gap-6 mt-12 mb-15 cursor-pointer ml-50'>
+        <div className='flex md:flex-row flex-col gap-6 mt-12 mb-15 cursor-pointer ml-20 md:ml-50'>
             <div className='bg-black hover:bg-[#D74664]  w-67 h-125  rounded-lg transition-all duration-100 ease-in-out hover:-translate-y-2 hover:scale-[1.1]'>
                 <div className='text-white ml-8 pt-7 flex flex-col group gap-5'>
                     <h1 className='text-2xl'>Sounds+</h1>

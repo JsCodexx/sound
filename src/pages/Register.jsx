@@ -1,40 +1,33 @@
 import React from 'react'
-import Nav from '@/components/Nav'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { Signup } from '@/api/auth/signup'
-import { useNavigate } from 'react-router-dom'
+
+import LiquidWaveSpinner from '@/components/Spinner'
+import { useContext } from 'react'
+import { Createuser } from '@/contextApi/usercontext'
+
+
 function Register() {
-    const [open, setOpen] = useState(false)
-    const [fullname, setFullNmae] = useState()
-    const [username, setUsername] = useState()
-    const [email, setemail] = useState()
-    const [password, setPassword] = useState()
-    const navigate = useNavigate()
-    const signupData = async (e) => {
-        try {
-const role = "user"
-            const signData = await Signup(fullname, username, email, password,role)
-            console.log(signData, "sign")
-            if (signData) {
-                navigate("/login")
-            }
+  
+    const { formData, setFormdata, signupData,loading } = useContext(Createuser)
+    const handleChange = (e) => {
+        const { name, value } = e.target;
 
+        setFormdata((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
+    function sign() {
+        
+            signupData()
+       
 
-        } catch (error) {
-            alert(error)
-        }
     }
 
 
-    function handleOpen() {
-        setOpen(true)
-    }
-    function close() {
-        setOpen(false)
-    }
+
     return (
         <div className=''>
+
             <div className='relative ' >
                 {/* <Nav /> */}
                 <div className='flex w-full'>
@@ -60,31 +53,32 @@ const role = "user"
                         <p className='mt-5 text-[#909090]'>---------or Sign in with Email----------</p>
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
                             <label className='text-[#909090] font-semibold' htmlFor="">Full Name</label>
-                            <input onChange={(e) => { setFullNmae(e.target.value) }} type="text" placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
+                            <input onChange={handleChange} type="text" name='fullname' value={formData.fullname} placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">User Name</label>
-                            <input onChange={(e) => { setUsername(e.target.value) }} type="text" placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
+                            <input onChange={handleChange} type="text" name='username' value={formData.username} placeholder='Waleed.....' className="py-1 px-2 placeholder-[#EBEBEB] border border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90 mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">Email</label>
-                            <input onChange={(e) => { setemail(e.target.value) }} type="text" placeholder='Waleed@gmail.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
+                            <input onChange={handleChange} type="email" name='email' value={formData.email} placeholder='Waleed@gmail.com' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex flex-col lg:w-90  mt-4 text-gray-700'>
                             <label className=' text-[#909090] font-semibold' htmlFor="">Password</label>
-                            <input onChange={(e) => { setPassword(e.target.value) }} type="text" placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
+                            <input onChange={handleChange} type="password" name='password' value={formData.password} placeholder='*********' className="py-1 px-2 border placeholder-[#EBEBEB] border-[#D6EAFF] rounded-[4px]" />
                         </div>
                         <div className='flex justify-evenly mt-5'>
                             <p className='text-sm '>By signing up i agree the Term and Conditions</p>
                         </div>
-                        <button onClick={signupData} className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
+                        {loading && <LiquidWaveSpinner />}
+                        {!loading && <button onClick={sign} className='bg-black py-2 w-60 l rounded-[4px] text-center lg:w-90 text-white mt-5 ' >
                             Sign up
-                        </button>
+                        </button>}
                         <p className=' mt-5 text-gray-500'>I already have an account.<span className='text-black  font-bold cursor-pointer' >Signin</span> </p>
                     </div>
 
                 </div>
-                {open && <div className='absolute left-40 top-160'><AlertDemo set={close} /></div>}
+
 
 
             </div>

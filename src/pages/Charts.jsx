@@ -5,367 +5,42 @@ import { NavLink } from 'react-router-dom'
 import PackCard from '@/components/PackCard'
 import SideBar from '@/components/SideBar'
 import { ComboboxBasic } from '@/components/Combobox'
+import { Packdata } from '@/api/Sounds/packs'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useNavigate } from 'react-router-dom'
 export default function Charts() {
-    const cardData = [
-        {
-            src: "/src/assets/p1.png",
-            id: "1",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "2",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "3",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "4",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "5",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "6",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "7",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "8",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "9",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p1.png",
-            id: "10",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "11",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "12",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "13",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "14",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "15",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "16",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "17",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "18",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "19",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "20",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "21",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "22",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "23",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "24",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "25",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "26",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "27",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "28",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "29",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "30",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "31",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "32",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p3.png",
-            id: "33",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585"
-            ,
-            showArrow: "/src/assets/arror.",
-            num1: "25"
-        },
-        {
-            src: "/src/assets/p2.png",
-            id: "34",
-            title: "Tape & Vinyl Drums",
-            description: "by sample Magic",
-            img: "/src/assets/z2.png",
-            num: "585",
-            showArrow: "/src/assets/arror.png",
-            num1: "25"
-        },
-    ]
+    const [chartpack, setChartpack] = useState()
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
+    console.log(chartpack)
+    async function chart() {
+        try {
+            showloading()
+            const data = await Packdata()
+            const datamin = data.data.items
+            setChartpack(datamin)
+            console.log(datamin, "charts")
+        } catch (error) {
+            {
+                if (error?.response?.status === 401) {
+                    navigate("/login")
+                }
+            }
+        } finally {
+            hideloading()
+        }
+
+    }
+
+
+    useEffect(() => {
+        chart()
+    }, [])
+
     return (
         <div>
 
@@ -411,20 +86,20 @@ export default function Charts() {
                                 <p className='text-[#838383]'>CONTENTS</p>
                             </div>
                             <div className='w-full flex flex-col  px-3'>
-                                {cardData.map((data, index) => (
+                                {loading && <BlocksWave />}
+                                {!loading && chartpack?.map((data, index) => (
                                     <PackCard
                                         key={index}
                                         id={data.id}
-                                        src={data.src}
+
                                         title={data.title}
-                                        description={data.description}
+                                        description={data.status}
                                         img={data.img}
                                         num={data.num}
-                                        num1={data.num1}
+                                        num1={data.price}
                                         ChangeRow={index % 2 === 1}
-                                        showArrow={data.showArrow}
+                                        showArrow={data.price}
                                         variant="chart"
-
                                     />
                                 ))}
 

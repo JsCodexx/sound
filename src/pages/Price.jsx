@@ -1,14 +1,14 @@
 import React from 'react'
 import { Footer2 } from '@/components/footer2'
-import Content from '@/components/content';
-
 import { useState } from 'react';
 import HoverCards from '@/components/HoverCards';
-import Pricecompo from '@/components/Pricecompo';
 import NavBar from '@/components/NavHome';
+
+
 
 function Price() {
     const [isMonthly, setIsMonthly] = useState(true);
+
     return (
         <div className='w-full'>
             <NavBar />

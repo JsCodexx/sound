@@ -1,236 +1,72 @@
 import React from 'react'
 import NavBar from '@/components/NavHome'
 import PackCard from '@/components/PackCard'
-import { NavLink } from 'react-router-dom'
 import { CardDemo } from '@/components/Card-2'
 import { Link } from 'react-router-dom'
 import SideBar from '@/components/SideBar'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { Packdata } from '@/api/Sounds/packs'
+import { Songs } from '@/api/Sounds/songs'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useNavigate } from 'react-router-dom'
 export default function Sound2() {
-    const cardData = [
-        {
-            src: "/src/assets/small1.png",
-            id: "1",
-            title: "os_Do_Kick_in",
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
+    const [pack, setPack] = useState()
+    const [song, setSong] = useState()
 
-            img: "/src/assets/duo.png",
+    // packsdata
+    async function datapack() {
+        try {
+            showloading()
+            const labelData = await Packdata()
+            const dataRemaing = labelData.data.items
+            setPack(dataRemaing)
+            console.log(dataRemaing, "pack")
 
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "2",
-            title: "os_Do_Kick_in",
+        } catch (error) {
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
+        }
 
-            img: "/src/assets/duo.png",
+    }
+    useEffect(() => {
+        datapack()
+
+    }, [])
+    // song api
+    async function songData() {
+        try {
+            showloading()
+
+            const datasong = await Songs()
+            const minData = datasong.data.items
+            setSong(minData)
+            console.log(datasong)
+        } catch (error) {
+            if (error?.response?.status === 401) {
+
+                navigate("/login")
 
 
 
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "3",
-            title: "os_Do_Kick_in",
+            }
 
-            img: "/src/assets/duo.png",
+        } finally {
+            hideloading()
+        }
 
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "4",
-            title: "os_Do_Kick_in",
+    }
+    useEffect(() => {
+        songData()
+    }, [])
 
-            img: "/src/assets/duo.png",
-
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "5",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "6",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "7",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "8",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "9",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "10",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "11",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "12",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "13",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "14",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "15",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "16",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small2.png",
-            id: "17",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-        {
-            src: "/src/assets/small1.png",
-            id: "18",
-            title: "os_Do_Kick_in",
-
-            img: "/src/assets/duo.png",
-
-        },
-    ]
-
-    const imgData = [
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x5.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-        {
-            src: "/src/assets/x4.png",
-            title: "House: Start Here",
-            packs: "Here a healthy hel...",
-            tags: "Company Stars"
-        },
-
-    ]
     return (
         <>
 
@@ -291,16 +127,17 @@ export default function Sound2() {
                         </div>
 
                         <p className='text-[#222222] font-bold font-Poppins ml-7 mt-5 '>Trending This Week</p>
-                        <div className=' ml-8 mt-5 flex gap-3 px-3 flex-wrap'>
-                            {cardData.map((data, index) => (
-                                <div className='w-74 text-[10px] '>
+                        <div className=' ml-8 mt-5 flex gap-3  px-3 flex-wrap'>
+                            {loading && <BlocksWave />}
+                            {!loading && pack?.map((data, index) => (
+                                <div className=' text-[10px] '>
                                     <PackCard
                                         key={index}
-                                        src={data.src}
+
                                         title={data.title}
-                                        img={data.img}
+                                        pack={data.status}
                                         id={data.id}
-                                        ChangeColoum={Math.floor(index / 3) % 2 == 0}
+                                        ChangeColoum={Math.floor(index / 1) % 2 == 0}
                                         variant="small"
                                     />
                                 </div>
@@ -311,17 +148,16 @@ export default function Sound2() {
                             <h1>Recent Release</h1>
                         </div>
                         <div className='flex flex-wrap gap-4 ml-8 px-3 mt-5 '>
-                            {imgData.map((data, index) => (
+                            {loading && <BlocksWave />}
+                            {!loading && song?.map((data, index) => (
                                 <CardDemo
                                     key={index}
-                                    src={data.src}
+
                                     title={data.title}
-                                    packs={data.packs}
-                                    tags={data.tags}
+                                    packs={data.key}
+                                    tags={data.pack_id}
                                     variant="Midi"
                                 />
-
-
                             ))}
                         </div>
 

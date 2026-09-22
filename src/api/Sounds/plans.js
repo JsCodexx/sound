@@ -1,11 +1,11 @@
 import axios from "axios";
 
-export const Labeldata = () => {
+export const Plans = () => {
   const token = localStorage.getItem("token");
   const session = sessionStorage.getItem("refresh");
   try {
     const res = axios.get(
-      "https://sound-backend.vercel.app/labels/?page=1&page_size=10",
+      "https://sound-backend.vercel.app/plans/?page=1&page_size=10",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -14,7 +14,7 @@ export const Labeldata = () => {
         withCredentials: true,
       },
     );
-    // console.log(res, "sound");
+    console.log(res, "faqs");
     return res;
   } catch (error) {
     alert(error);

@@ -7,7 +7,8 @@ export const Loginapi = async (email, password) => {
       {
         email: email,
         password: password,
-        expiresInMins: 1,
+        ACCESS_TOKEN_EXPIRE_MINUTES: 1,
+        REFRESH_TOKEN_EXPIRE_MINUTES: 2000,
       },
       {
         headers: {

@@ -8,23 +8,35 @@ import { CarouselSize } from '@/components/Carousel'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Packdata } from '@/api/Sounds/packs'
+import { useContext } from 'react'
+import { CreateLoaders } from '@/contextApi/context'
+import { BlocksWave } from '@/components/ui/Loader'
+import { useNavigate } from 'react-router-dom'
+
+
 
 function Sound() {
+    const { showloading, hideloading, loading } = useContext(CreateLoaders);
+    const navigate = useNavigate()
     const [label, setLabel] = useState()
     const [pack, setPack] = useState()
-    // const data = label
-    // console.log(data)
-    // labelsdata
-    console.log(pack, "packs")
+
+
+    // labeldata
     async function resdata() {
         try {
+            showloading()
             const labelData = await Labeldata()
             const dataRemaing = labelData.data.items
             setLabel(dataRemaing)
             console.log(dataRemaing, "label")
 
         } catch (error) {
-            alert(error)
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
         }
     }
     useEffect(() => {
@@ -35,14 +47,20 @@ function Sound() {
     // packsdata
     async function datapack() {
         try {
+            showloading()
             const labelData = await Packdata()
             const dataRemaing = labelData.data.items
             setPack(dataRemaing)
-            console.log(dataRemaing, "label")
+            console.log(dataRemaing, "pack")
 
         } catch (error) {
-            alert(error)
+            if (error?.response?.status === 401) {
+                navigate("/login")
+            }
+        } finally {
+            hideloading()
         }
+
     }
     useEffect(() => {
         datapack()
@@ -87,8 +105,11 @@ function Sound() {
                                                 No matter what genre of music you make, get instant inspiration from some of our team’s favorite Sounds on Splice.
                                             </p>
                                         </div>
-                                        <div className=' w-full '>
-                                            <CarouselSize packs={pack} />
+
+                                        <div className='  flex justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize packs={pack} />}
+
                                         </div>
                                     </div>
 
@@ -99,8 +120,9 @@ function Sound() {
                                                 As one of the world's leading providers of pro-audio loops and samples, Sample Magic puts the world of electronic music at your finger tips.
                                             </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -110,8 +132,9 @@ function Sound() {
                                                 Take a journey through the Middle East, Caribbean, Taiwan, Europe, Africa, and all places in between as these packs explore ancient instruments and modern techniques from the four corners of the earth.
                                             </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -121,8 +144,9 @@ function Sound() {
                                                 Celebrate AAPI month with us as we dive into this curation of our favorite sample packs by Asian, Asian-American and Pacific Island creators.
                                             </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -131,8 +155,9 @@ function Sound() {
                                             <p className=' md:text-center text-[#909090] font-semibold  md:w-full text-sm  py-0'>
                                                 We get it, life's moving fast. So don't worry if you missed something. We got your back. Get new inspiration from this collection of hidden gems.        </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center '>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -141,8 +166,9 @@ function Sound() {
                                             <p className='  md:text-center text-sm text-[#909090] font-semibold  md:w-full  py-0'>
                                                 A crate digger’s playground! These are our most classic sounds that represent the 'Golden Age' of music.    </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -152,8 +178,9 @@ function Sound() {
                                                 No matter what genre of music you make, get instant inspiration from some of our team’s favorite Sounds on Splice.
                                             </p>
                                         </div>
-                                        <div className='ml-0'>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                     <div className='flex flex-col px-3'>
@@ -163,8 +190,9 @@ function Sound() {
                                                 View All
                                             </p>
                                         </div>
-                                        <div className='md:ml-0 '>
-                                            <CarouselSize variant="crouse" packs={pack} />
+                                        <div className='flex md:ml-0 justify-center item-center'>
+                                            {loading && <BlocksWave />}
+                                            {!loading && <CarouselSize variant="crouse" packs={pack} />}
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +203,9 @@ function Sound() {
                                         <p className='text-sm text-[#909090] font-semibold pt-1'>View All</p>
                                     </div>
                                     <div className='  mt-5 flex gap-3 flex-col '>
-                                        {pack?.map((data, index) => (
+                                        {loading && <BlocksWave />}
+
+                                        {!loading && pack?.map((data, index) => (
                                             <div className=' text-[10px] '>
                                                 <PackCard
                                                     key={index}
@@ -194,8 +224,11 @@ function Sound() {
                                         <h1 className='bold md:text-xl text-[#404041] font-semibold'>Top Labels</h1>
 
                                     </div>
-                                    <div className='  mt-5 flex gap-3 flex-col '>
-                                        {label?.map((data, index) => (
+                                    <div>
+
+                                        {loading && <BlocksWave />}
+
+                                        {!loading && label?.map((data, index) => (
                                             <div className=' text-[10px] '>
                                                 <PackCard
                                                     key={index}

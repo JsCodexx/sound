@@ -35,15 +35,7 @@ export default function Instrument() {
 
                             <div className="flex gap-5 flex-wrap lg:justify-start lg:ml-8 justify-center items-center ">
                                 <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
-                                <CardSmall />
+                           
                             </div>
                         </div>
                     </div>

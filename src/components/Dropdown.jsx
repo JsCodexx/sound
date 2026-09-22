@@ -20,6 +20,8 @@ export function DropdownMenuShortcuts({ variant }) {
   const navigate = useNavigate()
 
   function goToLogin() {
+    localStorage.removeItem("token")
+    sessionStorage.removeItem("refresh")
     navigate("/login")
   }
   return (
